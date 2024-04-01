@@ -3,6 +3,8 @@
   "extends": [
     "config:recommended"
   ],
+  "assignees": ["evebrnd"],
+  "baseBranches": ["main"],
   "packageRules": [
     {
       "matchPackagePatterns": [
