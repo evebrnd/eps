@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,21 +11,24 @@ export const metadata: Metadata = {
   description: "Website of the Spring 2024 EPS project regarding",
 };
 
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+  children
+}: RootLayoutProps) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <head><link rel="icon" href="favicon.ico" sizes="any" /></head>
-      <body className={inter.className}>
-        <Navbar />
-        <div className="top-50 min-h-screen">
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body>
+          <Navbar />
           {children}
-        </div>
-        <Footer />
-      </body>
-    </html>
-  );
+
+          <Footer />
+        </body>
+      </html>
+    </>
+  )
 }
