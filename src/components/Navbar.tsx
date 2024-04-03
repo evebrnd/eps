@@ -90,9 +90,9 @@ export default function Navbar() {
                 <NavigationMenuTrigger className="bg-transparent">Chapters</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {components_chapters.map((component) => (
+                    {components_chapters.map((component, index) => (
                       <ListItem
-                        key={component.title}
+                        key={`chapter_${index}`}
                         title={component.title}
                         href={component.href}
                       >
@@ -106,9 +106,9 @@ export default function Navbar() {
                 <NavigationMenuTrigger className="bg-transparent">About</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {components_about.map((component) => (
+                    {components_about.map((component, index) => (
                       <ListItem
-                        key={component.title}
+                        key={`about_${index}`}
                         title={component.title}
                         href={component.href}
                       >
@@ -139,16 +139,16 @@ export default function Navbar() {
             <nav className="grid font-medium md:hidden divide-y">
               {/* leading-6 mt-6 text-xl sm:text-3xl */}
               <p className="text-foreground text-2xl font-bold">Chapters</p>
-              {components_chapters.map((component) => (
-                <Link href={component.href} className="leading-7 text-foreground/60 transition-colors hover:text-foreground">
+              {components_chapters.map((component, index) => (
+                <Link key={`mobile_chapter_${index}`} href={component.href} className="leading-7 text-foreground/60 transition-colors hover:text-foreground">
                   {component.title}
                 </Link>
               ))}
             </nav>
             <nav className="pt-4 grid font-medium md:hidden divide-y">
               <p className="text-foreground text-2xl font-bold">About</p>
-              {components_about.map((component) => (
-                <Link href={component.href} className="leading-7 text-foreground/60 transition-colors hover:text-foreground">
+              {components_about.map((component, index) => (
+                <Link key={`mobile_about_${index}`} href={component.href} className="leading-7 text-foreground/60 transition-colors hover:text-foreground">
                   {component.title}
                 </Link>
               ))}
