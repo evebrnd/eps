@@ -5,7 +5,7 @@ import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
-import Logo from "../../../public/vercel.svg";
+import Logo from "../../../public/relinkLogo.svg";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
