@@ -1,35 +1,34 @@
 'use client'
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { ReactTyped } from 'react-typed';
+import { Button } from "@/components/ui/button";
+import { Link, GraduationCap } from "lucide-react";
 
 export default function Page() {
   return (
-    <div className="">
-      <div className="py-10 px-20">
-        <h2 className='text-center scroll-m-10 text-2xl font-semibold tracking-tight'>
-          Smart Home Devices are:
-        </h2>
-        <div className="py-6" />
-        <h1 className='text-center scroll-m-20 font-extrabold tracking-tight text-6xl sm:text-9xl'>
-          <ReactTyped
-            strings={["Smart", "Handy", "Convenient", "Dangerous", "Insecure", "Hackable"]}
-            typeSpeed={100}
-            loop
-            backSpeed={50}
-            // cursorChar="."
-            showCursor={true}
-          />
-        </h1>
+    <div className="bg-muted px-4">
+      <div className="pt-16 pb-8">
+        <p className="text-4xl sm:text-6xl italic">
+          Education of
+        </p>
+        <p className="font-extrabold text-6xl sm:text-7xl">
+          Smart Home <br/>
+          Devices
+        </p>
       </div>
-
-      <div className="flex max-h-screen min-h-screen flex-col items-center justify-center text-white py-2 bg-[url('../../public/aiMobile.jpg')] md:bg-[url('../../public/aiComputer.jpg')] bg-cover bg-center">
-        <p className="text-center text-6xl font-bold bg-clip-text">Smart home device</p>
-        <p className="m-2 text-center text-xl font-bold bg-clip-text">
-          Lorem ipsum dolor
-        </p>
-        <p className="m-10 text-center text-lg">
-          EPS Spring 2024
-        </p>
+      <p className="leading-6 mt-6 text-xl sm:text-3xl">
+        The <strong>RELINK project</strong> is a research and documentation project against the unapproachable <strong>transparency</strong> in the <strong>smart home devices</strong> industry.
+      </p>
+      <p className="leading-6 mt-6 text-xl sm:text-3xl">
+        Transparency information about smart home devices is <strong>NOT</strong> accessible to the public. 
+      </p>
+      <p className="leading-6 mt-6 text-xl sm:text-3xl">
+        To create more <strong>awareness</strong> and create an easily understandable document the RELINK project is determined to <strong>gather</strong> information, <strong>process</strong> the information and <strong>create</strong> a clear and easily accessible <strong>documentation</strong> format. 
+      </p>
+      <div className="py-6"></div>
+      <div className="flex p-6">
+        <Button size="lg" className="justify-center flex-grow text-lg sm:text-2xl">
+          <GraduationCap className="mr-4 h-8 w-8 sm:w-10 sm:h-10" />
+          Start learning
+        </Button>
       </div>
     </div>
   );

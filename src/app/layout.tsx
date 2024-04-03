@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google"
+import { cn } from "@/lib/utils"
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: "EPS",
@@ -22,11 +26,15 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body>
+        <body 
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased",
+            fontSans.variable
+          )}>
           <Navbar />
           {children}
 
-          <Footer />
+          {/* <Footer /> */}
         </body>
       </html>
     </>
