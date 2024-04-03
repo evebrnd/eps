@@ -4,7 +4,7 @@ import { Link, GraduationCap } from "lucide-react";
 
 export default function Page() {
   return (
-    <div className="bg-muted px-4">
+    <div className="bg-primary-foreground px-4">
       <div className="pt-16 pb-8">
         <p className="text-4xl sm:text-6xl italic">
           Education of
