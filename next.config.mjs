@@ -4,6 +4,7 @@ const nextConfig = {
     basePath: "/eps",
     assetPrefix: "/eps/",
     reactStrictMode: true,
+    images: { unoptimized: true }
 };
 
 export default nextConfig;
