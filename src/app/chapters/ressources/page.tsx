@@ -3,6 +3,7 @@
 import Card from "@/components/Card"
 import Footer from "@/components/Footer"
 import Image from "../../../../public/aiComputer.jpg"
+import PreviousAndNextButton from "@/components/PreviousAndNextButton"
 
 export default function Page() {
 
@@ -15,6 +16,10 @@ export default function Page() {
                 caption="Lorem ispum dolor sit amet, consectetur adipiscing elit."
                 href="#"
                 image={Image}
+            />
+            <PreviousAndNextButton
+                previousUrl="https://evebrnd.github.io/eps/chapters/three"
+                nextUrl="https://evebrnd.github.io/eps/about/relink"
             />
             <Footer />
         </div>
