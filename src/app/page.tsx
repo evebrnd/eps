@@ -1,45 +1,34 @@
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+'use client'
+import { Button } from "@/components/ui/button";
+import { Link, GraduationCap } from "lucide-react";
 
 export default function Page() {
   return (
-    <div>
-      <div className="flex max-h-screen min-h-screen flex-col items-center justify-center text-white py-2 bg-[url('../../public/aiMobile.jpg')] md:bg-[url('../../public/aiComputer.jpg')] bg-cover bg-center">
-        <p className="text-center text-6xl font-bold bg-clip-text">Smart home device</p>
-        <p className="m-2 text-center text-xl font-bold bg-clip-text">
-          Lorem ipsum dolor
+    <div className="bg-primary-foreground px-4">
+      <div className="pt-16 pb-8">
+        <p className="text-4xl sm:text-6xl italic">
+          Education of
         </p>
-        <p className="m-10 text-center text-lg">
-          EPS Spring 2024
+        <p className="font-extrabold text-6xl sm:text-7xl">
+          Smart Home <br/>
+          Devices
         </p>
-        <button className="m-2 rounded-lg bg-blue-500 hover:bg-blue-700 p-2 px-5 text-white text-lg text-bold shadow">
-          <a href={`/`} target="_blank">
-            Follow the course
-          </a>
-        </button>
-
-        <a
-          href="#infos"
-          className="absolute inset-x-0 bottom-10 flex animate-bounce flex-col flex-wrap items-center"
-        >
-          More informations
-          <br />
-          <ChevronDownIcon className="-m-2 inline-block h-10 w-10" aria-hidden="true" />
-        </a>
       </div>
-
-      <div
-        id="infos"
-        className="flex flex-col items-center justify-center py-2 mx-2"
-      >
-        <p className="text-center text-4xl font-bold pt-8">Who are we ?</p>
-        <p className="text-pretty w-5/6 py-6">
-          Loremp ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          convallis, mi et ultrices tristique, nunc metus ultricies nunc, et
-          tincidunt libero libero vitae nunc. Nullam auctor, eros sit amet
-          ultrices convallis, est nunc ultricies felis, in ultricies magna
-          libero nec risus. Nullam auctor, eros sit amet ultrices convallis, est
-          nunc ultricies felis, in ultricies magna libero nec risus. Nullam
-        </p>
+      <p className="leading-6 mt-6 text-xl sm:text-3xl">
+        The <strong>RELINK project</strong> is a research and documentation project against the unapproachable <strong>transparency</strong> in the <strong>smart home devices</strong> industry.
+      </p>
+      <p className="leading-6 mt-6 text-xl sm:text-3xl">
+        Transparency information about smart home devices is <strong>NOT</strong> accessible to the public. 
+      </p>
+      <p className="leading-6 mt-6 text-xl sm:text-3xl">
+        To create more <strong>awareness</strong> and create an easily understandable document the RELINK project is determined to <strong>gather</strong> information, <strong>process</strong> the information and <strong>create</strong> a clear and easily accessible <strong>documentation</strong> format. 
+      </p>
+      <div className="py-6"></div>
+      <div className="flex p-6">
+        <Button size="lg" className="justify-center flex-grow text-lg sm:text-2xl">
+          <GraduationCap className="mr-4 h-8 w-8 sm:w-10 sm:h-10" />
+          Start learning
+        </Button>
       </div>
     </div>
   );

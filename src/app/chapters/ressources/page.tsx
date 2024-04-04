@@ -1,7 +1,7 @@
 "use client"
 
-import Card from "@/app/components/Card"
-import Link from "next/link"
+import Card from "@/components/Card"
+import Footer from "@/components/Footer"
 import Image from "../../../../public/aiComputer.jpg"
 
 export default function Page() {
@@ -16,6 +16,7 @@ export default function Page() {
                 href="#"
                 image={Image}
             />
+            <Footer />
         </div>
     )
 }
