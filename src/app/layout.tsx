@@ -1,31 +1,42 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google"
+import { cn } from "@/lib/utils"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: "EPS",
   description: "Website of the Spring 2024 EPS project regarding",
 };
 
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
 export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+  children
+}: RootLayoutProps) {
   return (
-    <html className="scroll-smooth" lang="en">
-      <head><link rel="icon" href="favicon.ico" sizes="any" /></head>
-      <body className={inter.className}>
-        <Navbar />
-        <div className="top-50 min-h-screen">
+    <>
+      <html lang="en" suppressHydrationWarning>
+        <head />
+        <body 
+          className={cn(
+            "min-h-screen bg-primary-foreground font-sans antialiased",
+            fontSans.variable
+          )}>
+          <Navbar />
           {children}
-        </div>
-        <Footer />
-      </body>
-    </html>
-  );
+
+          {/* <Footer /> */}
+        </body>
+      </html>
+    </>
+  )
 }

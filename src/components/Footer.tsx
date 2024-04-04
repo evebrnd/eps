@@ -3,7 +3,7 @@ import { MailFilled } from '@ant-design/icons'
 
 export default function Footer() {
     return (
-        <footer className="flex justify-center items-center bg-gray-900 text-white bottom-0 w-full h-9">
+        <footer className="flex justify-center items-center bg-primary text-secondary position-fixed bottom-0 w-full h-9">
             <a href="/" className="mr-4">
                 © 2024 EPS
             </a>
