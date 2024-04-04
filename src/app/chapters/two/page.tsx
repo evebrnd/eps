@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <div className="">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        The Joke Tax Chronicles
+        This is the chapyer of Daan
       </h1>
       <p className="leading-7 [&:not(:first-child)]:mt-6">
         Once upon a time, in a far-off land, there was a very lazy king who
