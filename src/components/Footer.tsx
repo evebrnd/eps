@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Icon from '@mdi/react';
-import { mdiEmail, mdiGithub } from '@mdi/js';
+import Icon from "@mdi/react";
+import { mdiEmail, mdiGithub } from "@mdi/js";
 
 function Footer() {
     return (
@@ -9,22 +9,22 @@ function Footer() {
             <div className="max-w-screen-xl px-4 py-10 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
                 <nav className="flex flex-wrap justify-center -mx-5 -my-2">
                     <div className="px-5 py-2">
-                        <Link href="/eps/about/relink" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
+                        <Link href="/about/relink" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
                             About RELINK
                         </Link>
                     </div>
                     <div className="px-5 py-2">
-                        <Link href="/eps/about/eps" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
+                        <Link href="/about/eps" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
                             About EPS
                         </Link>
                     </div>
                     <div className="px-5 py-2">
-                        <Link href="/eps/about/us" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
+                        <Link href="/about/us" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
                             Team
                         </Link>
                     </div>
                     <div className="px-5 py-2">
-                        <Link href="/eps/chapters/one" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
+                        <Link href="/chapters/one" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
                             Course
                         </Link>
                     </div>
@@ -40,7 +40,7 @@ function Footer() {
                     </Link>
                     <Link
                         className="text-gray-400 hover:text-gray-500"
-                        href={'mailto:evber2263@oslomet.no'}
+                        href={"mailto:evber2263@oslomet.no"}
                     >
                         <Icon path={mdiEmail} className="h-6 w-6" />
                     </Link>

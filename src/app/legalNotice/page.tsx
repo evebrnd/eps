@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Page() {
     return (
         <div>
-            <div className="mt-40 mb-10">
+            <div className="my-10">
                 <div className="flex flex-col items-center justify-center">
                 <button className="m-2 rounded-lg bg-blue-500 hover:bg-blue-700 p-2 px-5 text-white text-lg text-bold shadow">
                         <a href="/eps">
