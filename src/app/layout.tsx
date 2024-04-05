@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import Navbar from "../components/Navbar";
@@ -25,8 +26,10 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
-        <body 
+        <Head>
+          <link rel="shortcut icon" href="favicon.ico" />
+        </Head>
+        <body
           className={cn(
             "min-h-screen bg-primary-foreground font-sans antialiased",
             fontSans.variable
@@ -34,7 +37,7 @@ export default function RootLayout({
           <Navbar />
           {children}
 
-          {/* <Footer /> */}
+          <Footer /> 
         </body>
       </html>
     </>

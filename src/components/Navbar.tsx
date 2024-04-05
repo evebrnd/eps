@@ -25,20 +25,20 @@ import {
 
 const components_about: { title: string; href: string; description: string }[] = [
   {
-    title: "Us",
-    href: "/about/us",
+    title: "Our team",
+    href: "/eps/about/us",
     description:
       "A page about us.",
   },
   {
     title: "RELINK",
-    href: "/about/relink",
+    href: "/eps/about/relink",
     description:
       "A page about the RELINK project.",
   },
   {
     title: "EPS",
-    href: "/about/eps",
+    href: "/eps/about/eps",
     description:
       "A page about the EPS project.",
   }
@@ -47,27 +47,33 @@ const components_about: { title: string; href: string; description: string }[] =
 const components_chapters: { title: string; href: string; description: string }[] = [
   {
     title: "Chapter one",
-    href: "/chapters/one",
+    href: "/eps/chapters/one",
     description:
       "This page is about the first chapter.",
   },
   {
     title: "Chapter two",
-    href: "/chapters/two",
+    href: "/eps/chapters/two",
     description:
       "This page is about the second chapter.",
   },
   {
     title: "Chapter three",
-    href: "/chapters/three",
+    href: "/eps/chapters/three",
     description:
       "This page is about the third chapter.",
+  },
+  {
+    title: "Resources",
+    href: "/eps/chapters/resources",
+    description:
+      "To go further on resources for privacy in smart homes.",
   }
 ]
 
 export default function Navbar() {
   return (
-    <nav className='flex justify-between md:justify-normal md:flex-row p-4 bg-gradient-to-r from-primary/30 to-primary border-b-4 border-primary/10'>
+    <nav className="flex justify-between md:justify-normal md:flex-row p-4 bg-gradient-to-r from-primary/30 to-primary border-b-4 border-primary/10">
       <div className="flex md:basis-1/4 items-center gap-x-2">
         <Link href="/">
           <img src="https://uni.oslomet.no/relink/wp-content/uploads/sites/193/2019/04/ReLink-logo-v.2.png" alt="Logo" className="h-12" />
