@@ -26,9 +26,6 @@ export default function RootLayout({
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <Head>
-          <link rel="shortcut icon" href="favicon.ico" />
-        </Head>
         <body
           className={cn(
             "min-h-screen bg-primary-foreground font-sans antialiased",
@@ -36,7 +33,6 @@ export default function RootLayout({
           )}>
           <Navbar />
           {children}
-
           <Footer /> 
         </body>
       </html>
