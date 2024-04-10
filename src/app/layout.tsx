@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Head from "next/head";
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
 import Navbar from "../components/Navbar";
@@ -13,7 +12,7 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "EPS",
-  description: "Website of the Spring 2024 EPS project regarding",
+  description: "Website of the Spring 2024 EPS project regarding smart home devices' privacy",
 };
 
 interface RootLayoutProps {
