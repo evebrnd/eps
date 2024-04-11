@@ -1,3 +1,5 @@
+import { Roboto } from "next/font/google"
+import { root } from "postcss"
 import type { Config } from "tailwindcss"
 const { fontFamily } = require("tailwindcss/defaultTheme")
 
@@ -21,6 +23,7 @@ const config = {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        roboto: ["var(--font-roboto)", "Roboto", ...fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",
