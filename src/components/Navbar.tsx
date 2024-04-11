@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link"
+import Image from "next/image"
+import Logo from "../../public/relinkLogo.png"
 import { cn } from "@/lib/utils"
 import {
   Menu,
