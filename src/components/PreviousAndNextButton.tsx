@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function PreviousAndNextButton(previousUrl: any, nextUrl: any) {
+function PreviousAndNextButton({ previousUrl, nextUrl }: { previousUrl: string, nextUrl: string }) {
     return (
         <div className="flex items-center justify-center pt-3">
             <div className="w-full flex items-center justify-between">

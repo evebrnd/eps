@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
-function Card({ title, caption, href, image }: { title: string, caption:string, href: string, image: any }) {
+function Card({ title, caption, href, image }: { title: string, caption: string, href: string, image: StaticImageData }) {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
       <Link href={href}>
