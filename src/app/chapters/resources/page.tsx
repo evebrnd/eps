@@ -45,9 +45,6 @@ export default function Page() {
             <h3 className="text-pretty mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary">Now let's take a look at your <span className="text-primary">settings</span></h3>
 
             <p className="text-pretty py-6">Most platforms allow you to adjust settings regarding data collection and its usage. But more often than not, it is hidden in the tranches of the app in question... <br /> This section aims to give a list of a few easy settings to opt out of in order to limit the data being accessed!</p>
-            <Link href="https://www.nytimes.com/2022/07/27/technology/personaltech/default-settings-turn-off.html" className="inline-flex items-center px-4 py-2 mb-8 text-sm font-medium  bg-white border border-gray-900 hover:border-primary rounded-lg hover:text-primary">Read source <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-            </svg></Link>
 
             <ol className="relative border-s border-gray-900">
                 <li className="mb-10 ms-4">
@@ -83,6 +80,7 @@ export default function Page() {
                     </ul>
                 </li>
             </ol>
+            <Link href="https://www.nytimes.com/2022/07/27/technology/personaltech/default-settings-turn-off.html" className="mt-4 italic text-gray-500">https://www.nytimes.com/2022/07/27/technology/personaltech/default-settings-turn-off.html</Link>
 
             <hr className="w-80 h-1 mx-auto my-10 md:my-12 bg-gray-500 border-0 rounded" />
 
@@ -90,7 +88,7 @@ export default function Page() {
             <p className="text-pretty py-6">At this point you might be wondering, but Bob why are now talking about smartphones? Well the answer is simple, every smart phone device is connected to a hub in some way. In a vast majority of cases, this hub is your own personal smartphone. That is why it is important to also review the privacy settings and setup of this device!</p>
             <figure className="max-w-lg mx-auto my-6">
                 <Image className="h-auto max-w-full rounded-lg" src={InfographDeviceSettings} alt="image description" />
-                <figcaption className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">https://vpnoverview.com/privacy/devices/privacy-risks-smartphone/</figcaption>
+                <figcaption className="mt-2 text-sm text-center text-gray-500">https://vpnoverview.com/privacy/devices/privacy-risks-smartphone/</figcaption>
             </figure>
 
             <hr className="w-80 h-1 mx-auto my-10 md:my-12 bg-gray-500 border-0 rounded" />
