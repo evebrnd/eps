@@ -4,7 +4,7 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import {
   Menu,
-  Package2,
+  GraduationCap,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -71,18 +71,31 @@ const components_chapters: { title: string; href: string; description: string }[
   }
 ]
 
+//Mobile: RELINK -> StartLearningButton -> NavigationMenu
+//Medium: RELINK -> NavigationMenu -> StartLearningButton
+//Large: RELINK -> NavigationMenu -> StartLearningButton
+
 export default function Navbar() {
   return (
-    <nav className="flex justify-between md:justify-normal md:flex-row p-4 bg-gradient-to-r from-primary/30 to-primary border-b-4 border-primary/10">
-      <div className="flex md:basis-1/4 items-center gap-x-2">
-        <Link href="/">
+    <nav className="flex flex-row items-center justify-evenly p-4 bg-gradient-to-r from-primary/30 to-primary border-b-4 border-primary/10">
+      <div className="flex flex-row basis-1/4 gap-x-2">
+        {/* <Link href="/">
           <img src="https://uni.oslomet.no/relink/wp-content/uploads/sites/193/2019/04/ReLink-logo-v.2.png" alt="Logo" className="h-12" />
-        </Link>
-        <h1 className="invisible md:visible text-3xl text-foreground font-bold">RELINK</h1>
+        </Link> */}
+        {/* invisible md:visible */}
+        <h1 className="text-3xl text-foreground font-bold">RELINK</h1>
       </div>
-      <div className="flex md:basis-1/2 items-center justify-center">
+
+      <div className="md:order-last md:justify-end md:basis-1/4 basis-1/2 justify-center flex flex-row">
+        <Button size="rounded" className="text-xl font-bold bg-primary/80">
+          <GraduationCap className="w-8 h-8 mr-4" />
+          Start learning
+        </Button>
+      </div>
+
+      <div className="flex flex-row basis-1/4 md:basis-1/2 md:justify-center justify-end">
         {/* Bigger screens, above md it is not hidden. */}
-        <nav className="hidden items-center md:px-4 md:flex md:gap-7 md:text-xl lg:gap-9">
+        <nav className="hidden items-center md:px-4 md:flex md:flex-row md:gap-12 md:text-3xl lg:gap-20">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem className="">
