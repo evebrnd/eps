@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link"
+import Image from "next/image"
+import Logo from "../../public/relinkLogo.png"
 import { cn } from "@/lib/utils"
 import {
   Menu,
@@ -76,7 +78,7 @@ export default function Navbar() {
     <nav className="flex justify-between md:justify-normal md:flex-row p-4 bg-gradient-to-r from-primary/30 to-primary border-b-4 border-primary/10">
       <div className="flex md:basis-1/4 items-center gap-x-2">
         <Link href="/">
-          <img src="https://uni.oslomet.no/relink/wp-content/uploads/sites/193/2019/04/ReLink-logo-v.2.png" alt="Logo" className="h-12" />
+          <Image src={Logo} alt="Logo" className="h-12 w-20" />
         </Link>
         <h1 className="invisible md:visible text-3xl text-foreground font-bold">RELINK</h1>
       </div>
