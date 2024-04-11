@@ -45,7 +45,7 @@ const components_chapters: { title: string; href: string; description: string }[
 export default function Page() {
   return (
     <section>
-      <div className="w-full bg-primary/10 md:grid lg:grid-cols-8 md:px-12">
+      <div className="w-full h-vh bg-primary/10 md:grid lg:grid-cols-8 md:px-12">
         <div className="flex flex-col justify-center lg:col-span-3 px-4 py-6 md:py:12">
           <p className="pt-3 text-3xl italic md:pt-12 sm:text-justify">
             Education of
@@ -72,9 +72,9 @@ export default function Page() {
           <Image
             src={HomePage}
             alt="Image"
-            width= "1920"
+            width="1920"
             height="1080"
-            className="h-full w-full object-cover"
+            className="h-[90vh] w-full object-scale-down"
           />
         </div>
       </div>
