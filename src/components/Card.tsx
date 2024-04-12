@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 
-function Card({ title, caption, href, image }: { title: string, caption: string, href: string, image: StaticImageData }) {
+function Card({ title, caption, href, image }: { title: string, caption: string, href: string, image?: StaticImageData }) {
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
       <Link href={href}>
-        <Image className="rounded-t-lg" src={image} alt="" />
+        {image && <Image className="rounded-t-lg" src={image} alt="" />}
       </Link>
       <div className="p-5">
         <Link href={href}>
