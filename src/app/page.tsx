@@ -1,6 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import Card from "@/components/Card"
+import { components_chapters } from "@/utils/constants";
 import HomePage from "../../public/HomePage.png"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,34 +14,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-const components_chapters: { title: string; href: string; description: string }[] = [
-  {
-    title: "Chapter one",
-    href: "/eps/chapters/one",
-    description:
-      "This page is about the first chapter.",
-  },
-  {
-    title: "Chapter two",
-    href: "/eps/chapters/two",
-    description:
-      "This page is about the second chapter.",
-  },
-  {
-    title: "Chapter three",
-    href: "/eps/chapters/three",
-    description:
-      "This page is about the third chapter.",
-  },
-  {
-    title: "Resources",
-    href: "/eps/chapters/resources",
-    description:
-      "To go further on resources for privacy in smart homes.",
-  }
-]
-
 
 export default function Page() {
   return (
@@ -88,7 +61,6 @@ export default function Page() {
                     title={component.title}
                     caption={component.description}
                     href={component.href}
-                    image={Image}
                   />
                 </div>
               </CarouselItem>
