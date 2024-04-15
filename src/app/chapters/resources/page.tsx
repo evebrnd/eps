@@ -3,6 +3,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import Card from "@/components/Card"
+import Quiz from "@/components/Quiz"
+import questionsResources from "../../utils/questionsResources.json";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton"
 import PrivacyNotIncluded from "../../../../public/resources/privacyNotIncluded.png"
 import ElectronicFrontierFoundation from "../../../../public/resources/electronicFrontierFoundation.jpg"
@@ -93,8 +95,14 @@ export default function Page() {
 
             <hr className="w-80 h-1 mx-auto my-10 md:my-12 bg-gray-500 border-0 rounded" />
 
+            <h3 className="text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+
+            <Quiz
+                questions={questionsResources}
+            />
+
             <blockquote className="mx-auto my-8 text-center text-xl italic font-semibold">
-                <p>Don't see the resource you're looking for? <br /> <Link href={"mailto:evber2263@oslomet.no"} className="hover:underline hover:decoration-wavy hover:decoration-primary">Let us know</Link> what information you wish to see</p>
+                <p>Don't see the resource you're looking for? <br /> <Link href={"mailto:evber2263@oslomet.no"} className="hover:underline hover:decoration-wavy hover:decoration-primary text-primary">Let us know</Link> what information you wish to see</p>
             </blockquote>
 
             <PreviousAndNextButton
