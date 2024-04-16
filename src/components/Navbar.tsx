@@ -158,7 +158,10 @@ export default function Navbar() {
               {/* leading-6 mt-6 text-xl sm:text-3xl */}
               <p className="text-2xl font-bold text-foreground">Chapters</p>
               {components_chapters.map((component, index) => (
-                <Link key={`mobile_chapter_${index}`} href={component.href} className="leading-7 transition-colors text-foreground/60 hover:text-foreground">
+                <Link
+                  key={`chapter_${index}`}
+                  href={component.href} passHref
+                  className="leading-7 transition-colors text-foreground/60 hover:text-foreground">
                   {component.title}
                 </Link>
               ))}
@@ -166,7 +169,10 @@ export default function Navbar() {
             <nav className="grid pt-4 font-medium divide-y md:hidden">
               <p className="text-2xl font-bold text-foreground">About</p>
               {components_about.map((component, index) => (
-                <Link key={`mobile_about_${index}`} href={component.href} className="leading-7 transition-colors text-foreground/60 hover:text-foreground">
+                <Link
+                  key={`about_${index}`}
+                  href={component.href}
+                  className="leading-7 transition-colors text-foreground/60 hover:text-foreground">
                   {component.title}
                 </Link>
               ))}
