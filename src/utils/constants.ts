@@ -3,34 +3,34 @@ export const components_about: { title: string; href: string; description: strin
         title: "Our team",
         href: "/eps/about/us",
         description:
-            "A page about us.",
+            "Our project and the team behind it.",
     },
     {
         title: "RELINK",
         href: "/eps/about/relink",
         description:
-            "A page about the RELINK project.",
+            "The RELINK project.",
     },
     {
         title: "EPS",
         href: "/eps/about/eps",
         description:
-            "A page about the EPS project.",
+            "What is the European Project Semester?",
     }
 ]
 
 export const components_chapters: { title: string; href: string; description: string }[] = [
     {
-        title: "Chapter one",
+        title: "1. Introduction",
         href: "/eps/chapters/one",
         description:
-            "This page is about the first chapter.",
+            "What is a smart home device?",
     },
     {
-        title: "Chapter two",
+        title: "2. Opinions and studies",
         href: "/eps/chapters/two",
         description:
-            "This page is about the second chapter.",
+            "Thoughts of the general public on smart home devices.",
     },
     {
         title: "Chapter three",
