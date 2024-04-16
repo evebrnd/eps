@@ -9,7 +9,7 @@ import {
   GraduationCap,
 } from "lucide-react"
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { components_about, components_chapters } from "@/utils/constants"
 
@@ -36,11 +36,9 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-row justify-end md:order-last md:justify-end basis-9/12 md:basis-1/4">
-        <Button asChild size="rounded" className="items-center px-3 py-1 text-lg font-extrabold whitespace-pre h-fit bg-primary/80">
-          <Link href={components_chapters[0].href}>
-            <GraduationCap className="w-8 h-8 mr-2" />
-            Start <p className="hidden md:block">learning</p>
-          </Link>
+        <Button size="rounded" className="items-center px-3 py-1 text-lg font-extrabold whitespace-pre h-fit bg-primary/80">
+          <GraduationCap className="w-8 h-8 mr-2" />
+          Start <a className="hidden md:block">learning</a>
         </Button>
       </div>
 
@@ -64,7 +62,7 @@ export default function Navbar() {
                       <ListItem
                         key={`chapter_${index}`}
                         title={component.title}
-                        href={`/eps${component.href}`}
+                        href={component.href}
                       >
                         {component.description}
                       </ListItem>
@@ -80,7 +78,7 @@ export default function Navbar() {
                       <ListItem
                         key={`about_${index}`}
                         title={component.title}
-                        href={`/eps${component.href}`}
+                        href={component.href}
                       >
                         {component.description}
                       </ListItem>
@@ -110,11 +108,7 @@ export default function Navbar() {
               {/* leading-6 mt-6 text-xl sm:text-3xl */}
               <p className="text-2xl font-bold text-foreground">Chapters</p>
               {components_chapters.map((component, index) => (
-                <Link
-                  key={`mobile_chapter_${index}`}
-                  href={component.href}
-                  className="leading-7 transition-colors text-foreground/60 hover:text-foreground"
-                >
+                <Link key={`mobile_chapter_${index}`} href={component.href} className="leading-7 transition-colors text-foreground/60 hover:text-foreground">
                   {component.title}
                 </Link>
               ))}
@@ -122,10 +116,7 @@ export default function Navbar() {
             <nav className="grid pt-4 font-medium divide-y md:hidden">
               <p className="text-2xl font-bold text-foreground">About</p>
               {components_about.map((component, index) => (
-                <Link key={`mobile_about_${index}`}
-                  href={component.href}
-                  className="leading-7 transition-colors text-foreground/60 hover:text-foreground"
-                >
+                <Link key={`mobile_about_${index}`} href={component.href} className="leading-7 transition-colors text-foreground/60 hover:text-foreground">
                   {component.title}
                 </Link>
               ))}
