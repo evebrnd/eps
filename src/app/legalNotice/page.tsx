@@ -37,7 +37,7 @@ export default function Page() {
                     <li>Host: GitHub pages</li>
                 </ul>
                 <p className="p-4 mx-3 text-justify">
-                    This website is a project created by students of Oslo Metropolitan University for the European Project Semester of Spring 2024. The purpose of this website is for educational purposes only and does not represent any commercial or official activity.
+                    This site is a project created by students of Oslo Metropolitan University for the European Project Semester of Spring 2024. The purpose of this website is for educational purposes only and does not represent any commercial or official activity.
                 </p>
                 <h2 className="text-center text-2xl font-bold mt-4 p-4">Content Disclaimer</h2>
                 <p className="p-4 mx-3 text-justify">
