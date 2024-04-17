@@ -19,7 +19,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Deployment
 
-Project is built with `npm run build` and deployed using Travis CI!
+Project is built with `npm run build` and deployed using GitHub Actions!
 
 Deployment is done automatically on Github Pages when :
 - A commit is made on main branch 
