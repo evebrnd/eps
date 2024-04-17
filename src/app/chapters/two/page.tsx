@@ -1,21 +1,77 @@
 'use client'
 
+import React, { useEffect, useMemo, useState, useRef } from 'react';
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 export default function Page() {
+
+
+  const titleAmount = 7;
+  const refs = [];
+  const isInViewport = [];
+
+  for (let i = 0; i < titleAmount; i++) {
+    refs.push(useRef(null));
+    isInViewport.push(useIsInViewport(refs[i]));
+  }
+
   return (
-    <div className="flex flex-wrap">
-      <div className="flex justify-normal sticky w-full min-h-fit top-0 md:left-0 md:max-w-36 md:h-dvh md:px-4 bg-primary/10">
-        <div className="items-center md:items-start md:pt-4">
-          <p className="text-2xl font-bold">Table of Contents</p>
-          <a href="#Chapter_2.0" className="hover:underline">Section 2.0</a><hr />
-          <a href="#Chapter_2.1" className="hover:underline">Section 2.1</a><hr />
-          <a href="#Chapter_2.2" className="hover:underline">Section 2.2</a><hr />
-          <a href="#Chapter_3.0" className="hover:underline">Section 3.0</a><hr />
-          <a href="#Chapter_3.1" className="hover:underline">Section 3.1</a><hr />
-          <a href="#Chapter_3.2" className="hover:underline">Section 3.2</a><hr />
+    <div className="md:flex md:relative">
+      {/* Mobile Screen Content Sidebar */}
+      <div className="flex justify-center w-screen bg-primary/10 md:hidden">
+        <Accordion type="single" collapsible className=''>
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="text-2xl font-semibold">Contents:</AccordionTrigger>
+            <AccordionContent>
+              <ol className='list-decimal list-inside text-base'>
+                <li><a href="#Introduction" className="hover:text-foreground hover:underline">Introduction</a></li>
+                <li><a href="#Chapter_2.0" className={`hover:text-foreground hover:underline ${isInViewport[1] ? "text-foreground" : "text-muted-foreground"}`}>Sensors</a>
+                  <ul className='text-sm list-disc list-inside pl-2'>
+                    <li><a href="#Chapter_2.1" className="hover:text-foreground hover:underline">Google Nest</a></li>
+                    <li><a href="#Chapter_2.2" className="hover:text-foreground hover:underline">Ring</a></li>
+                  </ul>
+                </li>
+                <li><a href="#Chapter_3.0" className="hover:text-foreground hover:underline">Data Processing</a>
+                  <ul className='text-sm list-disc list-inside pl-2'>
+                    <li><a href="#Chapter_3.1" className="hover:text-foreground hover:underline">Google Nest</a></li>
+                    <li><a href="#Chapter_3.2" className="hover:text-foreground hover:underline">Ring</a></li>
+                  </ul>
+                </li>
+              </ol>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
+      {/* Full Screen Content Sidebar */}
+      {/* The sticky doesn't work. The text is also not yet centered.*/}
+      <div className="hidden md:sticky md:flex md:left-0 md:max-w-44 md:h-dvh md:px-4 bg-primary/10">
+        <div className="items-start md:pt-10">
+          <p className="text-2xl font-semibold">Contents:</p>
+          <ol className='list-decimal list-inside text-base'>
+            <li><a href="#Introduction" className={`hover:text-foreground hover:underline ${isInViewport[0] ? "text-foreground" : "text-muted-foreground"}`}>Introduction</a></li>
+            <li><a href="#Chapter_2.0" className={`hover:text-foreground hover:underline ${isInViewport[1] ? "text-foreground" : "text-muted-foreground"}`}>Sensors</a>
+              <ul className='text-sm list-disc list-inside pl-2'>
+                <li><a href="#Chapter_2.1" className={`hover:text-foreground hover:underline ${isInViewport[2] ? "text-foreground" : "text-muted-foreground"}`}>Google Nest</a></li>
+                <li><a href="#Chapter_2.2" className={`hover:text-foreground hover:underline ${isInViewport[3] ? "text-foreground" : "text-muted-foreground"}`}>Ring</a></li>
+              </ul>
+            </li>
+            <li><a href="#Chapter_3.0" className={`hover:text-foreground hover:underline ${isInViewport[4] ? "text-foreground" : "text-muted-foreground"}`}>Data Processing</a>
+              <ul className='text-sm list-disc list-inside pl-2'>
+                <li><a href="#Chapter_3.1" className={`hover:text-foreground hover:underline ${isInViewport[5] ? "text-foreground" : "text-muted-foreground"}`}>Google Nest</a></li>
+                <li><a href="#Chapter_3.2" className={`hover:text-foreground hover:underline ${isInViewport[6] ? "text-foreground" : "text-muted-foreground"}`}>Ring</a></li>
+              </ul>
+            </li>
+          </ol>
         </div>
       </div>
-      <div className="flex flex-col justify-self-center mx-auto pt-2 w-screen md:w-4/6 lg:w-3/6">
-        <h1 className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <div className="flex flex-col justify-self-center mx-auto pt-2 w-5/6 md:w-4/6 lg:w-3/6">
+        <h1 ref={refs[0]} id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Working of Smart Home Devices
         </h1>
         <p className="leading-7 mt-6 text-justify">
@@ -26,7 +82,7 @@ export default function Page() {
         </p>
         <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
           {/* 2.0 */}
-          <h2 id="Chapter_2.0" className="flex justify-center mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+          <h2 ref={refs[1]} id="Chapter_2.0" className="flex justify-center mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
             2.0.<a className="mx-2 border-x-2 border-primary text-2xl"></a>Sensors
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
@@ -43,7 +99,7 @@ export default function Page() {
           </p>
 
           {/* 2.1 */}
-          <h3 id="Chapter_2.1" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 ref={refs[2]} id="Chapter_2.1" className="mt-8 text-2xl font-semibold tracking-tight">
             2.1. Google Nest Mini
           </h3>
           <p className="leading-7 mt-3">
@@ -61,7 +117,7 @@ export default function Page() {
           </p>
 
           {/* 2.2 */}
-          <h3 id="Chapter_2.2" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 ref={refs[3]} id="Chapter_2.2" className="mt-8 text-2xl font-semibold tracking-tight">
             2.2. Ring Doorbell
           </h3>
           <p className="leading-7 mt-3">
@@ -86,7 +142,7 @@ export default function Page() {
 
         <div className="flex flex-col text-justify py-3 mt-4">
           {/* 3.0 */}
-          <h2 id="Chapter_3.0" className="flex justify-center border-b pb-2 text-3xl font-semibold tracking-tight ">
+          <h2 ref={refs[4]} id="Chapter_3.0" className="flex justify-center border-b pb-2 text-3xl font-semibold tracking-tight ">
             3.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Data Processing
           </h2>
           <p className="leading-7 mt-6">
@@ -94,7 +150,7 @@ export default function Page() {
           </p>
 
           {/* 3.1 */}
-          <h3 id="Chapter_3.1" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 ref={refs[5]} id="Chapter_3.1" className="mt-8 text-2xl font-semibold tracking-tight">
             3.1. Google Nest Mini
           </h3>
           <p className="leading-7 mt-3">
@@ -117,7 +173,7 @@ export default function Page() {
           </p>
 
           {/* 3.2 */}
-          <h3 id="Chapter_3.2" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 ref={refs[6]} id="Chapter_3.2" className="mt-8 text-2xl font-semibold tracking-tight">
             3.2. Ring Doorbell
           </h3>
           <p className="leading-7 mt-3">
@@ -142,4 +198,26 @@ export default function Page() {
       </div>
     </div>
   );
+}
+
+
+function useIsInViewport(ref: any) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) =>
+        setIsIntersecting(entry.isIntersecting),
+      ),
+    [],
+  );
+  useEffect(() => {
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref, observer]);
+
+  return isIntersecting;
 }
