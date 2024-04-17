@@ -13,7 +13,7 @@ export default function Page() {
       </h1>
 
       <div className="flex flex-col text-justify  mx-auto w-5/6 md:w-3/6 py-3 border-y-2 border-primary/20 mt-10">
-        <h3 className="mt-8 text-2xl font-semibold tracking-tight">
+        <h3 className="mt-8 text-3xl font-semibold tracking-tight">
           2.1. The definition of smart home device
         </h3>
         <p className="leading-7 mt-3 md:mt-6">
@@ -39,7 +39,7 @@ export default function Page() {
         </p>
 
 
-        <h3 className="mt-8 text-2xl font-semibold tracking-tight">2.2. An example of smart home device </h3>
+        <h3 className="mt-8 text-3xl font-semibold tracking-tight">2.2. An example of smart home device </h3>
         <p className="leading-7">There are many devices which can be classified as smart home devices, and it may be that there are some devices that people cannot even think of being a smart home device.  </p>
         <p className="leading-7">An example of these devices:</p>
         <ul className="text-left my-4 ml-6 list-disc [&>li]:mt-2">

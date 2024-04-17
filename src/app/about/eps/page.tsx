@@ -1,6 +1,7 @@
-'use client'
+"use client"
 
 import React from "react";
+import Link from "next/link";
 import ReactCountryFlag from "react-country-flag";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 
@@ -36,12 +37,15 @@ export default function Page() {
 
         </p>
         <blockquote className="text-pretty my-6 border-l-2 pl-2 italic font-semibold text-xl">
-          “Gain a unique international experience in one semester by developing a project at another university in an international and multidisciplinary team. ” - https://europeanprojectsemester.eu/
+          “Gain a unique international experience in one semester by developing a project at another university in an international and multidisciplinary team. ”
         </blockquote>
         <p className="leading-7 mt-3">
           Smart Home devices and more generally the IoT sector is a very complex field. It requires knowledge in many different areas such as electronics, software development, data analysis, security, privacy, etc. This explains why the EPS programme was a valid option to help with the RELINK organization.
           <br />
         </p>
+
+        <h3 className="mt-8 text-2xl font-semibold tracking-tight">Sources</h3>
+        <Link href="https://europeanprojectsemester.eu/" className="mt-4 italic text-gray-500" rel="noopener noreferrer" target="_blank">https://europeanprojectsemester.eu/</Link>
       </div>
 
       <PreviousAndNextButton

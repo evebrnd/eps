@@ -39,10 +39,10 @@ export const components_chapters: { title: string; href: string; description: st
             "This page is about the third chapter.",
     },
     {
-        title: "Chapter four",
+        title: "4. Transparency",
         href: "/chapters/four",
         description:
-            "This page is about the fourth chapter.",
+            "What it means and why it is important.",
     },
     {
         title: "Resources",

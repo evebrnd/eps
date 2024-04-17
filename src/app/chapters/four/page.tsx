@@ -1,16 +1,19 @@
 "use client"
 
+import Icon from '@mdi/react';
+import { mdiHandBackLeftOffOutline } from '@mdi/js';
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 
 export default function Page() {
     return (
         <div className="flex flex-col justify-center py-2 mx-4 md:mx-12">
+            <Icon path={mdiHandBackLeftOffOutline} size="4em" className="mx-auto mt-7" />
             <h1 className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
                 Transparency of Smart Home Devices
             </h1>
 
             <div className="flex flex-col text-justify  mx-auto w-5/6 md:w-3/6 py-3 border-y-2 border-primary/20 mt-10">
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-8 text-3xl font-semibold tracking-tight">
                     4.1. The black box
                 </h3>
                 <p className="leading-7 mt-3 md:mt-6">
@@ -30,7 +33,7 @@ export default function Page() {
                 </p>
 
 
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-8 text-3xl font-semibold tracking-tight">
                     4.2. What data is being processed?
                 </h3>
                 <p className="leading-7 mt-3">
@@ -43,7 +46,7 @@ export default function Page() {
                     If you are a citizen of the EU / EAA, companies are legally required to have a privacy policy in which they detail exactly what data they collect about you, why they collect it (their legal basis), for how long they keep it and with whom they share it. This is the result of the GDPR(general data protection regulation). It also gives users the right to request a copy of the data a company holds about them and the right to erasure – meaning that you can request a company to delete all data they hold about you (unless the company must keep the data to comply with other regulations).
                 </p>
 
-                <h3 className="mt-8 text-2xl font-semibold tracking-tight">
+                <h3 className="mt-8 text-3xl font-semibold tracking-tight">
                     4.3. Why this matters.
                 </h3>
                 <p className="leading-7 mt-3">
