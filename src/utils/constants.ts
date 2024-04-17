@@ -39,6 +39,12 @@ export const components_chapters: { title: string; href: string; description: st
             "This page is about the third chapter.",
     },
     {
+        title: "Chapter four",
+        href: "/eps/chapters/four",
+        description:
+            "This page is about the fourth chapter.",
+    },
+    {
         title: "Resources",
         href: "/eps/chapters/resources",
         description:
