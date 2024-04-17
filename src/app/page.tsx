@@ -34,9 +34,11 @@ export default function Page() {
               To create more awareness and create an easily understandable way of explaining the RELINK project created a course for you.
             </p>
             <div className="flex flex-row justify-center lg:justify-normal">
-              <Button size="rounded" className="text-lg mt-14 sm:text-2xl bg-primary/80">
+              <Button asChild size="rounded" className="text-lg mt-14 sm:text-2xl bg-primary/80">
+                <Link href={components_chapters[0].href} replace>
                 <GraduationCap className="w-8 h-8 mr-4" />
                 Start learning
+                </Link>
               </Button>
             </div>
           </div>
