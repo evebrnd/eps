@@ -1,8 +1,12 @@
 'use client'
 
+import { mdiChip } from "@mdi/js";
+import Icon from "@mdi/react";
+
 export default function Page() {
   return (
     <div className="flex flex-col justify-center py-2 mx-4 md:mx-12">
+      <Icon path={mdiChip} size="4em" className="mx-auto mt-7" />
       <h1 className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
         Working of Smart Home Devices
       </h1>

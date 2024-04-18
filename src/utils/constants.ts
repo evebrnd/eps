@@ -33,10 +33,10 @@ export const components_chapters: { title: string; href: string; description: st
             "Thoughts of the general public on smart home devices.",
     },
     {
-        title: "Chapter three",
+        title: "3. Internal Workings",
         href: "/chapters/three",
         description:
-            "This page is about the third chapter.",
+            "Internals working of smart home devices.",
     },
     {
         title: "4. Transparency",
