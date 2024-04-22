@@ -560,3 +560,38 @@ export default function Page() {
   );
 }
 
+// Quiz Questions
+// 1. What does Ring's statement imply about their access to customer video recordings?
+//    - a) They can access any video without permission
+//    - b) They can only access videos with explicit permission or those made publicly available
+//    - c) They can access videos without permission but only for research and development purposes
+//    - d) They do not access any customer videos
+//    - **Answer: b) They can only access videos with explicit permission or those made publicly available**
+
+// 2. What is a concern raised about the use of smart devices?
+//    - a) They are too expensive
+//    - b) They may record and share data without consent
+//    - c) They are not user-friendly
+//    - d) They are not durable
+//    - **Answer: b) They may record and share data without consent**
+
+// 3. What is suggested about the operation of smart speakers?
+//    - a) They record audio constantly
+//    - b) They only record audio after a wake word is said
+//    - c) They do not record any audio
+//    - d) They record audio at random intervals
+//    - **Answer: b) They only record audio after a wake word is said**
+
+// 4. What incident is mentioned regarding Amazon's reviewers and audio clips?
+//    - a) Reviewers used audio clips for amusement
+//    - b) Reviewers intervened in potential criminal situations
+//    - c) Reviewers had direct access to personal customer information
+//    - d) None of the above
+//    - **Answer: a) Reviewers used audio clips for amusement**
+
+// 5. What information is associated with Amazon's voice recordings?
+//   a) Account number, first name, and device serial number
+//   b) Personally identifiable information
+//   c) Randomized identifier
+//   d) None of the above
+//   Answer: a) Account number, first name, and device serial number
