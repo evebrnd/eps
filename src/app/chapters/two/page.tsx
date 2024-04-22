@@ -1,17 +1,12 @@
 'use client'
 
 import React, { useEffect, useMemo, useState, useRef } from 'react';
+import Sidebar from "@/components/SideBar";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 
 export default function Page() {
 
-  // This is for the internal navigation of the page. It's not yet working.
+  // This is for the internal navigation of the page.
   const titleAmount = 7;
   const refs = [];
   const isInViewport = [];
@@ -21,58 +16,23 @@ export default function Page() {
     isInViewport.push(useIsInViewport(refs[i]));
   }
 
-  return (
-    <div className="md:flex md:relative">
+  const chapters = [
+    { title: 'Introduction', id: 'Introduction', isInViewport: isInViewport[0]},
+    { title: 'Sensors', id: 'Chapter_2.0', isInViewport: isInViewport[1] , subChapters: [
+      { title: 'Google Nest', id: 'Chapter_2.1', isInViewport: isInViewport[2] },
+      { title: 'Ring', id: 'Chapter_2.2', isInViewport: isInViewport[3] },
+    ]},
+    { title: 'Data Processing', id: 'Chapter_3.0', isInViewport: isInViewport[4], subChapters: [
+      { title: 'Google Nest', id: 'Chapter_3.1', isInViewport: isInViewport[5] },
+      { title: 'Ring', id: 'Chapter_3.2', isInViewport: isInViewport[6] },
+    ]},
+  ];
 
-      {/* Here the sidebar for the internal navigation will be placed. */}
-      {/* Mobile Screen Content Sidebar (Works good)*/}
-      <div className="flex justify-center w-screen bg-primary/10 md:hidden">
-        <Accordion type="single" collapsible className=''>
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl font-semibold">Contents:</AccordionTrigger>
-            <AccordionContent>
-              <ol className='list-decimal list-inside text-base'>
-                <li><a href="#Introduction" className="hover:text-foreground hover:underline">Introduction</a></li>
-                <li><a href="#Chapter_2.0" className={`hover:text-foreground hover:underline ${isInViewport[1] ? "text-foreground" : "text-muted-foreground"}`}>Sensors</a>
-                  <ul className='text-sm list-disc list-inside pl-2'>
-                    <li><a href="#Chapter_2.1" className="hover:text-foreground hover:underline">Google Nest</a></li>
-                    <li><a href="#Chapter_2.2" className="hover:text-foreground hover:underline">Ring</a></li>
-                  </ul>
-                </li>
-                <li><a href="#Chapter_3.0" className="hover:text-foreground hover:underline">Data Processing</a>
-                  <ul className='text-sm list-disc list-inside pl-2'>
-                    <li><a href="#Chapter_3.1" className="hover:text-foreground hover:underline">Google Nest</a></li>
-                    <li><a href="#Chapter_3.2" className="hover:text-foreground hover:underline">Ring</a></li>
-                  </ul>
-                </li>
-              </ol>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
-      {/* Full Screen Content Sidebar */}
-      {/* The sticky doesn't work. The text is also not yet centered.*/}
-      <div className="hidden md:sticky md:flex md:left-0 md:max-w-44 md:h-dvh md:px-4 bg-primary/10">
-        <div className="items-start md:pt-10">
-          <p className="text-2xl font-semibold">Contents:</p>
-          <ol className='list-decimal list-inside text-base'>
-            <li><a href="#Introduction" className={`hover:text-foreground hover:underline ${isInViewport[0] ? "text-foreground" : "text-muted-foreground"}`}>Introduction</a></li>
-            <li><a href="#Chapter_2.0" className={`hover:text-foreground hover:underline ${isInViewport[1] ? "text-foreground" : "text-muted-foreground"}`}>Sensors</a>
-              <ul className='text-sm list-disc list-inside pl-2'>
-                <li><a href="#Chapter_2.1" className={`hover:text-foreground hover:underline ${isInViewport[2] ? "text-foreground" : "text-muted-foreground"}`}>Google Nest</a></li>
-                <li><a href="#Chapter_2.2" className={`hover:text-foreground hover:underline ${isInViewport[3] ? "text-foreground" : "text-muted-foreground"}`}>Ring</a></li>
-              </ul>
-            </li>
-            <li><a href="#Chapter_3.0" className={`hover:text-foreground hover:underline ${isInViewport[4] ? "text-foreground" : "text-muted-foreground"}`}>Data Processing</a>
-              <ul className='text-sm list-disc list-inside pl-2'>
-                <li><a href="#Chapter_3.1" className={`hover:text-foreground hover:underline ${isInViewport[5] ? "text-foreground" : "text-muted-foreground"}`}>Google Nest</a></li>
-                <li><a href="#Chapter_3.2" className={`hover:text-foreground hover:underline ${isInViewport[6] ? "text-foreground" : "text-muted-foreground"}`}>Ring</a></li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-      </div>
-        
+  return (
+    <div className="flex flex-wrap">
+      {/* The sidebar of the page */}
+      <Sidebar chapters={chapters} />
+
       {/* The main content of the page */}
       <div className="flex flex-col justify-self-center mx-auto pt-2 w-5/6 md:w-4/6 lg:w-3/6">
         <h1 ref={refs[0]} id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
