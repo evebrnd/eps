@@ -95,7 +95,7 @@ const chap3_2_Examples = [
 
 export default function Page() {
   return (
-    <div className="flex flex-col justify-center py-2 mx-4 md:mx-12 max-w-screen">
+    <div className="flex flex-col justify-center py-2 mx-auto w-5/6 md:w-3/6">
       <Icon path={mdiChip} size="4em" className="mx-auto mt-7" />
       <h1 className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
         Working of Smart Home Devices
@@ -120,7 +120,7 @@ export default function Page() {
           <Carousel className="">
             <CarouselContent className="">
               {chap1_Examples.map((component, index) => (
-                <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2 lg:basis-1/4">
+                <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2">
                   {/* Created a modified version of card component. */}
                   <div className="p-1 text-center content-center">
                     <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
@@ -279,7 +279,7 @@ export default function Page() {
           <Carousel className="">
             <CarouselContent className="">
               {chap3_1_Examples.map((component, index) => (
-                <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2 lg:basis-1/4">
+                <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2">
                   {/* Created a modified version of card component. */}
                   <div className="p-1 text-center content-center">
                     <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
@@ -324,7 +324,7 @@ export default function Page() {
           <Carousel className="">
             <CarouselContent className="">
               {chap3_2_Examples.map((component, index) => (
-                <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2 lg:basis-1/4">
+                <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2 ">
                   {/* Created a modified version of card component. */}
                   <div className="p-1 text-center content-center">
                     <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
