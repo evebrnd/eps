@@ -11,7 +11,7 @@ import {
 
 export default function Page() {
 
-
+  // This is for the internal navigation of the page. It's not yet working.
   const titleAmount = 7;
   const refs = [];
   const isInViewport = [];
@@ -23,7 +23,9 @@ export default function Page() {
 
   return (
     <div className="md:flex md:relative">
-      {/* Mobile Screen Content Sidebar */}
+
+      {/* Here the sidebar for the internal navigation will be placed. */}
+      {/* Mobile Screen Content Sidebar (Works good)*/}
       <div className="flex justify-center w-screen bg-primary/10 md:hidden">
         <Accordion type="single" collapsible className=''>
           <AccordionItem value="item-1">
@@ -70,6 +72,8 @@ export default function Page() {
           </ol>
         </div>
       </div>
+        
+      {/* The main content of the page */}
       <div className="flex flex-col justify-self-center mx-auto pt-2 w-5/6 md:w-4/6 lg:w-3/6">
         <h1 ref={refs[0]} id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Working of Smart Home Devices
