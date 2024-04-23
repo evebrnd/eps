@@ -170,30 +170,31 @@ function createViewPortObserver(titleAmount: number) {
   const refs = [];
   const isInViewport = [];
 
-  function useIsInViewport(ref: any) {
-    const [isIntersecting, setIsIntersecting] = useState(false);
-
-    const observer = useMemo(
-      () => typeof IntersectionObserver !== 'undefined'
-        ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
-        : { observe: () => { }, disconnect: () => { } },
-      [],
-    );
-    useEffect(() => {
-      observer.observe(ref.current);
-
-      return () => {
-        observer.disconnect();
-      };
-    }, [ref, observer]);
-
-    return isIntersecting;
-  }
-
   for (let i = 0; i < titleAmount; i++) {
     refs.push(useRef(null));
     isInViewport.push(useIsInViewport(refs[i]));
   }
 
   return { refs, isInViewport };
+}
+
+
+function useIsInViewport(ref: any) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const observer = useMemo(
+    () => typeof IntersectionObserver !== 'undefined'
+      ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
+      : { observe: () => { }, disconnect: () => { } },
+    [],
+  );
+  useEffect(() => {
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref, observer]);
+
+  return isIntersecting;
 }
