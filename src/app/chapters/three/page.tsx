@@ -11,13 +11,9 @@ export default function Page() {
   // This is for the internal navigation of the page.
   const titleAmount = 7;
   // const { refs, isInViewport } = useViewPortObserver(titleAmount);
-  const refs = [];
-  const isInViewport = [];
 
-  for (let i = 0; i < titleAmount; i++) {
-    refs.push(useRef(null));
-    isInViewport.push(useIsInViewport(refs[i]));
-  }
+  const refs = Array.from({ length: titleAmount }, () => useRef(null));
+  const isInViewport = refs.map(ref => useIsInViewport(ref));
 
   const chapters = [
     { title: 'Introduction', id: 'Introduction', isInViewport: isInViewport[0] },
