@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ chapters }) => {
   const renderChapters = (chapters: Chapter[], level: number = 0) => {
     return chapters.map((chapter, index) => (
       <li key={chapter.id}>
-        <a href={`#${chapter.id}`} className={`hover:text-foreground hover:underline ${chapter.isInViewport ? "text-foreground font-bold" : "text-muted-foreground"}`}>
+        <a href={`#${chapter.id}`} className={`hover:text-foreground hover:underline ${chapter.isInViewport ? "md:text-foreground md:font-bold" : "md:text-muted-foreground"}`}>
           {chapter.title}
         </a>
         {chapter.subChapters && (
