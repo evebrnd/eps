@@ -12,23 +12,18 @@ export default function Page() {
   const titleAmount = 7;
   // const { refs, isInViewport } = useViewPortObserver(titleAmount);
 
-  // eslint-ignore-next-line react-hooks/exhaustive-deps
-  const refs = Array.from({ length: titleAmount }, () => useRef(null));
-  // eslint-ignore-next-line react-hooks/exhaustive-deps
-  const isInViewport = refs.map(ref => useIsInViewport(ref));
-
   const chapters = [
-    { title: 'Introduction', id: 'Introduction', isInViewport: isInViewport[0] },
+    { title: 'Introduction', id: 'Introduction'},
     {
-      title: 'Sensors', id: 'Chapter_2.0', isInViewport: isInViewport[1], subChapters: [
-        { title: 'Google Nest', id: 'Chapter_2.1', isInViewport: isInViewport[2] },
-        { title: 'Ring', id: 'Chapter_2.2', isInViewport: isInViewport[3] },
+      title: 'Sensors', id: 'Chapter_2.0', subChapters: [
+        { title: 'Google Nest', id: 'Chapter_2.1' },
+        { title: 'Ring', id: 'Chapter_2.2'},
       ]
     },
     {
-      title: 'Data Processing', id: 'Chapter_3.0', isInViewport: isInViewport[4], subChapters: [
-        { title: 'Google Nest', id: 'Chapter_3.1', isInViewport: isInViewport[5] },
-        { title: 'Ring', id: 'Chapter_3.2', isInViewport: isInViewport[6] },
+      title: 'Data Processing', id: 'Chapter_3.0', subChapters: [
+        { title: 'Google Nest', id: 'Chapter_3.1' },
+        { title: 'Ring', id: 'Chapter_3.2'},
       ]
     },
   ];
@@ -41,7 +36,7 @@ export default function Page() {
       {/* The main content of the page */}
       <div className="flex flex-col justify-self-center mx-auto pt-2 w-5/6 md:w-4/6 lg:w-3/6">
         <Icon path={mdiChip} size="4em" className="mx-auto mt-7" />
-        <h1 ref={refs[0]} id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
+        <h1 id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Working of Smart Home Devices
         </h1>
         <p className="leading-7 mt-6 text-justify">
@@ -52,7 +47,7 @@ export default function Page() {
         </p>
         <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
           {/* 2.0 */}
-          <h2 ref={refs[1]} id="Chapter_2.0" className="flex justify-center mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+          <h2 id="Chapter_2.0" className="flex justify-center mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
             2.0.<a className="mx-2 border-x-2 border-primary text-2xl"></a>Sensors
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
@@ -69,7 +64,7 @@ export default function Page() {
           </p>
 
           {/* 2.1 */}
-          <h3 ref={refs[2]} id="Chapter_2.1" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 id="Chapter_2.1" className="mt-8 text-2xl font-semibold tracking-tight">
             2.1. Google Nest Mini
           </h3>
           <p className="leading-7 mt-3">
@@ -87,7 +82,7 @@ export default function Page() {
           </p>
 
           {/* 2.2 */}
-          <h3 ref={refs[3]} id="Chapter_2.2" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 id="Chapter_2.2" className="mt-8 text-2xl font-semibold tracking-tight">
             2.2. Ring Doorbell
           </h3>
           <p className="leading-7 mt-3">
@@ -112,7 +107,7 @@ export default function Page() {
 
         <div className="flex flex-col text-justify py-3 mt-4">
           {/* 3.0 */}
-          <h2 ref={refs[4]} id="Chapter_3.0" className="flex justify-center border-b pb-2 text-3xl font-semibold tracking-tight ">
+          <h2 id="Chapter_3.0" className="flex justify-center border-b pb-2 text-3xl font-semibold tracking-tight ">
             3.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Data Processing
           </h2>
           <p className="leading-7 mt-6">
@@ -120,7 +115,7 @@ export default function Page() {
           </p>
 
           {/* 3.1 */}
-          <h3 ref={refs[5]} id="Chapter_3.1" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 id="Chapter_3.1" className="mt-8 text-2xl font-semibold tracking-tight">
             3.1. Google Nest Mini
           </h3>
           <p className="leading-7 mt-3">
@@ -143,7 +138,7 @@ export default function Page() {
           </p>
 
           {/* 3.2 */}
-          <h3 ref={refs[6]} id="Chapter_3.2" className="mt-8 text-2xl font-semibold tracking-tight">
+          <h3 id="Chapter_3.2" className="mt-8 text-2xl font-semibold tracking-tight">
             3.2. Ring Doorbell
           </h3>
           <p className="leading-7 mt-3">
@@ -191,22 +186,23 @@ export default function Page() {
 // }
 
 
-function useIsInViewport(ref: any) {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+// function useIsInViewport(ref: any) {
+//   const [isIntersecting, setIsIntersecting] = useState(false);
 
-  const observer = useMemo(
-    () => typeof IntersectionObserver !== 'undefined'
-      ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
-      : { observe: () => { }, disconnect: () => { } },
-    [],
-  );
-  useEffect(() => {
-    observer.observe(ref.current);
+//   const observer = useMemo(
+//     () => typeof IntersectionObserver !== 'undefined'
+//       ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
+//       : { observe: () => { }, disconnect: () => { } },
+//     [],
+//   );
+//   useEffect(() => {
+//     observer.observe(ref.current);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref, observer]);
+//     return () => {
+//       observer.disconnect();
+//     };
+//   }, [ref, observer]);
 
-  return isIntersecting;
-}
+//   return isIntersecting;
+// }
+

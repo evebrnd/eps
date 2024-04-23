@@ -7,12 +7,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-import { useEffect, useMemo, useState, useRef } from 'react';
-
 interface Chapter {
   title: string;
   id: string;
-  isInViewport: boolean;
+  isInViewport?: boolean;
   subChapters?: Chapter[];
 }
 
