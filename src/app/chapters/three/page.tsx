@@ -10,7 +10,14 @@ export default function Page() {
 
   // This is for the internal navigation of the page.
   const titleAmount = 7;
-  const { refs, isInViewport } = createViewPortObserver(titleAmount);
+  // const { refs, isInViewport } = useViewPortObserver(titleAmount);
+  const refs = [];
+  const isInViewport = [];
+
+  for (let i = 0; i < titleAmount; i++) {
+    refs.push(useRef(null));
+    isInViewport.push(useIsInViewport(refs[i]));
+  }
 
   const chapters = [
     { title: 'Introduction', id: 'Introduction', isInViewport: isInViewport[0] },
@@ -166,17 +173,24 @@ export default function Page() {
 }
 
 
-function createViewPortObserver(titleAmount: number) {
-  const refs = [];
-  const isInViewport = [];
+// function useViewPortObserver(titleAmount: number) {
+//   //   const refs = [];
+//   //   const isInViewport = [];
 
-  for (let i = 0; i < titleAmount; i++) {
-    refs.push(useRef(null));
-    isInViewport.push(useIsInViewport(refs[i]));
-  }
+//   //   for (let i = 0; i < titleAmount; i++) {
+//   //     refs.push(useRef(null));
+//   //     isInViewport.push(useIsInViewport(refs[i]));
+//   //   }
 
-  return { refs, isInViewport };
-}
+//   //   return { refs, isInViewport };
+//   const observers = Array.from({ length: titleAmount }, () => {
+//     const refs = useRef(null);
+//     const isInViewport = useIsInViewport(refs);
+//     return { refs, isInViewport };
+//   });
+
+//   return observers;
+// }
 
 
 function useIsInViewport(ref: any) {
