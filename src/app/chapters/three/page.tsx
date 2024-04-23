@@ -31,27 +31,38 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-
 const chap1_Examples = [
   {
     title: "Smart Lightbulb",
     description: "Just on/off.",
     image: SmartLightbulbPNG,
+    alt: "Picture of a Smart Lightbulb",
+    quickSource: "zoofy.nl",
+    source: "https://zoofy.nl/smart-home/philips-hue-starterkit/"
   },
   {
     title: "Google Home",
     description: "Sound.",
     image: SmartSpeakerPNG,
+    alt: "Picture of a Google Home",
+    quickSource: "youversion.com",
+    source: "https://www.youversion.com/the-bible-app/bible-for-voice/"
   },
   {
     title: "Smart Vacuum",
     description: "Environment scanning sensors.",
     image: SmartVacuumPNG,
+    alt: "Picture of a Smart Vacuum",
+    quickSource: "irobot.com",
+    source: "https://www.irobot.com/en_US/roomba-combo-j5-robot-vacuum-and-mop/J517020.html"
   },
   {
     title: "Ring Doorbell",
     description: "Sound and Visuals.",
     image: SmartDoorbellPNG,
+    alt: "Picture of a Ring Doorbell",
+    quickSource: "ring.com",
+    source: "https://se-en.ring.com/products/video-doorbell-gen-2?variant=32521738813545"
   }
 ]
 
@@ -60,21 +71,33 @@ const chap3_1_Examples = [
     title: "Wake Word Detection",
     description: "Smart speakers like Google Home or Amazon Echo use on-device machine learning to detect their wake words.",
     image: WakeWordDetectionGIF,
+    alt: "GIF of a smart speaker detecting a wake word",
+    quickSource: "Giphy.com",
+    source: "https://giphy.com/gifs/google-macaulay-culkin-hey-google-55vzISvU8zUFvd6U3W"
   },
   {
     title: "Facial Recognition",
     description: "Many smartphones use on-device machine learning for facial recognition features.",
     image: FacialRecognitionGIF,
+    alt: "GIF of a smartphone using facial recognition",
+    quickSource: "Tenor.com",
+    source: "https://tenor.com/view/face-gif-21129360"
   },
   {
     title: "Text Prediction",
     description: "As mentioned earlier, text prediction on your smartphone keyboard is a form of on-device machine learning.",
     image: TextPredictionGIF,
+    alt: "GIF of a smartphone keyboard predicting text",
+    quickSource: "Stackoverflow.com",
+    source: "https://stackoverflow.com/a/29449504"
   },
   {
     title: "Activity Recognition",
     description: "Many fitness trackers and smartwatches use on-device machine learning to recognize different types of physical activity.",
     image: ActivityDetectionGIF,
+    alt: "GIF of a fitness tracker recognizing physical activity",
+    quickSource: "Pinterest.com",
+    source: "https://pin.it/2c1h3oxEC"
   }
 ]
 
@@ -83,11 +106,18 @@ const chap3_2_Examples = [
     title: "Image Recognition and Analysis",
     description: "Social media platforms like Facebook use cloud-based machine learning for their image recognition features.",
     image: ImageRecognitionGIF,
+    alt: "GIF of a social media platform using image recognition",
+    quickSource: "Gifer.com",
+    source: "https://i.gifer.com/NRY9.gif"
+
   },
   {
     title: "Chatbots and Conversational AI",
     description: "Cloud-based machine learning powers advanced chatbots and conversational AI systems like OpenAI's GPT-4.",
     image: ChatGPTGIF,
+    alt: "GIF of a chatbot using conversational AI",
+    quickSource: "Giphy.com",
+    source: "https://giphy.com/gifs/pudgypenguins-internet-bard-chatgpt-0lGd2OXXHe4tFhb7Wh"
   },
 ]
 
@@ -126,11 +156,12 @@ export default function Page() {
                     <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
                       <Image
                         src={component.image}
-                        alt="Picture of the author"
+                        alt={component.alt}
                         className="rounded-t-lg"
                       />
-                      <div className="p-5">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
+                      <a href={component.source} className="text-xs text-muted-foreground hover:text-foreground"> {component.quickSource} </a>
+                      <div className="pb-5 px-5 pt-2">
+                        <h5 className="text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
                         <p className="font-normal text-muted-foreground">{component.description}</p>
                       </div>
                     </div>
@@ -285,11 +316,12 @@ export default function Page() {
                     <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
                       <Image
                         src={component.image}
-                        alt="Picture of the author"
-                        className="rounded-t-lg object-scale-down max-h-64 p-4"
+                        alt={component.alt}
+                        className="rounded-t-lg"
                       />
-                      <div className="p-5">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
+                      <a href={component.source} className="text-xs text-muted-foreground hover:text-foreground"> {component.quickSource} </a>
+                      <div className="pb-5 px-5 pt-2">
+                        <h5 className="text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
                         <p className="font-normal text-muted-foreground">{component.description}</p>
                       </div>
                     </div>
@@ -330,11 +362,12 @@ export default function Page() {
                     <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
                       <Image
                         src={component.image}
-                        alt="Picture of the author"
-                        className="rounded-t-lg object-scale-down max-h-64 p-4"
+                        alt={component.alt}
+                        className="rounded-t-lg"
                       />
-                      <div className="p-5">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
+                      <a href={component.source} className="text-xs text-muted-foreground hover:text-foreground"> {component.quickSource} </a>
+                      <div className="pb-5 px-5 pt-2">
+                        <h5 className="text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
                         <p className="font-normal text-muted-foreground">{component.description}</p>
                       </div>
                     </div>
