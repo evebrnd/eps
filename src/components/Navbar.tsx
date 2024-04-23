@@ -122,14 +122,15 @@ export default function Navbar() {
             <nav className="grid pt-4 font-medium divide-y md:hidden">
               <p className="text-2xl font-bold text-foreground">About</p>
               {components_about.map((component, index) => (
-                <Link key={`mobile_about_${index}`}
+                <Link 
+                  key={`mobile_about_${index}`}
                   href={component.href}
                   className="leading-7 transition-colors text-foreground/60 hover:text-foreground"
                 >
                   {component.title}
                 </Link>
               ))}
-            </nav>
+                </nav>
           </SheetContent>
         </Sheet>
       </div>
