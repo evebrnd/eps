@@ -1,6 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import Card from "@/components/Card"
+import { components_chapters } from "@/utils/constants";
 import HomePage from "../../public/HomePage.png"
 import Image from "next/image"
 import Link from "next/link"
@@ -13,34 +14,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-const components_chapters: { title: string; href: string; description: string }[] = [
-  {
-    title: "Chapter one",
-    href: "/eps/chapters/one",
-    description:
-      "This page is about the first chapter.",
-  },
-  {
-    title: "Chapter two",
-    href: "/eps/chapters/two",
-    description:
-      "This page is about the second chapter.",
-  },
-  {
-    title: "Chapter three",
-    href: "/eps/chapters/three",
-    description:
-      "This page is about the third chapter.",
-  },
-  {
-    title: "Resources",
-    href: "/eps/chapters/resources",
-    description:
-      "To go further on resources for privacy in smart homes.",
-  }
-]
-
 
 export default function Page() {
   return (
@@ -61,9 +34,11 @@ export default function Page() {
               To create more awareness and create an easily understandable way of explaining the RELINK project created a course for you.
             </p>
             <div className="flex flex-row justify-center lg:justify-normal">
-              <Button size="rounded" className="text-lg mt-14 sm:text-2xl bg-primary/80">
+              <Button asChild size="rounded" className="text-lg mt-14 sm:text-2xl bg-primary/80">
+                <Link href={components_chapters[0].href} replace>
                 <GraduationCap className="w-8 h-8 mr-4" />
                 Start learning
+                </Link>
               </Button>
             </div>
           </div>
@@ -88,7 +63,6 @@ export default function Page() {
                     title={component.title}
                     caption={component.description}
                     href={component.href}
-                    image={Image}
                   />
                 </div>
               </CarouselItem>
