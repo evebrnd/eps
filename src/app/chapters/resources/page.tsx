@@ -10,6 +10,7 @@ import PrivacyNotIncluded from "../../../../public/resources/privacyNotIncluded.
 import ElectronicFrontierFoundation from "../../../../public/resources/electronicFrontierFoundation.jpg"
 import RelinkLogo from "../../../../public/relinkLogo.png"
 import InfographDeviceSettings from "../../../../public/resources/infographDeviceSettings.webp"
+import { components_chapters } from '@/utils/constants';
 
 export default function Page() {
     return (
@@ -105,8 +106,8 @@ export default function Page() {
                 </blockquote>
 
                 <PreviousAndNextButton
-                    previousUrl="https://evebrnd.github.io/eps/chapters/three"
-                    nextUrl="https://evebrnd.github.io/eps/about/us"
+                    previousUrl={components_chapters[3].href}
+                    nextUrl="/about"
                 />
             
         </div>

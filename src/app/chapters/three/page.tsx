@@ -32,6 +32,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import PreviousAndNextButton from "@/components/PreviousAndNextButton";
+import { components_chapters } from "@/utils/constants";
 
 const chap1_Examples = [
   {
@@ -624,6 +626,13 @@ export default function Page() {
               </AccordionItem>
             </Accordion>
           </div>
+        </div>
+        <div className="flex flex-col">
+          {/* The previous and next buttons */}
+          <PreviousAndNextButton
+            previousUrl={components_chapters[1].href}
+            nextUrl={components_chapters[3].href}
+          />
         </div>
       </div>
     </div>
