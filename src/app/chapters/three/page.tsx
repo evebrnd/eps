@@ -12,7 +12,9 @@ export default function Page() {
   const titleAmount = 7;
   // const { refs, isInViewport } = useViewPortObserver(titleAmount);
 
+  // eslint-ignore-next-line react-hooks/exhaustive-deps
   const refs = Array.from({ length: titleAmount }, () => useRef(null));
+  // eslint-ignore-next-line react-hooks/exhaustive-deps
   const isInViewport = refs.map(ref => useIsInViewport(ref));
 
   const chapters = [
