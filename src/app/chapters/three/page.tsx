@@ -174,10 +174,9 @@ function createViewPortObserver(titleAmount: number) {
     const [isIntersecting, setIsIntersecting] = useState(false);
 
     const observer = useMemo(
-      () =>
-        new IntersectionObserver(([entry]) =>
-          setIsIntersecting(entry.isIntersecting),
-        ),
+      () => typeof IntersectionObserver !== 'undefined'
+        ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
+        : { observe: () => { }, disconnect: () => { } },
       [],
     );
     useEffect(() => {
