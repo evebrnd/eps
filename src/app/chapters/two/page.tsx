@@ -8,13 +8,7 @@ export default function Page() {
 
   // This is for the internal navigation of the page.
   const titleAmount = 7;
-  const refs = [];
-  const isInViewport = [];
-
-  for (let i = 0; i < titleAmount; i++) {
-    refs.push(useRef(null));
-    isInViewport.push(useIsInViewport(refs[i]));
-  }
+  const { refs, isInViewport } = createViewPortObserver(titleAmount);
 
   const chapters = [
     { title: 'Introduction', id: 'Introduction', isInViewport: isInViewport[0]},
@@ -164,24 +158,35 @@ export default function Page() {
   );
 }
 
+function createViewPortObserver(titleAmount: number) {
+  const refs = [];
+  const isInViewport = [];
 
-function useIsInViewport(ref: any) {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  function useIsInViewport(ref: any) {
+    const [isIntersecting, setIsIntersecting] = useState(false);
 
-  const observer = useMemo(
-    () =>
-      new IntersectionObserver(([entry]) =>
-        setIsIntersecting(entry.isIntersecting),
-      ),
-    [],
-  );
-  useEffect(() => {
-    observer.observe(ref.current);
+    const observer = useMemo(
+      () =>
+        new IntersectionObserver(([entry]) =>
+          setIsIntersecting(entry.isIntersecting),
+        ),
+      [],
+    );
+    useEffect(() => {
+      observer.observe(ref.current);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref, observer]);
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref, observer]);
 
-  return isIntersecting;
+    return isIntersecting;
+  }
+
+  for (let i = 0; i < titleAmount; i++) {
+    refs.push(useRef(null));
+    isInViewport.push(useIsInViewport(refs[i]));
+  }
+
+  return { refs, isInViewport };
 }
