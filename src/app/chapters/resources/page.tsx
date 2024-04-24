@@ -22,7 +22,7 @@ export default function Page() {
                 Making Your Smart Home More Privacy-Secure
             </h1>
 
-            <div className="flex flex-col text-justify  mx-auto w-5/6 md:w-3/6 py-3 border-y-2 border-primary/20 mt-10">
+            <div className="flex flex-col text-justify mx-auto w-5/6 md:w-3/6 py-3 border-y-2 border-primary/20 mt-10">
                 <p className="text-pretty mx-auto py-6">Hi everyone! I'm Bob, and like many of you, I love the convenience of smart home devices. But after learning more about privacy and transparency concerns, I decided to take back control and make my smart home more secure. Here's what I found:</p>
 
                 <h3 className="text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary">First, a few <span className="text-primary">HELPFUL</span> links</h3>
@@ -50,9 +50,7 @@ export default function Page() {
                     />
                 </div>
 
-                <hr className="w-80 h-1 mx-auto my-10 md:my-12 bg-gray-500 border-0 rounded" />
-
-                <h3 className="text-pretty mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary">Now let's take a look at your <span className="text-primary">settings</span></h3>
+                <h3 className="text-pretty mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 mt-10 border-t-2 border-primary/20">Now let's take a look at your <span className="text-primary">settings</span></h3>
 
                 <p className="text-pretty py-6">Most platforms allow you to adjust settings regarding data collection and its usage. But more often than not, it is hidden in the tranches of the app in question... <br /> This section aims to give a list of a few easy settings to opt out of in order to limit the data being accessed!</p>
 
@@ -92,32 +90,32 @@ export default function Page() {
                 </ol>
                 <Link href="https://www.nytimes.com/2022/07/27/technology/personaltech/default-settings-turn-off.html" className="mt-4 italic text-gray-500">https://www.nytimes.com/2022/07/27/technology/personaltech/default-settings-turn-off.html</Link>
 
-                <hr className="w-80 h-1 mx-auto my-10 md:my-12 bg-gray-500 border-0 rounded" />
-
-                <h3 className="text-pretty mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary">Finally read carefully the <span className="text-primary">infograph</span> on smartphone data collection</h3>
+                <h3 className="text-pretty mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 mt-10 border-t-2 border-primary/20">Finally read carefully the <span className="text-primary">infograph</span> on smartphone data collection</h3>
                 <p className="text-pretty py-6">At this point you might be wondering, but Bob why are now talking about smartphones? Well the answer is simple, every smart phone device is connected to a hub in some way. In a vast majority of cases, this hub is your own personal smartphone. That is why it is important to also review the privacy settings and setup of this device!</p>
                 <figure className="max-w-lg mx-auto my-6">
                     <Image className="h-auto max-w-full rounded-lg" src={InfographDeviceSettings} alt="image description" />
                     <figcaption className="mt-2 text-sm text-center text-gray-500">https://vpnoverview.com/privacy/devices/privacy-risks-smartphone/</figcaption>
                 </figure>
 
-                </div>
 
-            <h3 className="text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
 
-            <Quiz
-                questions={questionsResources}
+                <h3 className="text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+
+                <Quiz
+                    questions={questionsResources}
+                />
+
+            </div>
+
+            <blockquote className="mx-auto my-8 text-center text-xl italic font-semibold">
+                <p>Don't see the resource you're looking for? <br /> <Link href={"mailto:evber2263@oslomet.no"} className="hover:underline hover:decoration-wavy hover:decoration-primary text-primary">Let us know</Link> what information you wish to see</p>
+            </blockquote>
+
+            <PreviousAndNextButton
+                previousUrl={components_chapters[3].href}
+                nextUrl="/about"
             />
 
-                <blockquote className="mx-auto my-8 text-center text-xl italic font-semibold">
-                    <p>Don't see the resource you're looking for? <br /> <Link href={"mailto:evber2263@oslomet.no"} className="hover:underline hover:decoration-wavy hover:decoration-primary text-primary">Let us know</Link> what information you wish to see</p>
-                </blockquote>
-
-                <PreviousAndNextButton
-                    previousUrl={components_chapters[3].href}
-                    nextUrl="/about"
-                />
-            
         </div>
     )
 }
