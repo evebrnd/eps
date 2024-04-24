@@ -73,7 +73,7 @@ export default function Navbar() {
 
               {/* Course Button */}
               <NavigationMenuItem className="">
-                <Link href= "/course" legacyBehavior passHref>
+                <Link href= "/coursematerial" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent font-bold text-xl text-center align-text-top leading-tight`}>
                     Course <br /> Material
                   </NavigationMenuLink>
