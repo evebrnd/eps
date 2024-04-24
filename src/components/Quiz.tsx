@@ -1,8 +1,18 @@
 import { useState } from "react";
-
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogDescription,
+  DialogTitle,
+  DialogClose,
+} from "@/components/ui/dialog"
+import { Button } from "./ui/button";
 
 export default function Quiz({ questions }: { questions: any[] }) {
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
+  const [showResultDialog, setShowResultDialog] = useState(false);
 
   const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
     setSelectedAnswers((prevSelectedAnswers) => {
@@ -23,8 +33,7 @@ export default function Quiz({ questions }: { questions: any[] }) {
   };
 
   const showResults = () => {
-    const score = calculateScore();
-    alert(`Your score is ${score} out of ${questions.length}`);
+    setShowResultDialog(true);
   };
 
   return (
@@ -55,6 +64,23 @@ export default function Quiz({ questions }: { questions: any[] }) {
       <button className="bg-blue-500 hover:bg-blue-700 items-center mx-auto text-white font-bold my-5 py-2 px-4 rounded" onClick={showResults}>
         Show Results
       </button>
+      <Dialog open={showResultDialog} >
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Quiz Results</DialogTitle>
+          </DialogHeader>
+          <DialogDescription>
+            <p className="text-center ml-4">Your score is {calculateScore()} out of {questions.length}</p>
+          </DialogDescription>
+          <DialogFooter>
+            <DialogClose asChild>
+            <Button onClick={() => setShowResultDialog(false)}>
+              Close
+            </Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
