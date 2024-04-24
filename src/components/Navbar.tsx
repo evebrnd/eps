@@ -24,7 +24,7 @@ import {
 export default function Navbar() {
   return (
     <nav className="flex flex-row items-center p-2 px-4 md:px-8 justify-evenly bg-primary/10">
-      
+
       {/* RELINK/Home icon */}
       <div className="flex flex-row basis-2/12 md:basis-1/4">
         <Link href="/">
@@ -47,7 +47,7 @@ export default function Navbar() {
 
       {/* Navigation Menu */}
       <div className="flex flex-row justify-end basis-1/12 md:basis-1/2 md:justify-center">
-        
+
         {/* Bigger screens, above md it is not hidden. */}
         <nav className="items-center hidden text-foreground/80 md:px-4 md:flex md:flex-row md:gap-12 lg:gap-20">
           <NavigationMenu>
@@ -73,9 +73,9 @@ export default function Navbar() {
 
               {/* Course Button */}
               <NavigationMenuItem className="">
-                <Link href= "/coursematerial" legacyBehavior passHref>
+                <Link href="/coursematerial" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent font-bold text-xl text-center align-text-top leading-tight`}>
-                    Course <br /> Material
+                    Course material
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -100,7 +100,7 @@ export default function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
-        
+
         {/*Mobile screens*/}
         <Sheet>
           {/* Create the mobile navigation menu icon, above md hidden.*/}
@@ -130,9 +130,17 @@ export default function Navbar() {
               ))}
             </nav>
             <nav className="grid pt-4 font-medium divide-y md:hidden">
+              <Link
+                href="/coursematerial"
+                className="text-2xl font-bold text-foreground"
+              >
+                Course Material
+              </Link>
+            </nav>
+            <nav className="grid pt-4 font-medium divide-y md:hidden">
               <p className="text-2xl font-bold text-foreground">About</p>
               {components_about.map((component, index) => (
-                <Link 
+                <Link
                   key={`mobile_about_${index}`}
                   href={component.href}
                   className="leading-7 transition-colors text-foreground/60 hover:text-foreground"
@@ -140,7 +148,7 @@ export default function Navbar() {
                   {component.title}
                 </Link>
               ))}
-                </nav>
+            </nav>
           </SheetContent>
         </Sheet>
       </div>
