@@ -33,7 +33,7 @@ export default function Page() {
           />
           <TeamMemberCard
             title="Janette"
-            caption=""
+            caption="Industrial engineering and management (IEM) student from Metropolia University of Applied Sciences in Helsinki, Finland"
             image={TeamMemberIcon}
           />
         </div>
@@ -50,7 +50,7 @@ export default function Page() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-4 mx-auto mt-3">
+        <div className="flex flex-col md:flex-row gap-4 mx-auto my-3">
           <TeamMemberCard
             title="Melle"
             caption="Cyber security student from the Amsterdam University of Applied Sciences, Netherlands"
