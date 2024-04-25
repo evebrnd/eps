@@ -33,16 +33,16 @@ export const components_chapters: { title: string; href: string; description: st
             "Thoughts of the general public on smart home devices.",
     },
     {
-        title: "3. Internal Workings",
+        title: "3. Transparency",
         href: "/chapters/three",
         description:
-            "Internals working of smart home devices.",
+            "What it means and why it is important.",
     },
     {
-        title: "4. Transparency",
+        title: "4. Internal workings",
         href: "/chapters/four",
         description:
-            "What it means and why it is important.",
+            "Internals working of smart home devices.",
     },
     {
         title: "Resources",
