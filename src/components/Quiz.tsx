@@ -2,12 +2,12 @@ import { useState } from "react";
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
   DialogHeader,
   DialogFooter,
   DialogDescription,
-  DialogTitle,
   DialogClose,
-} from "@/components/ui/dialog"
+} from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 
 export default function Quiz({ questions }: { questions: any[] }) {
@@ -44,19 +44,20 @@ export default function Quiz({ questions }: { questions: any[] }) {
           {question.answerOptions.map((answer: any, answerIndex: number) => (
             <div
               key={answerIndex}
-              className={`w-3/4 mx-auto flex py-4 pl-5 m-2 space-x-2 border-2 cursor-pointer ${selectedAnswers[questionIndex] === answerIndex
-                ? "bg-white/5 border-white/10"
-                : ""
-                } rounded-xl`}
+              className={`w-3/4 mx-auto flex py-4 pl-5 m-2 space-x-2 cursor-pointer rounded-xl ${
+                selectedAnswers[questionIndex] === answerIndex
+                  ? "border-2 border-primary bg-white/5"
+                  : "border-2"
+              }`}
               onClick={() => handleAnswerSelect(questionIndex, answerIndex)}
             >
               <input
                 type="radio"
                 className="w-6 h-6 bg-black"
                 checked={selectedAnswers[questionIndex] === answerIndex}
-                onChange={() => { }}
+                onChange={() => {}}
               />
-              <p className="ml-6">{answer.answer}</p>
+              <p className="ml-6 text-left">{answer.answer}</p>
             </div>
           ))}
         </div>
@@ -64,7 +65,7 @@ export default function Quiz({ questions }: { questions: any[] }) {
       <button className="bg-blue-500 hover:bg-blue-700 items-center mx-auto text-white font-bold my-5 py-2 px-4 rounded" onClick={showResults}>
         Show Results
       </button>
-      <Dialog open={showResultDialog} >
+      <Dialog open={showResultDialog}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Quiz Results</DialogTitle>
@@ -74,9 +75,9 @@ export default function Quiz({ questions }: { questions: any[] }) {
           </DialogDescription>
           <DialogFooter>
             <DialogClose asChild>
-            <Button onClick={() => setShowResultDialog(false)}>
-              Close
-            </Button>
+              <Button onClick={() => setShowResultDialog(false)}>
+                Close
+              </Button>
             </DialogClose>
           </DialogFooter>
         </DialogContent>
