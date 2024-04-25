@@ -130,14 +130,6 @@ export default function Navbar() {
               ))}
             </nav>
             <nav className="grid pt-4 font-medium divide-y md:hidden">
-              <Link
-                href="/coursematerial"
-                className="text-2xl font-bold text-foreground"
-              >
-                Course Material
-              </Link>
-            </nav>
-            <nav className="grid pt-4 font-medium divide-y md:hidden">
               <p className="text-2xl font-bold text-foreground">About</p>
               {components_about.map((component, index) => (
                 <Link
@@ -148,6 +140,14 @@ export default function Navbar() {
                   {component.title}
                 </Link>
               ))}
+            </nav>
+            <nav className="grid pt-4 font-medium divide-y md:hidden">
+              <Link
+                href="/coursematerial"
+                className="text-2xl font-bold text-foreground"
+              >
+                Course Material
+              </Link>
             </nav>
           </SheetContent>
         </Sheet>
