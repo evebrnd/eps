@@ -45,6 +45,12 @@ export const components_chapters: { title: string; href: string; description: st
             "What it means and why it is important.",
     },
     {
+        title: "6. Benefits and Risks",
+        href: "/chapters/six",
+        description:
+            "Benefits and risks of smart home devices.",
+    },
+    {
         title: "Resources",
         href: "/chapters/resources",
         description:
