@@ -39,33 +39,35 @@ export default function Page() {
         </h1>
 
         <p className="leading-7 mt-10 text-pretty">
-          Understanding what a smart home device is plays a huge role when searching for information about what the general public is thinking about smart home devices.
-          <br />
-          Public opinion about these devices can vary widely depending on the viewpoint, for example, convenience, efficiency, security, safety, privacy risks, cost and integration issues. As well as individual opinions can vary from the general public’s thoughts.  <br />
-
-          There are already many studies, surveys and articles about data transparency, privacy and risks and dangers related to smart home devices. In addition, articles about what the general public think about topics related to smart home devices. And here is few of them:
+          Understanding the concept of smart home devices is crucial when researching public opinion on these devices.
+          <br /><br />
+          Perceptions of these devices can greatly vary based on factors such as convenience, efficiency, security, safety, privacy risks, cost, and integration issues. Individual opinions can also diverge from those of the general public.
+          <br /><br />
+          Numerous studies, surveys, and articles have been conducted and written about data transparency, privacy, and the risks associated with smart home devices. Here are a few:
         </p>
 
-        <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
+        <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
           <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
             1.0. Articles
           </h3>
           <p className="leading-7 mt-3 md:mt-6">
-            The article "User Perceptions of Smart Home IoT Privacy" explores the thoughts of smart homeowners about their privacy. They interviewed eleven people about why they bought IoT devices, what they think about privacy risks, and what they do to keep their privacy safe. The questions were about awareness and worries about privacy. The results showed that people with smart homes like how these devices make their lives easier and more convenient. Their opinions about who should see their data depend on how much they trust the companies that make the devices and how useful they find them.
-            <br />
-            Before buying any smart home devices, all the people interviewed said they did some research. They chose devices based on what they read in online reviews and the reputation of the brands.
-            <br />
-            For example, one person said, “I try to make sure it’s a reputable brand… I don’t just get the cheapest thing because those are less secure… I want something that’s more established so I kind of assume that they have more security”. People are also unsure about the privacy risks of devices that don't record sound or video. (Chetty et al. 2018.)
-            <br />
-            The article “I Want it Anyway: Consumer Perceptions of Smart Home Devices” looks at how the benefits and risks affect people’s decisions to use smart home devices. They collected information through an online survey. The results showed that people usually don’t pay much attention to the possible risks and focus more on the benefits they can get from using these devices. People thought that good performance and compatibility were positive things about these devices. Among the possible risks, only issues related to privacy, performance and time were seen as real risks. (Klobas et al. 2018.)
-            <br />
-            The paper "Consumer Attitudes Towards Privacy and Security in Home Assistants" looks at what people have said online about privacy and security after buying home assistants like Amazon's Echo or Google's Home. They found three main worries: data collection, the extent of information gathered, strange device behavior, and violations of personal privacy. They collected over 109,000 reviews from online stores like Target, Amazon, Walmart, and Best Buy. They used a list of 53 keywords to find relevant reviews. After their research, they discovered that only about 2% of the reviews mentioned one of the keywords. The device mentioned the most was the Amazon Echo Show, mentioned in 6.1% of reviews. In the end, they found that people who review these devices usually don't talk about privacy and security worries. If they do mention these issues, it's usually about the kind and amount of data that the devices collect. (Fruchter et al. 2018.)
-            <br />
-            The article "Privacy Norms for Smart Home Personal Assistants" talks about an online survey done by researchers. They wanted to know what users think about security and privacy when it comes to data from smart home devices. One of the findings was a chart that showed how comfortable people are with others seeing their data. For instance, most people don't mind if their partner sees their data, but they're not okay with neighbors or guests seeing it. (Abdi et al. 2021.)
-            <br />
-            In addition, article "Trust in the Institution and Privacy Management of Internet of Things Devices: A Comparative Study of Dutch and Norwegian Households" explores how trust in national institutions and government rules affects the way people in Norway and the Netherlands think about privacy and IoT devices in their homes.
-            <br />
-            Overall, people in both countries behave similarly. In a two-adult household, usually one person, often a man, is enthusiastic about IoT and makes decisions about devices and privacy. The other person, often a woman, cares more about how the devices look in their home. So, one person worries about risks for the other, and the second person trusts their partner. People's trust in the companies that make the devices, their government, and policies also varies. The GDPR, a European law, was said to increase trust in the companies that make the devices, but not in the companies themselves. (Paupini et al. 2022.)
+            Diving into the realm of smart home devices, we encounter a fascinating blend of technology, privacy, and user behavior. Let's take a journey through some intriguing studies and articles that shed light on this.
+            <br /><br />
+            First, we come across "User Perceptions of Smart Home IoT Privacy." Here, researchers engage in candid conversations with smart homeowners, unearthing their reasons for embracing IoT devices, their thoughts on privacy risks, and actions they take to protect their privacy. It's clear that these tech-savvy homeowners value the convenience these devices offer. But when it comes to sharing data, trust in device manufacturers and the usefulness of the devices takes center stage.
+            <br /><br />
+            Next, we stumble upon "I Want it Anyway: Consumer Perceptions of Smart Home Devices." This study reveals a curious trend - potential users seem to put on rose-tinted glasses, downplaying possible risks and focusing on the enticing benefits these devices promise.
+            <br /><br />
+            Tapping into the pulse of online conversations, "Consumer Attitudes Towards Privacy and Security in Home Assistants" presents an analysis of how the public feels about privacy and security concerning home assistants like Amazon's Echo or Google's Home. The study identifies some common worries: data collection, the breadth of information captured, odd device behavior, and breaches of personal privacy.
+            <br /><br />
+            Moving on, we find "Privacy Norms for Smart Home Personal Assistants," which reports on an online survey conducted to gauge how users feel about security and privacy when it comes to data from their smart home devices.
+            <br /><br />
+            Then, we explore "Trust in the Institution and Privacy Management of Internet of Things Devices: A Comparative Study of Dutch and Norwegian Households." This unique study peeks into homes in Norway and the Netherlands to see how trust in national institutions and government regulations shapes their views on privacy and IoT devices.
+            <br /><br />
+            Within these households, we see a pattern. Typically, one person, often a man, is the tech enthusiast who makes decisions about IoT adoption and privacy. Meanwhile, the other person, usually a woman, is more concerned about how these devices fit into their home. It's a dance of risk and trust, with one person shouldering the concerns and the other placing trust in their partner.
+            <br /><br />
+            Interestingly, trust levels in the device manufacturers, their respective governments, and policies vary among individuals. The introduction of the General Data Protection Regulation (GDPR), a European law, reportedly boosts trust in the device-making companies' compliance with privacy regulations, but not necessarily in the companies themselves. (Paupini et al. 2022.)
+            <br /><br />
+            These studies bring us face-to-face with the complex dynamics of trust, privacy, and convenience in the world of smart home devices. They highlight the importance of transparency, robust privacy safeguards, and user education in this ever-evolving landscape. So, as we navigate this intricate world, these insights can serve as our compass, guiding us towards a more secure and privacy-conscious future.
           </p>
           <div className="flex flex-col md:flex-row gap-4 mx-auto mt-5">
             <Card
@@ -105,31 +107,30 @@ export default function Page() {
             2.0. The EPS project survey
           </h3>
           <p className="leading-7 mt-3">
-            There was also a survey to gather information about people’s current knowledge about smart home devices. This survey was conducted by the EPS project group. There are already about 70 respondents, which are a group of students and older people. There are 20 questions in the survey and here are some results.
+            In our quest to understand people's knowledge of smart home devices, we, the EPS project group, conducted a survey with around 70 respondents, a mix of students and older individuals. The survey, consisting of 20 questions, offered some intriguing insights.
           </p>
           <h3 id="Chapter_2.1" className="mt-8 text-2xl font-bold tracking-tight">How would you rate your knowledge of smart home devices?</h3>
           <p className="leading-7">INSERT GRAPHIC</p>
 
           <h3 id="Chapter_2.2" className="mt-8 text-2xl font-bold tracking-tight">Do you own a smart home device?</h3>
           <p className="leading-7">INSERT GRAPHIC</p>
-
-          <h3 id="Chapter_2.3" className="mt-8 text-2xl font-bold tracking-tight">What smart home device(s)?</h3>
-          <p className="leading-7">Respondents were also asked to name what device they own, and the answers were for example Google Home, heating, lights, speaker and smart TV.</p>
+          <br /><br />
+          <p className="leading-7">Those who owned a device mentioned examples such as Google Home, heating systems, lights, speakers, and smart TVs.  </p>
 
           <h3 id="Chapter_2.4" className="mt-8 text-2xl font-bold tracking-tight">When thinking of smart home devices, which one comes to mind first?</h3>
-          <p className="leading-7">After this, respondents were asked “When thinking of smart home devices, which one comes to mind first?” and respondents answered, for example, Alexa (31%), Google Home (21%), lights, smart tv, fridge, camera doorbells and heating. Therefore, it can be seen that some respondents have already experience and knowledge with some smart home devices and can also identify what can be a smart home device.  </p>
+          <p className="leading-7">When we asked respondents which smart home device first comes to mind, Alexa (31%) and Google Home (21%) topped the list, followed by lights, smart TVs, fridges, camera doorbells, and heating systems. This showed us a varied level of familiarity and experience with smart home devices among our respondents.  </p>
 
           <h3 id="Chapter_2.5" className="mt-8 text-2xl font-bold tracking-tight">Do you know if there is AI in any smart home device you use? & Specify which device?</h3>
           <p className="leading-7">INSERT GRAPHIC</p>
-          <p className="leading-7">Respondents who answered yes, were told to specify which device and answers were, for example, Google Home, Alexa, solar system, speaker and heating. Accordingly, to this question, some people do not know everything about smart home devices.  </p>
+          <p className="leading-7">A majority (53%) were unsure, while 17% answered yes, and 30% said no. Those who answered yes listed devices like Google Home, Alexa, solar systems, speakers, and heating systems. From this, we inferred that not everyone is fully aware of the role of AI in their smart home devices.  </p>
 
           <h3 id="Chapter_2.5" className="mt-8 text-2xl font-bold tracking-tight">If you were to buy a smart home device, would you rather put your trust in a big company (Google, Amazon, etc.) or in a small company?</h3>
-          <p className="leading-7">In addition, respondents were asked to rate if they trust a big company or a small company when buying a smart home device and most respondents answered a small company.   </p>
+          <p className="leading-7">When considering purchasing a smart home device, most respondents indicated they would trust a small company over a big one like Google or Amazon.</p>
 
           <h3 id="Chapter_2.6" className="mt-8 text-2xl font-bold tracking-tight">
             Do you have anything you want to mention or tell us about?
           </h3>
-          <p className="leading-7">One of the last questions of the survey was “Do you have anything you want to mention or tell us about?” and most answered no. However, there were answers such as:
+          <p className="leading-7">Finally, we gave respondents the opportunity to share any additional thoughts. While most didn't add anything, there were answers such as:
             <br />
             “I have no idea what a smart device means”,
             <br />
@@ -140,9 +141,13 @@ export default function Page() {
             Thus, it can be said based on these answers that someone has already had experience with smart home devices but some not at all.  </p>
 
           <h3 id="Chapter_3.0" className="mt-8 text-2xl font-bold tracking-tight">Summary</h3>
-          <p className="leading-7">In conclusion, based on the survey and articles, it can be seen that some people already have some experience with smart home devices. Based on the survey, respondents have already some experiences with smart home devices, and they find their knowledge of smart home devices the most as little, average and advanced knowledge.
+          <p className="leading-7">
+            In conclusion, both the survey and the articles indicate that many people already have some level of experience with smart home devices. According to our survey, respondents generally rated their knowledge of smart home devices as little, average, or advanced.
             <br /><br />
-            This also makes it easier to identify what a smart home device is because they were already able to name a few of these devices. In addition, based on articles, people’s opinion about smart home devices can vary depending on, for example, manufacturers, companies, data collection, privacy and security risks, online reviews, brand reputation, efficiency and easy-to-use devices. </p>
+            This familiarity with smart home devices allowed respondents to readily identify and name various devices. The articles further underscored that people's opinions about smart home devices can vary widely. Factors influencing these opinions include the device manufacturers, the companies behind the devices, data collection practices, privacy and security risks, online reviews, brand reputation, as well as the efficiency and user-friendliness of the devices.
+            <br /><br />
+            So, while some people are already navigating the world of smart home devices with ease, others are still exploring this territory. As we continue to delve into this field, our goal is to enhance awareness and understanding, ensuring that everyone can confidently and safely integrate these devices into their lives.
+          </p>
         </div>
 
         <PreviousAndNextButton
