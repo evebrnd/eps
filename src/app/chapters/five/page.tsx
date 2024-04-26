@@ -39,7 +39,7 @@ export default function Page() {
         {/* What is Artificial Intelligence? */}
         <div className="flex flex-col text-justify py-3 border-t-2 border-primary/20 mt-10">
           <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
-            What is Artificial Intelligence?
+            1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>What is Artificial Intelligence?
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
             When discussing Artificial Intelligence, or AI for short, we're referring to a unique kind of computer program - one that's capable of learning and making autonomous decisions.
@@ -56,7 +56,7 @@ export default function Page() {
         {/* Is AI used in smart home devices? */}
         <div className="flex flex-col text-justify py-3 border-t-2 border-primary/20 mt-6">
           <h2 id="Chapter_2.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
-            Is AI used in smart home devices?
+            2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Is AI used in smart home devices?
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
             Not all smart home devices use AI, but there are certainly smart home devices that do use it. When done right, it can significantly enhance the user experience, enabling people to automate or enhance various things in their homes. However, it's not all smooth sailing. AI brings along its own set of privacy concerns. For example, are companies using our data to train their AI models and if so, are they transparent about it, and can we opt out of it? An interesting question that would be great to have answered.
@@ -102,7 +102,7 @@ export default function Page() {
             </AccordionItem>
           </Accordion>
         </div>
-        
+
         {/* The previous and next buttons */}
         <div className="flex flex-col">
           <PreviousAndNextButton
