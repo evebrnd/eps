@@ -32,6 +32,11 @@ export default function Quiz({ questions }: { questions: any[] }) {
     return score;
   };
 
+  const getCorrectAnswer = (questionIndex: number) => {
+    const correctIndex = questions[questionIndex].answerOptions.findIndex((option: { isCorrect: any; }) => option.isCorrect);
+    return questions[questionIndex].answerOptions[correctIndex].answer;
+  };
+
   const showResults = () => {
     setShowResultDialog(true);
   };
@@ -71,7 +76,13 @@ export default function Quiz({ questions }: { questions: any[] }) {
             <DialogTitle>Quiz Results</DialogTitle>
           </DialogHeader>
           <DialogDescription>
-            <p className="text-center ml-4">Your score is {calculateScore()} out of {questions.length}</p>
+            <p className="text-center text-2xl ml-4">Your score is <span className="text-primary">{calculateScore()} out of {questions.length}</span></p>
+            <p className="mt-4 font-bold">Correct Answers:</p>
+            {questions.map((question: any, questionIndex: number) => (
+              <p key={questionIndex}>
+                {questionIndex + 1} - {getCorrectAnswer(questionIndex)}
+              </p>
+            ))}
           </DialogDescription>
           <DialogFooter>
             <DialogClose asChild>
