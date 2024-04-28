@@ -1,0 +1,30 @@
+[
+    {
+      "question": "Privacy Not Included is a fondation from which company?",
+      "answerOptions": [
+        { "answer": "Google" },
+        { "answer": "Apple" },
+        { "answer": "Mozilla", "isCorrect": true },
+        { "answer": "Chrome" }
+      ]
+    },
+    {
+      "question": "Which type of settings is not concerned by this article?",
+      "answerOptions": [
+        { "answer": "Data collection" },
+        { "answer": "Activity of devices" },
+        { "answer": "Activity of smart devices", "isCorrect": true },
+        { "answer": "Data sharing" }
+      ]
+    },
+    {
+      "question": "Which is not a way to collect data from users?",
+      "answerOptions": [
+        { "answer": "Location tracking via wi-fi or bluetooth" },
+        { "answer": "Apps access request to microphone", "isCorrect": true },
+        { "answer": "Apps analytics" },
+        { "answer": "Voice recognition" }
+      ]
+    }
+  ]
+  
