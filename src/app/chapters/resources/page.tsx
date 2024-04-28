@@ -95,7 +95,7 @@ export default function Page() {
                 <h3 className="text-pretty mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary">Finally read carefully the <span className="text-primary">infograph</span> on smartphone data collection</h3>
                 <p className="text-pretty py-6">At this point you might be wondering, but Bob why are now talking about smartphones? Well the answer is simple, every smart phone device is connected to a hub in some way. In a vast majority of cases, this hub is your own personal smartphone. That is why it is important to also review the privacy settings and setup of this device!</p>
                 <figure className="max-w-lg mx-auto my-6">
-                    <Image className="h-auto max-w-full rounded-lg" src={InfographDeviceSettings} alt="image description" />
+                    <Image className="h-auto max-w-full rounded-lg" src={InfographDeviceSettings} alt="Smartphone & privacy" />
                     <figcaption className="mt-2 text-sm text-center text-gray-500">https://vpnoverview.com/privacy/devices/privacy-risks-smartphone/</figcaption>
                 </figure>
 
@@ -106,7 +106,7 @@ export default function Page() {
                 </blockquote>
 
                 <PreviousAndNextButton
-                    previousUrl={components_chapters[3].href}
+                    previousUrl={components_chapters[4].href}
                     nextUrl="/about"
                 />
             

@@ -71,8 +71,8 @@ export default function Page() {
                 </div>
 
                 <PreviousAndNextButton
-                    previousUrl={components_chapters[1].href}
-                    nextUrl={components_chapters[3].href}
+                    previousUrl={components_chapters[2].href}
+                    nextUrl={components_chapters[4].href}
                 />
             </div>
         </div>

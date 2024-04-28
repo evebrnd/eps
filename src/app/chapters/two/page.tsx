@@ -1,11 +1,15 @@
 "use client"
 
 import Icon from "@mdi/react";
+import Image from "next/image"
 import Card from "@/components/Card";
 import { mdiLightbulbOnOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import { components_chapters } from "@/utils/constants";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
+import AiDrivenSHD from "/public/generalPublicOpinion/aiDrivenShdDiagram.svg"
+import ItKnowledge from "/public/generalPublicOpinion/itKnowledgeDiagram.svg"
+import SHDOwners from "/public/generalPublicOpinion/shdOwnersDiagram.svg"
 
 export default function Page() {
   const chapters = [
@@ -110,18 +114,18 @@ export default function Page() {
             In our quest to understand people's knowledge of smart home devices, we, the EPS project group, conducted a survey with around 70 respondents, a mix of students and older individuals. The survey, consisting of 20 questions, offered some intriguing insights.
           </p>
           <h3 id="Chapter_2.1" className="mt-8 text-2xl font-bold tracking-tight">How would you rate your knowledge of smart home devices?</h3>
-          <p className="leading-7">INSERT GRAPHIC</p>
+          <Image src={ItKnowledge} alt="it knowledge diagram" className="mx-auto my-5" width="700" />
 
           <h3 id="Chapter_2.2" className="mt-8 text-2xl font-bold tracking-tight">Do you own a smart home device?</h3>
-          <p className="leading-7">INSERT GRAPHIC</p>
+          <Image src={SHDOwners} alt="shd owners diagram" className="mx-auto my-5" width="700" />
           <br /><br />
           <p className="leading-7">Those who owned a device mentioned examples such as Google Home, heating systems, lights, speakers, and smart TVs.  </p>
 
           <h3 id="Chapter_2.4" className="mt-8 text-2xl font-bold tracking-tight">When thinking of smart home devices, which one comes to mind first?</h3>
           <p className="leading-7">When we asked respondents which smart home device first comes to mind, Alexa (31%) and Google Home (21%) topped the list, followed by lights, smart TVs, fridges, camera doorbells, and heating systems. This showed us a varied level of familiarity and experience with smart home devices among our respondents.  </p>
 
-          <h3 id="Chapter_2.5" className="mt-8 text-2xl font-bold tracking-tight">Do you know if there is AI in any smart home device you use? & Specify which device?</h3>
-          <p className="leading-7">INSERT GRAPHIC</p>
+          <h3 id="Chapter_2.5" className="mt-8 text-2xl font-bold tracking-tight">Do you know if there is AI in any smart home device you use? Specify which device(s)</h3>
+          <Image src={AiDrivenSHD} alt="ai driven shd diagram" className="mx-auto my-5" width="700" />
           <p className="leading-7">A majority (53%) were unsure, while 17% answered yes, and 30% said no. Those who answered yes listed devices like Google Home, Alexa, solar systems, speakers, and heating systems. From this, we inferred that not everyone is fully aware of the role of AI in their smart home devices.  </p>
 
           <h3 id="Chapter_2.5" className="mt-8 text-2xl font-bold tracking-tight">If you were to buy a smart home device, would you rather put your trust in a big company (Google, Amazon, etc.) or in a small company?</h3>
@@ -131,13 +135,11 @@ export default function Page() {
             Do you have anything you want to mention or tell us about?
           </h3>
           <p className="leading-7">Finally, we gave respondents the opportunity to share any additional thoughts. While most didn't add anything, there were answers such as:
-            <br />
-            “I have no idea what a smart device means”,
-            <br />
-            “Everything is being processed locally is one of the most important parts of a smart home for me. No external dependencies.” and
-            <br />
-            “Not knowing about something is very scary. No movement is what happens”.
-            <br />
+            <ul className="text-left my-4 ml-6 list-disc [&>li]:mt-2">
+              <li>“I have no idea what a smart device means”</li>
+              <li>“Everything is being processed locally is one of the most important parts of a smart home for me. No external dependencies.”</li>
+              <li>“Not knowing about something is very scary. No movement is what happens”</li>
+            </ul>
             Thus, it can be said based on these answers that someone has already had experience with smart home devices but some not at all.  </p>
 
           <h3 id="Chapter_3.0" className="mt-8 text-2xl font-bold tracking-tight">Summary</h3>
@@ -151,8 +153,8 @@ export default function Page() {
         </div>
 
         <PreviousAndNextButton
-          previousUrl={components_chapters[0].href}
-          nextUrl={components_chapters[2].href}
+          previousUrl={components_chapters[1].href}
+          nextUrl={components_chapters[3].href}
         />
 
       </div>

@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ chapters }) => {
       <div className="flex justify-center w-screen bg-primary/5 border border-b-2 border-primary-foreground md:hidden">
         <Accordion type="single" collapsible className=''>
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl font-semibold">Contents of the page:</AccordionTrigger>
+            <AccordionTrigger className="text-2xl font-semibold">Contents of the page</AccordionTrigger>
             <AccordionContent>
               <ol className='list-decimal list-inside text-base'>
                 {renderChapters(chapters)}
@@ -53,7 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ chapters }) => {
       {/* For large screens */}
       <div className="hidden md:flex sticky top-0 min-h-fit md:left-0 md:min-w-38 md:max-w-44 md:h-dvh md:px-4 bg-primary/10">
         <div className="justify-normal md:pt-6">
-          <p className="text-2xl font-semibold">Contents:</p>
+          <p className="text-2xl font-semibold">Contents</p>
           <ol className='list-decimal list-inside text-sm pt-2'>
             {renderChapters(chapters)}
           </ol>
