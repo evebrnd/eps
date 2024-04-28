@@ -51,6 +51,18 @@ export const components_chapters: { title: string; href: string; description: st
             "Internals working of smart home devices.",
     },
     {
+        title: "5. Artificial Intelligence",
+        href: "/chapters/five",
+        description:
+            "The role of AI in smart home devices.",
+    },
+    {
+        title: "6. Usabilities and Dangers",
+        href: "/chapters/six",
+        description:
+            "The usabilities and dangers of smart home devices.",
+    },
+    {
         title: "Resources",
         href: "/chapters/resources",
         description:

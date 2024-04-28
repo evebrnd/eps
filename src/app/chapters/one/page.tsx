@@ -35,9 +35,11 @@ export default function Page() {
           </h3>
           <p className="leading-7 mt-3 md:mt-6">
             When people hear the word smart home, they usually first connect it to some device they already know or have at their home. <br />
+          </p>
             <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-xl">
               “A smart home is a set up where applications or devices can be controlled from anywhere and are connected to the internet and other devices wirelessly.”
             </blockquote>
+          <p className="leading-7">
             A device can perform functions independently as well as can be used even remotely when a person who owns it, is not home. Smart homes can provide homeowners security, comfort, convenience and energy efficiency by allowing them to control smart home devices by application on their smart phone or other device. These devices collect information constantly, so they have potential risks related to privacy and security. (Chawda et al. 2020.) <br />
             Smart home environments can have many benefits, for example:
           </p>

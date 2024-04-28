@@ -134,13 +134,13 @@ export default function Page() {
           <h3 id="Chapter_2.6" className="mt-8 text-2xl font-bold tracking-tight">
             Do you have anything you want to mention or tell us about?
           </h3>
-          <p className="leading-7">Finally, we gave respondents the opportunity to share any additional thoughts. While most didn't add anything, there were answers such as:
-            <ul className="text-left my-4 ml-6 list-disc [&>li]:mt-2">
-              <li>“I have no idea what a smart device means”</li>
-              <li>“Everything is being processed locally is one of the most important parts of a smart home for me. No external dependencies.”</li>
-              <li>“Not knowing about something is very scary. No movement is what happens”</li>
-            </ul>
-            Thus, it can be said based on these answers that someone has already had experience with smart home devices but some not at all.  </p>
+          <p className="leading-7">Finally, we gave respondents the opportunity to share any additional thoughts. While most didn't add anything, there were answers such as:</p>
+          <ul className="text-left my-4 ml-6 list-disc [&>li]:mt-2">
+            <li>“I have no idea what a smart device means”</li>
+            <li>“Everything is being processed locally is one of the most important parts of a smart home for me. No external dependencies.”</li>
+            <li>“Not knowing about something is very scary. No movement is what happens”</li>
+          </ul>
+          <p>Thus, it can be said based on these answers that someone has already had experience with smart home devices but some not at all.</p>
 
           <h3 id="Chapter_3.0" className="mt-8 text-2xl font-bold tracking-tight">Summary</h3>
           <p className="leading-7">
