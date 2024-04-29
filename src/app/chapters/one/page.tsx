@@ -1,11 +1,13 @@
 "use client"
 
 import Link from "next/link";
+import Image from "next/image"
 import Icon from '@mdi/react';
 import { mdiChatQuestionOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import { components_chapters } from "@/utils/constants";
+import SmartHomeIntroduction from "/public/smartHomeIntroduction.webp";
 
 export default function Page() {
   const chapters = [
@@ -33,7 +35,11 @@ export default function Page() {
           </h3>
           <p className="leading-7 mt-3 md:mt-6">
             When people hear the word smart home, they usually first connect it to some device they already know or have at their home. <br />
-            A smart home is a set up where applications or devices can be controlled from anywhere and are connected to the internet and other devices wirelessly.  <br />
+          </p>
+            <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-xl">
+              “A smart home is a set up where applications or devices can be controlled from anywhere and are connected to the internet and other devices wirelessly.”
+            </blockquote>
+          <p className="leading-7">
             A device can perform functions independently as well as can be used even remotely when a person who owns it, is not home. Smart homes can provide homeowners security, comfort, convenience and energy efficiency by allowing them to control smart home devices by application on their smart phone or other device. These devices collect information constantly, so they have potential risks related to privacy and security. (Chawda et al. 2020.) <br />
             Smart home environments can have many benefits, for example:
           </p>
@@ -57,6 +63,10 @@ export default function Page() {
           <h3 id="Chapter_2.0" className="mt-8 text-3xl font-semibold tracking-tight">
             2.0. An example of smart home device
           </h3>
+          <figure className="max-w-lg mx-auto my-6">
+            <Image className="h-auto max-w-full rounded-lg" src={SmartHomeIntroduction} alt="A smart home" />
+            <figcaption className="mt-2 text-sm text-center text-gray-500">https://medium.com/iotforall/who-is-buying-into-iot-8f65c701b1ef</figcaption>
+          </figure>
           <p className="leading-7">There are many devices which can be classified as smart home devices, and it may be that there are some devices that people cannot even think of being a smart home device.  </p>
           <p className="leading-7">An example of these devices:</p>
           <ul className="text-left my-4 ml-6 list-disc [&>li]:mt-2">
@@ -93,8 +103,8 @@ export default function Page() {
         </div>
 
         <PreviousAndNextButton
-          previousUrl="/"
-          nextUrl={components_chapters[1].href}
+          previousUrl={components_chapters[0].href}
+          nextUrl={components_chapters[2].href}
         />
 
       </div>

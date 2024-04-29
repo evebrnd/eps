@@ -21,7 +21,7 @@ export default function Page() {
       <div className="w-full h-vh bg-primary/10 md:grid lg:grid-cols-8 md:px-12">
         <div className="flex flex-col justify-center lg:col-span-3 px-4 py-6 md:py:12">
           <p className="pt-3 text-3xl italic md:pt-12 sm:text-justify">
-            Education of
+            Education on
           </p>
           <p className="pt-6 text-5xl font-extrabold">
             Smart Home Devices
@@ -31,7 +31,7 @@ export default function Page() {
               Transparency information about smart home devices is <strong>NOT</strong> accessible to the public.
             </p>
             <p className="mt-6 text-xl leading-7">
-              To create more awareness and create an easily understandable way of explaining the RELINK project created a course for you.
+              To create more awareness and have an easier way of explaining this, the RELINK project developed a course for you.
             </p>
             <div className="flex flex-row justify-center lg:justify-normal">
               <Button asChild size="rounded" className="text-lg mt-14 sm:text-2xl bg-primary/80">
