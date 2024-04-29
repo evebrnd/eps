@@ -10,7 +10,17 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 
-export default function Quiz({ questions }: { questions: any[] }) {
+interface AnswerOption {
+  answer: string;
+  isCorrect?: boolean;
+}
+
+interface Question {
+  question: string;
+  answerOptions: AnswerOption[];
+}
+
+export default function Quiz({ questions }: { questions: Question[] }) {
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([]);
   const [showResultDialog, setShowResultDialog] = useState(false);
 
@@ -25,7 +35,7 @@ export default function Quiz({ questions }: { questions: any[] }) {
   const calculateScore = () => {
     let score = 0;
     for (let i = 0; i < questions.length; i++) {
-      if (selectedAnswers[i] === questions[i].answerOptions.findIndex((option: { isCorrect: any; }) => option.isCorrect)) {
+      if (selectedAnswers[i] === questions[i].answerOptions.findIndex((option: AnswerOption) => option.isCorrect)) {
         score++;
       }
     }
@@ -33,7 +43,7 @@ export default function Quiz({ questions }: { questions: any[] }) {
   };
 
   const getCorrectAnswer = (questionIndex: number) => {
-    const correctIndex = questions[questionIndex].answerOptions.findIndex((option: { isCorrect: any; }) => option.isCorrect);
+    const correctIndex = questions[questionIndex].answerOptions.findIndex((option: AnswerOption) => option.isCorrect);
     return questions[questionIndex].answerOptions[correctIndex].answer;
   };
 
@@ -43,10 +53,10 @@ export default function Quiz({ questions }: { questions: any[] }) {
 
   return (
     <div className="mx-auto flex flex-col">
-      {questions.map((question: any, questionIndex: number) => (
+      {questions.map((question: Question, questionIndex: number) => (
         <div key={questionIndex}>
           <h3 className="font-bold pt-6 pb-2">{question.question}</h3>
-          {question.answerOptions.map((answer: any, answerIndex: number) => (
+          {question.answerOptions.map((answer: AnswerOption, answerIndex: number) => (
             <div
               key={answerIndex}
               className={`w-3/4 mx-auto flex py-4 pl-5 m-2 space-x-2 cursor-pointer rounded-xl ${
@@ -78,7 +88,7 @@ export default function Quiz({ questions }: { questions: any[] }) {
           <DialogDescription>
             <p className="text-center text-2xl ml-4">Your score is <span className="text-primary">{calculateScore()} out of {questions.length}</span></p>
             <p className="mt-4 font-bold">Correct Answers:</p>
-            {questions.map((question: any, questionIndex: number) => (
+            {questions.map((question: Question, questionIndex: number) => (
               <p key={questionIndex}>
                 {questionIndex + 1} - {getCorrectAnswer(questionIndex)}
               </p>
