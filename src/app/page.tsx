@@ -57,9 +57,9 @@ export default function Page() {
       </div>
       <div className="flex flex-col w-full px-12 pt-12 md:px-24">
         <Carousel className="">
-          <CarouselContent className="-ml-1">
+          <CarouselContent className="-ml-1 items-center">
             {components_chapters.map((component, index) => (
-              <CarouselItem key={index} className="flex flex-row pl-1 md:basis-1/2 lg:basis-1/4">
+              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4 max-w-60">
 
                 <div className="p-1 text-center">
                   <div className="max-w-sm bg-white border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
