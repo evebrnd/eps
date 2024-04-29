@@ -10,6 +10,7 @@ import questionsResources from "../../utils/questionsResources.json";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton"
 import PrivacyNotIncluded from "../../../../public/resources/privacyNotIncluded.png"
 import ElectronicFrontierFoundation from "../../../../public/resources/electronicFrontierFoundation.jpg"
+import GdprEnforcementTracker from "../../../../public/resources/gdprEnforcementTracker.jpg"
 import RelinkLogo from "../../../../public/relinkLogo.png"
 import InfographDeviceSettings from "../../../../public/resources/infographDeviceSettings.webp"
 import { components_chapters } from '@/utils/constants';
@@ -47,6 +48,12 @@ export default function Page() {
                         caption="A sum-up leaflet of the most important privacy and security tips for your smart home."
                         href="https://designrr.s3.amazonaws.com/noahherold_at_gmx.com_146874/cybersecurity-for-grandparents-volume-4-copy_617ed985.pdf"
                         image={RelinkLogo}
+                    />
+                    <Card
+                        title="GDPR Enforcement Tracker"
+                        caption="A database that tracks the latest fines ordered on non-compliant organizations and companies."
+                        href="https://www.enforcementtracker.com/"
+                        image={GdprEnforcementTracker}
                     />
                 </div>
 
