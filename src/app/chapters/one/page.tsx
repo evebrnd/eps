@@ -27,7 +27,7 @@ export default function Page() {
           What is a smart home device?
         </h1>
 
-        <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
+        <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
           <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
             1.0. The definition of smart home device
           </h3>

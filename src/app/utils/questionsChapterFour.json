@@ -1,0 +1,38 @@
+[
+  {
+    "question": "What is the main concern about the use of smart devices?",
+    "answerOptions": [
+      { "answer": "They are too expensive" },
+      { "answer": "They may record and share data without consent", "isCorrect": true },
+      { "answer": "They are not user-friendly" },
+      { "answer": "They are not durable" }
+    ]
+  },
+  {
+    "question": "What is suggested about the operation of smart speakers?",
+    "answerOptions": [
+      { "answer": "They record audio constantly" },
+      { "answer": "They only record audio after a wake word is said", "isCorrect": true },
+      { "answer": "They do not record any audio" },
+      { "answer": "They record audio at random intervals" }
+    ]
+  },
+  {
+    "question": "What incident is mentioned regarding Amazon's reviewers and audio clips?",
+    "answerOptions": [
+      { "answer": "Reviewers used audio clips for amusement", "isCorrect": true },
+      { "answer": "Reviewers intervened in potential criminal situations" },
+      { "answer": "Reviewers had direct access to personal customer information" },
+      { "answer": "None of the above" }
+    ]
+  },
+  {
+    "question": "What information is associated with Amazon's voice recordings?",
+    "answerOptions": [
+      { "answer": "Account number, first name, and device serial number", "isCorrect": true },
+      { "answer": "Personally identifiable information" },
+      { "answer": "Randomized identifier" },
+      { "answer": "None of the above" }
+    ]
+  }
+]

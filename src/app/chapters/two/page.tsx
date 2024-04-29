@@ -46,7 +46,7 @@ export default function Page() {
           There are already many studies, surveys and articles about data transparency, privacy and risks and dangers related to smart home devices. In addition, articles about what the general public think about topics related to smart home devices. And here is few of them:
         </p>
 
-        <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
+        <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
           <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
             1.0. Articles
           </h3>
