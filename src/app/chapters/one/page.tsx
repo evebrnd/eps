@@ -5,15 +5,18 @@ import Image from "next/image"
 import Icon from '@mdi/react';
 import { mdiChatQuestionOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
+import Quiz from "@/components/Quiz";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import { components_chapters } from "@/utils/constants";
 import SmartHomeIntroduction from "/public/smartHomeIntroduction.webp";
+import QuestionsIntroduction from "../../utils/questionsIntroduction.json";
 
 export default function Page() {
   const chapters = [
     { title: 'Introduction', id: 'Introduction' },
     { title: 'The definition of a smart home device', id: 'Chapter_1.0' },
-    { title: 'An example of a smart home device', id: 'Chapter_2.0' }
+    { title: 'An example of a smart home device', id: 'Chapter_2.0' },
+    { title: 'Quiz', id: 'quiz'}
   ];
 
   return (
@@ -100,6 +103,10 @@ export default function Page() {
           <h3 className="mt-8 text-2xl font-semibold tracking-tight">Sources</h3>
           <Link href="https://www.sciencedirect.com/science/article/pii/S2451958823000337" className="mt-4 italic text-gray-500" rel="noopener noreferrer" target="_blank">https://www.sciencedirect.com/science/article/pii/S2451958823000337</Link>
           <Link href="https://www.researchgate.net/publication/346211896_A_RESEARCH_PAPER_ON_SMART_HOME" className="mt-4 italic text-gray-500" rel="noopener noreferrer" target="_blank">https://www.researchgate.net/publication/346211896_A_RESEARCH_PAPER_ON_SMART_HOME</Link>
+
+
+          <h3 id="quiz" className="mt-8 text-2xl font-semibold tracking-tight">Quiz</h3>
+          <Quiz questions={QuestionsIntroduction} />
         </div>
 
         <PreviousAndNextButton

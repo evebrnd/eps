@@ -21,7 +21,7 @@ export const components_about: { title: string; href: string; description: strin
 
 export const components_chapters: { title: string; href: string; description: string }[] = [
     {
-        title: "0. Kick-off",
+        title: "Kick-off",
         href: "/chapters/kickoff",
         description:
             "What this lesson is about.",

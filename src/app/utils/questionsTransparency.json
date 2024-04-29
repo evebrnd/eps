@@ -1,0 +1,34 @@
+[
+    {
+      "question": "What is the black box?",
+      "answerOptions": [
+        { "answer": "A small device used in planes to record parameters" },
+        { "answer": "How open a company is about their data selling practices" },
+        { "answer": "How open a company is about their data collection practices", "isCorrect": true },
+        { "answer": "How open a company is about their third parties contract" }
+      ] 
+    },
+    {
+      "question": "What does GDPR stand for?",
+      "answerOptions": [
+        { "answer": "General Data Protection Regulation", "isCorrect": true },
+        { "answer": "General Degree Protection Regulation" },
+        { "answer": "Generic Data Protection Regulation" },
+        { "answer": "General Data Privacy Regulation" }
+      ]
+    },
+    {
+      "question": "In the EU you have the right to access the data that a company has on you",
+      "answerOptions": [
+        { "answer": "True", "isCorrect": true },
+        { "answer": "False" }
+      ]
+    },
+    {
+      "question": "In the EU you have the right to modify the data that a company has on you",
+      "answerOptions": [
+       { "answer": "True" },
+       { "answer": "False", "isCorrect": true }
+      ]
+    }
+  ]
