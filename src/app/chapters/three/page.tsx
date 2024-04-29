@@ -5,15 +5,18 @@ import Image from "next/image"
 import { mdiHandBackLeftOffOutline } from '@mdi/js';
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import Sidebar from '@/components/SideBar';
+import Quiz from '@/components/Quiz';
 import TransparencyImage from "/public/transparency/connectedHome.png"
 import { components_chapters } from '@/utils/constants';
+import QuestionsTransparency from "../../utils/questionsTransparency.json";
 
 export default function Page() {
     const chapters = [
         { title: 'Introduction', id: 'Introduction' },
         { title: "The black box", id: "Chapter_1.0" },
         { title: "What data is being processed?", id: "Chapter_2.0" },
-        { title: "Why this matters", id: "Chapter_3.0" }
+        { title: "Why this matters", id: "Chapter_3.0" },
+        { title: "Quiz", id: "quiz"}
     ];
 
     return (
@@ -67,6 +70,9 @@ export default function Page() {
                         This is precisely why companies need to pull back the curtain and be upfront about the data they collect and the safety measures they adopt to guard this sensitive information. Transparency isn't just a nice-to-have, it's a must-have in the world of data privacy.
                     </p>
                     <Image src={TransparencyImage} alt="Connected Home" className="mx-auto" width="500" />
+
+                    <h3 id="quiz" className="mt-8 text-3xl font-semibold tracking-tight">Quiz</h3>
+                    <Quiz questions={QuestionsTransparency} />
 
                 </div>
 

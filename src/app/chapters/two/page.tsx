@@ -5,11 +5,13 @@ import Image from "next/image"
 import Card from "@/components/Card";
 import { mdiLightbulbOnOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
+import Quiz from "@/components/Quiz";
 import { components_chapters } from "@/utils/constants";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import AiDrivenSHD from "/public/generalPublicOpinion/aiDrivenShdDiagram.svg"
 import ItKnowledge from "/public/generalPublicOpinion/itKnowledgeDiagram.svg"
 import SHDOwners from "/public/generalPublicOpinion/shdOwnersDiagram.svg"
+import QuestionsOpinion from "../../utils/questionsOpinion.json";
 
 export default function Page() {
   const chapters = [
@@ -25,7 +27,8 @@ export default function Page() {
         { title: 'Question 6', id: 'Chapter_2.6' }
       ]
     },
-    { title: 'Summary', id: 'Chapter_3.0' }
+    { title: 'Summary', id: 'Chapter_3.0' },
+    { title: 'Quiz', id: 'quiz'}
 
   ];
 
@@ -150,6 +153,9 @@ export default function Page() {
             <br /><br />
             So, while some people are already navigating the world of smart home devices with ease, others are still exploring this territory. As we continue to delve into this field, our goal is to enhance awareness and understanding, ensuring that everyone can confidently and safely integrate these devices into their lives.
           </p>
+
+          <h3 id="quiz" className="mt-8 text-2xl font-bold tracking-tight">Quiz</h3>
+          <Quiz questions={QuestionsOpinion} />
         </div>
 
         <PreviousAndNextButton
