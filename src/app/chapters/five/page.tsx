@@ -3,6 +3,7 @@
 import { mdiRobotConfused } from "@mdi/js";
 import Icon from "@mdi/react";
 import Sidebar from "@/components/SideBar";
+import Image from "next/image";
 
 import {
   Accordion,
@@ -12,6 +13,11 @@ import {
 } from "@/components/ui/accordion"
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import { components_chapters } from "@/utils/constants";
+
+import AI_Neural_DeepPNG from "../../../../public/ArtificialIntelligence/AI_Neural_Deep.png";
+
+import Quiz from "@/components/Quiz";
+import questionsChapterFive from "../../utils/questionsChapterFive.json";
 
 export default function Page() {
 
@@ -32,12 +38,12 @@ export default function Page() {
         <h1 id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Artificial Intelligence in Smart Home Devices
         </h1>
-        <p className="leading-7 mt-6 text-justify">
-
+        <p className="leading-7 mt-6 text-pretty">
+          Artificial Intelligence (AI) is a technology that has been around for quite some time now. It's used in various fields, from healthcare to finance, and even in our homes. In this chapter, we'll discuss what AI is and how it's used in smart home devices. We'll also discuss some of the privacy concerns that come with using AI in smart home devices.
         </p>
 
         {/* What is Artificial Intelligence? */}
-        <div className="flex flex-col text-justify py-3 border-t-2 border-primary/20 mt-10">
+        <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-10">
           <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
             1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>What is Artificial Intelligence?
           </h2>
@@ -53,8 +59,20 @@ export default function Page() {
           </p>
         </div>
 
+        <div className="flex flex-col self-center items-center max-w-full bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
+          <Image
+            src={AI_Neural_DeepPNG}
+            alt="Image of differences between AI, Neural Networks, and Deep Learning"
+            className="rounded-t-lg"
+          />
+          <a href="https://picovoice.ai/blog/ai-vs-machine-learning-vs-deep-learning/"
+            className="text-xs text-muted-foreground hover:text-foreground">
+            picovoice.ai
+          </a>
+        </div>
+
         {/* Is AI used in smart home devices? */}
-        <div className="flex flex-col text-justify py-3 border-t-2 border-primary/20 mt-6">
+        <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-6">
           <h2 id="Chapter_2.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
             2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Is AI used in smart home devices?
           </h2>
@@ -110,43 +128,14 @@ export default function Page() {
             nextUrl={components_chapters[5].href}
           />
         </div>
+
+        {/* The Quiz */}
+        <h3 className="text-center text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+        <Quiz
+          questions={questionsChapterFive}
+        />
+
       </div>
     </div>
   );
 }
-
-// Quiz Questions
-// 1. What is the main focus of this page?
-//    - a) Exploring the history of Artificial Intelligence
-//    - b) Discussing the impact of AI on smart home devices
-//    - c) Comparing different AI models
-//    - d) Analyzing the privacy concerns of AI
-//    Answer: b) Discussing the impact of AI on smart home devices
-
-// 2. What is the purpose of AI in smart home devices?
-//    - a) To collect user data for marketing purposes
-//    - b) To automate household tasks and enhance user experience
-//    - c) To replace human interaction in the home
-//    - d) To monitor and record user activities without consent
-//    Answer: b) To automate household tasks and enhance user experience
-
-// 3. How do smart speakers use AI?
-//    - a) They constantly record and analyze user conversations
-//    - b) They only respond to specific voice commands
-//    - c) They have no AI capabilities
-//    - d) They use AI to learn and adapt to user preferences
-//    Answer: d) They use AI to learn and adapt to user preferences
-
-// 4. What potential privacy concern is mentioned in the text?
-//    - a) Companies using customer data to train AI models without consent
-//    - b) Smart home devices being too expensive for most users
-//    - c) AI models becoming self-aware and taking over the home
-//    - d) Smart home devices not being compatible with each other
-//    Answer: a) Companies using customer data to train AI models without consent
-
-// 5. What information is associated with AI-powered security cameras?
-//   a) Facial recognition data and personal identification
-//   b) Randomized identifiers for user privacy
-//   c) Audio recordings of user conversations
-//   d) None of the above
-//   Answer: a) Facial recognition data and personal identification

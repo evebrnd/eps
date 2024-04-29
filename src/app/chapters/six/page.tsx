@@ -13,7 +13,7 @@ export default function Page() {
                 The Usabilities and Dangers of Smart Home Devices
             </h1>
 
-            <div className="flex flex-col text-justify  mx-auto w-5/6 md:w-3/6 py-3 border-y-2 border-primary/20 mt-10">
+            <div className="flex flex-col text-pretty  mx-auto w-5/6 md:w-3/6 py-3 border-y-2 border-primary/20 mt-10">
                 <p className="text-pretty mx-auto py-6">
                     This is Melle his part.
                 </p>

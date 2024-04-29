@@ -1,0 +1,47 @@
+[
+  {
+    "question": "What is the main focus of this page?",
+    "answerOptions": [
+      { "answer": "Exploring the history of Artificial Intelligence" },
+      { "answer": "Discussing the impact of AI on smart home devices", "isCorrect": true },
+      { "answer": "Comparing different AI models" },
+      { "answer": "Analyzing the privacy concerns of AI" }
+    ]
+  },
+  {
+    "question": "What is the purpose of AI in smart home devices?",
+    "answerOptions": [
+      { "answer": "To collect user data for marketing purposes" },
+      { "answer": "To automate household tasks and enhance user experience", "isCorrect": true },
+      { "answer": "To replace human interaction in the home" },
+      { "answer": "To monitor and record user activities without consent" }
+    ]
+  },
+  {
+    "question": "How do smart speakers use AI?",
+    "answerOptions": [
+      { "answer": "They constantly record and analyze user conversations" },
+      { "answer": "They only respond to specific voice commands" },
+      { "answer": "They have no AI capabilities" },
+      { "answer": "They use AI to learn and adapt to user preferences", "isCorrect": true }
+    ]
+  },
+  {
+    "question": "What potential privacy concern is mentioned in the text?",
+    "answerOptions": [
+      { "answer": "Companies using customer data to train AI models without consent", "isCorrect": true },
+      { "answer": "Smart home devices being too expensive for most users" },
+      { "answer": "AI models becoming self-aware and taking over the home" },
+      { "answer": "Smart home devices not being compatible with each other" }
+    ]
+  },
+  {
+    "question": "What information is associated with AI-powered security cameras?",
+    "answerOptions": [
+      { "answer": "Facial recognition data and personal identification", "isCorrect": true },
+      { "answer": "Randomized identifiers for user privacy" },
+      { "answer": "Audio recordings of user conversations" },
+      { "answer": "None of the above" }
+    ]
+  }
+]

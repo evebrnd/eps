@@ -11,12 +11,15 @@ import SmartDoorbellPNG from "../../../../public/WorkingOfDevices/SmartDoorbell.
 import SmartLightbulbPNG from "../../../../public/WorkingOfDevices/SmartLightbulb.png"
 import SmartSpeakerPNG from "../../../../public/WorkingOfDevices/SmartSpeakers.png"
 import SmartVacuumPNG from "../../../../public/WorkingOfDevices/SmartVacuum.png"
+
 import FacialRecognitionGIF from "../../../../public/WorkingOfDevices/FacialRecognitionGIF.gif"
 import ActivityDetectionGIF from "../../../../public/WorkingOfDevices/ActivityDetectionGIF.gif"
 import TextPredictionGIF from "../../../../public/WorkingOfDevices/TextPredictionGIF.gif"
 import WakeWordDetectionGIF from "../../../../public/WorkingOfDevices/WakeWordDetectionGIF.gif"
 import ImageRecognitionGIF from "../../../../public/WorkingOfDevices/ImageRecognitionGIF.gif"
 import ChatGPTGIF from "../../../../public/WorkingOfDevices/ChatGPTGIF.gif"
+
+import InsideSmartDoorbellJPG from "../../../../public/WorkingOfDevices/insideSmartDoorbell.jpeg"
 
 import {
   Carousel,
@@ -34,6 +37,10 @@ import {
 } from "@/components/ui/accordion"
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import { components_chapters } from "@/utils/constants";
+
+import Quiz from "@/components/Quiz";
+import questionsChapterFour from "../../utils/questionsChapterFour.json";
+
 
 const chap1_Examples = [
   {
@@ -168,7 +175,7 @@ export default function Page() {
         <h1 id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Working of Smart Home Devices
         </h1>
-        <p className="leading-7 mt-6 text-justify">
+        <p className="leading-7 mt-6 text-pretty">
           Now that the general idea of a <a className="text-2xl font-semibold tracking-tight">Smart Home Device</a> is uncovered, there needs to be more clarity about the physical workings of these devices.
           <br />
           What do they save? What do they process and where do they process this? But maybe the best question to begin with is;
@@ -176,7 +183,7 @@ export default function Page() {
           What sensors do smart home devices have?
         </p>
 
-        <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
+        <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
           {/* 1.0 */}
           <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
             1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Sensors
@@ -264,7 +271,7 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="flex flex-col text-justify py-3 mt-4">
+        <div className="flex flex-col text-pretty py-3 mt-4">
           {/* 2.0 */}
           <h2 id="Chapter_2.0" className="flex justify-normal border-b pb-2 text-3xl font-semibold tracking-tight ">
             2.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Data Processing
@@ -317,10 +324,22 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="flex flex-col text-justify py-3 mt-4">
+        <div className="flex flex-col self-center items-center max-w-64 bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
+          <Image
+            src={InsideSmartDoorbellJPG}
+            alt="Insides of a Smart Doorbell"
+            className="rounded-t-lg"
+          />
+          <a href="https://copilot.microsoft.com/images/create/882431053/2-662f57b8d6924774a7c741e26a2e300c?id=W%2bwNaUNx9nW87AwP3MI58w%3d%3d&view=detailv2&idpp=genimg&idpclose=1&genimgbce=1&thId=OIGBCE2.w47nZbeH.1uSCTNksbke&FORM=SYDBIC"
+            className="text-xs text-muted-foreground hover:text-foreground">
+            copilot.microsoft.com
+          </a>
+        </div>
+
+        <div className="flex flex-col text-pretty py-3 mt-4">
           {/* 3.0 */}
           <h2 id="Chapter_3.0" className="flex justify-normal border-b pb-2 text-3xl font-semibold tracking-tight ">
-            3.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Where is the data being processed?
+            <p className="self-center">3.0</p> <p className="mx-2 border-x-2 border-primary text-2xl"> </p> Where is the data being processed?
           </h2>
           <p className="leading-7 mt-3">
             Having explored the sensors within two smart devices and the data they process, let's turn our attention to the processing itself and where it takes place.
@@ -562,9 +581,11 @@ export default function Page() {
             So, what's happening in the cloud? Perhaps the package or person detection is processed there. Or maybe even some sophisticated facial recognition?
             <br />
             According to Ring, that's not the case:
-            <blockquote className="my-6 border-l-2 pl-6 italic">
-              "Ring does not have facial recognition technology in any of its devices or services."
-            </blockquote>
+          </p>
+          <blockquote className="my-6 border-l-2 pl-6 italic">
+            "Ring does not have facial recognition technology in any of its devices or services."
+          </blockquote>
+          <p className="leading-7">
             Yet, it's been reported that Amazon has used public videos to train a facial recognition system.
           </p>
           <p className="leading-7 mt-6">
@@ -580,7 +601,7 @@ export default function Page() {
             The reality is you can't be certain. There have been numerous cases where data was provided to law enforcement without the user's consent, raising serious concerns about privacy and data security.
           </p>
 
-          <div className="flex flex-col text-justify py-3 mt-4">
+          <div className="flex flex-col text-pretty py-3 mt-4">
             {/* 4.0 */}
             <h2 id="Chapter_4.0" className="flex justify-normal border-b pb-2 text-3xl font-semibold tracking-tight ">
               4.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Dangers
@@ -656,6 +677,11 @@ export default function Page() {
             nextUrl={components_chapters[5].href}
           />
         </div>
+
+        <h3 className="text-center text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+        <Quiz
+          questions={questionsChapterFour}
+        />
       </div>
     </div>
   );
