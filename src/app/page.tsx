@@ -1,8 +1,8 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import Card from "@/components/Card"
 import { components_chapters } from "@/utils/constants";
 import HomePage from "../../public/HomePage.png"
+import HomePage_Mobile from "../../public/HomePage_Mobile.png"
 import Image from "next/image"
 import Link from "next/link"
 import { GraduationCap } from "lucide-react";
@@ -20,8 +20,8 @@ import {
 export default function Page() {
   return (
     <section>
-      <div className="w-full h-vh bg-primary/10 md:grid lg:grid-cols-8 md:px-12">
-        <div className="flex flex-col justify-center lg:col-span-3 px-4 py-6 md:py:12">
+      <div className="w-full lg:h-svh sm:items-center bg-primary/10 grid sm:grid-cols-8 md:px-12">
+        <div className="flex flex-col justify-center sm:col-span-5 lg:col-span-3 px-4 py-6 md:py-12">
           <p className="pt-3 text-3xl italic md:pt-12 sm:text-justify">
             Education on
           </p>
@@ -35,7 +35,7 @@ export default function Page() {
             <p className="mt-6 text-xl leading-7">
               To create more awareness and have an easier way of explaining this, the RELINK project developed a course for you.
             </p>
-            <div className="flex flex-row justify-center lg:justify-normal">
+            <div className="flex flex-row justify-center md:justify-normal">
               <Button asChild size="rounded" className="text-lg mt-14 sm:text-2xl bg-primary/80">
                 <Link href={components_chapters[0].href} replace>
                   <GraduationCap className="w-8 h-8 mr-4" />
@@ -51,20 +51,33 @@ export default function Page() {
             alt="Image"
             width="1920"
             height="1080"
-            className="h-[90vh] w-full object-scale-down"
+            className="lg:h-[90vh] w-full object-scale-down"
+          />
+        </div>
+        <div className="hidden sm:col-span-3 sm:block lg:hidden">
+          <Image
+            src={HomePage_Mobile}
+            alt="Image"
+            width={1000}
+            height={2000}
+            className="sm:h-[90vh] w-full object-cover"
           />
         </div>
       </div>
-      <div className="flex flex-col w-full px-12 pt-12 md:px-24">
-        <Carousel className="">
-          <CarouselContent className="-ml-1 items-center">
-            {components_chapters.map((component, index) => (
-              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4 max-w-60">
 
+      <p className="pt-6 text-4xl font-extrabold text-center">
+            Course Chapters
+      </p>
+
+      <div className="flex flex-col w-full px-12 pt-6 md:px-24">
+        <Carousel className="">
+          <CarouselContent className="md:-ml-8 items-center">
+            {components_chapters.map((component, index) => (
+              <CarouselItem key={index} className="md:pl-8 md:basis-1/2 lg:basis-1/4 max-w-80">
                 <div className="p-1 text-center">
                   <div className="max-w-sm bg-white border border-gray-200 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
                     <Link href={component.href}>
-                      <Icon path={component.icon} size="4em" className="mx-auto mt-7" />
+                      <Icon path={component.icon} size="4em" className="mx-auto mt-2" />
                     </Link>
                     <div className="p-5">
                       <Link href={component.href}>
@@ -80,7 +93,6 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -88,6 +100,7 @@ export default function Page() {
           <CarouselNext />
         </Carousel>
       </div>
+
     </section>
   );
 }
