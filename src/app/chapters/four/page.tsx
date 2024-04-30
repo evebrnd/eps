@@ -291,7 +291,7 @@ export default function Page() {
             “Ok Google.” Right?
           </p>
           <p className="leading-7">
-            This is not 100% clear, according to Google itself they say, quote:
+            According to Google they say, quote:
           </p>
           <blockquote className="mt-6 border-l-2 pl-6 italic">
             “Google Assistant is designed to wait in standby mode until it detects an activation, like when it hears "Hey Google."”
@@ -311,16 +311,13 @@ export default function Page() {
             But how does it do this?
           </p>
           <p className="leading-7 mt-6">
-            Let’s start with the main component, the camera. The camera supposedly only starts recording when one of the motion sensors sees well, motion. The camera also start recording when the doorbell is pressed physically.
+            Let’s start with the main component, the camera. The camera according to Ring only starts recording when one of the motion sensors sees well, motion. The camera also starts recording when the doorbell is pressed physically.
             <br />
             The Ring Doorbell also has a microphone so this will be recorded together with the camera footage.
             Depending on if you have a subscription or not these videos will be stored online.
           </p>
           <p className="leading-7 mt-6">
-            They say it’s safely stored against anyone else. But is it really? Is it just a security camera for you? You will get the answer later in this course.
-          </p>
-          <p className="leading-7 mt-6">
-            You can say what you want about Google, but they are way clearer about what they do with your data.
+            They say it’s safely stored against anyone else. But is it really? Is it just a security camera for you? You will get the information later in this course.
           </p>
         </div>
 
@@ -673,14 +670,14 @@ export default function Page() {
 
         {/* The quiz text */}
         <h3 className="text-center text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
-        
+
         {/* The quiz */}
         <div className="flex text-center">
           <Quiz
             questions={questionsChapterFour}
           />
         </div>
-        
+
         {/* The previous and next buttons */}
         <div className="flex flex-col">
           <PreviousAndNextButton
