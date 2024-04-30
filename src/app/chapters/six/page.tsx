@@ -11,10 +11,6 @@ import SmartDoorbellPNG from "../../../../public/WorkingOfDevices/SmartDoorbell.
 import SmartEcoBeePNG from "../../../../public/WorkingOfDevices/SmartEcoBee.png"
 import SmartNestHubPNG from "../../../../public/WorkingOfDevices/NestHubSand.jpg"
 import SmartEnergyMonitorPNG from "../../../../public/WorkingOfDevices/smappeeEnergyMonitor.jpeg"
-import FacialRecognitionGIF from "../../../../public/WorkingOfDevices/FacialRecognitionGIF.gif"
-import ActivityDetectionGIF from "../../../../public/WorkingOfDevices/ActivityDetectionGIF.gif"
-import TextPredictionGIF from "../../../../public/WorkingOfDevices/TextPredictionGIF.gif"
-import WakeWordDetectionGIF from "../../../../public/WorkingOfDevices/WakeWordDetectionGIF.gif"
 import ImageRecognitionGIF from "../../../../public/WorkingOfDevices/ImageRecognitionGIF.gif"
 import ChatGPTGIF from "../../../../public/WorkingOfDevices/ChatGPTGIF.gif"
 
@@ -36,40 +32,7 @@ import {
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import { components_chapters } from "@/utils/constants";
 
-const chap3_1_Examples = [
-  {
-    title: "Wake Word Detection",
-    description: "Smart speakers like Google Home or Amazon Echo use on-device machine learning to detect their wake words.",
-    image: WakeWordDetectionGIF,
-    alt: "GIF of a smart speaker detecting a wake word",
-    quickSource: "Giphy.com",
-    source: "https://giphy.com/gifs/google-macaulay-culkin-hey-google-55vzISvU8zUFvd6U3W"
-  },
-  {
-    title: "Facial Recognition",
-    description: "Many smartphones use on-device machine learning for facial recognition features.",
-    image: FacialRecognitionGIF,
-    alt: "GIF of a smartphone using facial recognition",
-    quickSource: "Tenor.com",
-    source: "https://tenor.com/view/face-gif-21129360"
-  },
-  {
-    title: "Text Prediction",
-    description: "As mentioned earlier, text prediction on your smartphone keyboard is a form of on-device machine learning.",
-    image: TextPredictionGIF,
-    alt: "GIF of a smartphone keyboard predicting text",
-    quickSource: "Stackoverflow.com",
-    source: "https://stackoverflow.com/a/29449504"
-  },
-  {
-    title: "Activity Recognition",
-    description: "Many fitness trackers and smartwatches use on-device machine learning to recognize different types of physical activity.",
-    image: ActivityDetectionGIF,
-    alt: "GIF of a fitness tracker recognizing physical activity",
-    quickSource: "Pinterest.com",
-    source: "https://pin.it/2c1h3oxEC"
-  }
-]
+
 
 const chap3_2_Examples = [
   {
@@ -259,18 +222,27 @@ export default function Page() {
           Smart homes enable cost savings through efficient routines and sustainable consumption practices. Additionally, virtual medical consultations reduce healthcare costs and enhance overall well-being.
           </p>
           <p className="leading-7">
-            Additionally,
+          <br />
+            Another financial benefit lies in enhanced security measures. 
+            Smart home security systems provide peace of mind and can even lower insurance costs. 
+            Features like smart doorbells, 
+            which allow you to receive alerts and view live video feeds when someone approaches your door, enhance security. 
+            Motion sensors and smart locks also contribute to a safer home environment.
+          <br />
+          <br />
+            Lastly, investing in smart home technology can increase your property value.
+            An example can be investing into a smart solar system that has an energy management system,
+            which analyzes energy usage patterns, weather forecasts and grid demand. This data can help the user
+            make informed decisions like when to use stored energy, and when to sell excess energy back to the grid.
             <br />
-            Ring doesn’t really tell what is in the device specifically like Google did. Ring tells us that it has video capabilities, motion detection and two-way audio.
-            <br />
-            What does this mean? Exactly, it’s not clear on the home page.
+            <br /> 
+            A well-equipped smart home appeals to buyers, making it more attractive in the real estate market. 
+            While the initial setup cost can be significant, the long-term benefits, 
+            including energy savings and added property value, can offset this investment.
           </p>
-          <p className="leading-7 mt-6">
-            After some more digging we found that the Ring Doorbell has a HD camera, a button, a speaker, microphone, infrared LEDS for the night vision of the camera and “motion detection sensors”.
+            
             <br />
-            Well this is way more data that can be processed compared to the Google Nest Mini.
-          </p>
-          {/* 1.3 */}
+          {/* 1.3
           <h3 id="Chapter_1.3" className="mt-8 text-2xl font-semibold tracking-tight">
             1.3. Psychological benefits
           </h3>
@@ -291,29 +263,36 @@ export default function Page() {
             After some more digging we found that the Ring Doorbell has a HD camera, a button, a speaker, microphone, infrared LEDS for the night vision of the camera and “motion detection sensors”.
             <br />
             Well this is way more data that can be processed compared to the Google Nest Mini.
-          </p>
+          </p> */}
           {/* 1.4 */}
           <h3 id="Chapter_1.4" className="mt-8 text-2xl font-semibold tracking-tight">
             1.4. Health related benefits
           </h3>
           <p className="leading-7 mt-3">
-            The other device we are going to check is the Ring Doorbell. This is:
+          Smart home devices offer several health advantages for occupants, 
+          particularly older adults and people with specific health needs. 
+          These devices can help with illness prevention by measuring cleanliness and hygiene of the house. 
+          During the COVID-19 pandemic, homeowners became more aware of maintaining a clean living space. 
+          Features like smart air purifiers and sanitizing devices reduce the spread of germs and viruses, 
+          promoting a healthier environment.
           </p>
-          <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-xl">
-            “Ring Video Doorbells allow you to see, hear and speak to visitors, from anywhere.”
-          </blockquote>
           <p className="leading-7">
-            Well, isn’t that great, always being able to see who is in front of your door.
+          Apart from physical health, smart home devices can help with general quality of life. 
+          Examples are smart lighting that can change to natural daylight patterns, improving  sleep quality or 
+          virtual assistants that can provide companionship and reminders for medication or self-care routines.
+          <br />
+          <br />
+          For older adults, smart homes can be especially useful. Nearly 75% of adults aged 50 and older express a desire to remain in their homes. Features like smart door locks, fall detection sensors, medication reminders, and voice-controlled devices assist with daily tasks and enhance safety.
             <br />
-            Ring doesn’t really tell what is in the device specifically like Google did. Ring tells us that it has video capabilities, motion detection and two-way audio.
             <br />
-            What does this mean? Exactly, it’s not clear on the home page.
           </p>
           <p className="leading-7 mt-6">
             After some more digging we found that the Ring Doorbell has a HD camera, a button, a speaker, microphone, infrared LEDS for the night vision of the camera and “motion detection sensors”.
             <br />
             Well this is way more data that can be processed compared to the Google Nest Mini.
           </p>
+            <br></br>
+          <a href="https://www.aarp.org/pri/topics/livable-communities/housing/2021-home-community-preferences/" className="underline">Where We Live, Where We Age: Trends in Home and Community Preferences (AARP.org)</a>
         </div>
 
         <div className="flex flex-col text-justify py-3 mt-4">
@@ -466,34 +445,8 @@ export default function Page() {
             Some other things that can be done On-Device are:
           </p>
 
-          {/* Carousell item, showing the different on On-Device Processes*/}
-          <div className="flex flex-col w-full px-12 py-6 md:px-24">
-            <Carousel className="">
-              <CarouselContent className="">
-                {chap3_1_Examples.map((component, index) => (
-                  <CarouselItem key={index} className="flex flex-row justify-center md:basis-1/2">
-                    {/* Created a modified version of card component. */}
-                    <div className="p-1 text-center content-center">
-                      <div className="max-w-sm bg-background border border-background/80 rounded-lg overflow-hidden shadow hover:shadow-lg active:shadow-lg">
-                        <Image
-                          src={component.image}
-                          alt={component.alt}
-                          className="rounded-t-lg"
-                        />
-                        <a href={component.source} className="text-xs text-muted-foreground hover:text-foreground"> {component.quickSource} </a>
-                        <div className="pb-5 px-5 pt-2">
-                          <h5 className="text-2xl font-bold tracking-tight text-foreground">{component.title}</h5>
-                          <p className="font-normal text-muted-foreground">{component.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
+          
+          
 
           {/* 3.2 */}
           <h3 id="Chapter_3.2" className="mt-8 text-2xl font-semibold tracking-tight">
