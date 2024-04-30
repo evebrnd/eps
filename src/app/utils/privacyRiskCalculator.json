@@ -1,0 +1,180 @@
+[
+    {
+        "question": "How is the device connected to other devices?",
+        "options": [
+            {
+                "option": "Wired",
+                "points": 3
+            },
+            {
+                "option": "Wi-Fi",
+                "points": 2
+            },
+            {
+                "option": "Via mobile networks, 3G, 4G, etc",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Does it use a special network for setup? Did the setup involve an app on your phone connected to a Wifi network broadcast by the vacuum?",
+        "options": [
+            {
+                "option": "No",
+                "points": 2
+            },
+            {
+                "option": "Yes",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Does it collect private or sensitive data? (e.g. name, phone number, etc)",
+        "options": [
+            {
+                "option": "No",
+                "points": 2
+            },
+            {
+                "option": "Yes",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Is the authentication secure?",
+        "options": [
+            {
+                "option": "Yes, requires more than just a password",
+                "points": 2
+            },
+            {
+                "option": "No, only uses ID/password",
+                "points": 1
+            },
+            {
+                "option": "Manufacturer forces password change",
+                "points": 2
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Is the operating system / app well-known and regularly updated?",
+        "options": [
+            {
+                "option": "Yes, known and regularly updated",
+                "points": 2
+            },
+            {
+                "option": "No, unknown or outdated",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Are software upgrades & security patches applied automatically?",
+        "options": [
+            {
+                "option": "Yes",
+                "points": 2
+            },
+            {
+                "option": "No",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Does the manufacturer collect personal data?",
+        "options": [
+            {
+                "option": "No",
+                "points": 2
+            },
+            {
+                "option": "Yes",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Is personal data shared with third parties?",
+        "options": [
+            {
+                "option": "No",
+                "points": 2
+            },
+            {
+                "option": "Yes",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Is the end-user license agreement available?",
+        "options": [
+            {
+                "option": "Yes",
+                "points": 2
+            },
+            {
+                "option": "No",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "question": "Does the end-user license agreement include security guidelines and warnings?",
+        "options": [
+            {
+                "option": "Yes",
+                "points": 2
+            },
+            {
+                "option": "No",
+                "points": 1
+            },
+            {
+                "option": "I don't know",
+                "points": 0
+            }
+        ]
+    }
+]

@@ -7,9 +7,9 @@ import {
   GraduationCap,
 } from "lucide-react"
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { components_about, components_chapters } from "@/utils/constants"
+import { components_about, components_chapters, components_teaching } from "@/utils/constants"
 
 import {
   NavigationMenu,
@@ -28,7 +28,6 @@ export default function Navbar() {
       {/* RELINK/Home icon */}
       <div className="flex flex-row basis-2/12 md:basis-1/4">
         <Link href="/">
-          {/* <img src="https://uni.oslomet.no/relink/wp-content/uploads/sites/193/2019/04/ReLink-logo-v.2.png" alt="Logo" className="h-12" /> */}
           <h1 className="px-2 py-1 text-3xl italic font-bold border text-foreground font-roboto rounded-xl bg-primary/5">
             RELINK
           </h1>
@@ -71,13 +70,22 @@ export default function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* Course Button */}
-              <NavigationMenuItem className="">
-                <Link href="/coursematerial" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent font-bold text-xl text-center align-text-top leading-tight`}>
-                    Course material
-                  </NavigationMenuLink>
-                </Link>
+              {/* Teaching Material Button */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-xl font-bold bg-transparent">Teaching Material</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                    {components_teaching.map((component, index) => (
+                      <ListItem
+                        key={`chapter_${index}`}
+                        title={component.title}
+                        href={`/eps${component.href}`}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               {/* About Us Button */}
@@ -142,12 +150,16 @@ export default function Navbar() {
               ))}
             </nav>
             <nav className="grid pt-4 font-medium divide-y md:hidden">
-              <Link
-                href="/coursematerial"
-                className="text-2xl font-bold text-foreground"
-              >
-                Course Material
-              </Link>
+              <p className="text-2xl font-bold text-foreground">Teaching Material</p>
+              {components_teaching.map((component, index) => (
+                <Link
+                  key={`mobile_about_${index}`}
+                  href={component.href}
+                  className="leading-7 transition-colors text-foreground/60 hover:text-foreground"
+                >
+                  {component.title}
+                </Link>
+              ))}
             </nav>
           </SheetContent>
         </Sheet>

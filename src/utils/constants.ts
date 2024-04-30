@@ -19,6 +19,21 @@ export const components_about: { title: string; href: string; description: strin
     }
 ]
 
+export const components_teaching: { title: string; href: string; description: string }[] = [
+    {
+        title: "Privacy Calculator",
+        href: "/teachingmaterial/privacycalculator",
+        description:
+            "A tool to understand how privacy respecting a device is.",
+    },
+    {
+        title: "Course Resources",
+        href: "/teachingmaterial/courseresources",
+        description:
+            "Resources and material to organize the class.",
+    },
+]
+
 export const components_chapters: { title: string; href: string; description: string }[] = [
     {
         title: "Kick-off",
