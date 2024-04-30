@@ -670,56 +670,25 @@ export default function Page() {
             </Accordion>
           </div>
         </div>
+
+        {/* The quiz text */}
+        <h3 className="text-center text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+        
+        {/* The quiz */}
+        <div className="flex text-center">
+          <Quiz
+            questions={questionsChapterFour}
+          />
+        </div>
+        
+        {/* The previous and next buttons */}
         <div className="flex flex-col">
-          {/* The previous and next buttons */}
           <PreviousAndNextButton
             previousUrl={components_chapters[3].href}
             nextUrl={components_chapters[5].href}
           />
         </div>
-
-        <h3 className="text-center text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
-        <Quiz
-          questions={questionsChapterFour}
-        />
       </div>
     </div>
   );
 }
-
-
-// Quiz Questions
-// 1. What does Ring's statement imply about their access to customer video recordings?
-//    - a) They can access any video without permission
-//    - b) They can only access videos with explicit permission or those made publicly available
-//    - c) They can access videos without permission but only for research and development purposes
-//    - d) They do not access any customer videos
-//    - **Answer: b) They can only access videos with explicit permission or those made publicly available**
-
-// 2. What is a concern raised about the use of smart devices?
-//    - a) They are too expensive
-//    - b) They may record and share data without consent
-//    - c) They are not user-friendly
-//    - d) They are not durable
-//    - **Answer: b) They may record and share data without consent**
-
-// 3. What is suggested about the operation of smart speakers?
-//    - a) They record audio constantly
-//    - b) They only record audio after a wake word is said
-//    - c) They do not record any audio
-//    - d) They record audio at random intervals
-//    - **Answer: b) They only record audio after a wake word is said**
-
-// 4. What incident is mentioned regarding Amazon's reviewers and audio clips?
-//    - a) Reviewers used audio clips for amusement
-//    - b) Reviewers intervened in potential criminal situations
-//    - c) Reviewers had direct access to personal customer information
-//    - d) None of the above
-//    - **Answer: a) Reviewers used audio clips for amusement**
-
-// 5. What information is associated with Amazon's voice recordings?
-//   a) Account number, first name, and device serial number
-//   b) Personally identifiable information
-//   c) Randomized identifier
-//   d) None of the above
-//   Answer: a) Account number, first name, and device serial number

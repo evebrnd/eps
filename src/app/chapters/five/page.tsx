@@ -121,6 +121,16 @@ export default function Page() {
           </Accordion>
         </div>
 
+        {/* The quiz text */}
+        <h3 className="text-center text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+        
+        {/* The quiz */}
+        <div className="flex text-center">
+          <Quiz
+            questions={questionsChapterFive}
+          />
+        </div>
+        
         {/* The previous and next buttons */}
         <div className="flex flex-col">
           <PreviousAndNextButton
@@ -128,13 +138,6 @@ export default function Page() {
             nextUrl={components_chapters[5].href}
           />
         </div>
-
-        {/* The Quiz */}
-        <h3 className="text-center text-pretty mt-6 mb-5 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
-        <Quiz
-          questions={questionsChapterFive}
-        />
-
       </div>
     </div>
   );
