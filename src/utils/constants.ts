@@ -81,6 +81,13 @@ export const components_chapters: { title: string; href: string; description: st
         icon: mdiCogOffOutline,
     },
     {
+        title: "6. Benefits and Risks",
+        href: "/chapters/six",
+        description:
+            "Benefits and risks of smart home devices.",
+            icon: mdiCogOffOutline,
+    },
+    {
         title: "Resources",
         href: "/chapters/resources",
         description:
