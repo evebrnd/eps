@@ -1,0 +1,36 @@
+[
+    {
+      "question": "The majority of survey respondents have ... on smart home devices",
+      "answerOptions": [
+        { "answer": "No knowledge" },
+        { "answer": "Advanced knowledge" },
+        { "answer": "Expert knowledge" },
+        { "answer": "Average knowledge", "isCorrect": true }
+      ] 
+    },
+    {
+      "question": "Which is the smart home device that first came to mind for most survey respondents?",
+      "answerOptions": [
+        { "answer": "Amazon Alexa", "isCorrect": true },
+        { "answer": "Google Home" },
+        { "answer": "Siri" },
+        { "answer": "Ring Doorbell" }
+      ]
+    },
+    {
+      "question": "Which is not a worry expressed by some participants of a study mentionned about consumer attitudes?",
+      "answerOptions": [
+        { "answer": "Odd device behavior" },
+        { "answer": "Data sold to third parties", "isCorrect": true },
+        { "answer": "Data collection" },
+        { "answer": "Breaches of personal privacy" }
+      ]
+    },
+    {
+      "question": "Most survey respondents know if their smart home device has AI",
+      "answerOptions": [
+       { "answer": "True" },
+       { "answer": "False", "isCorrect": true }
+      ]
+    }
+  ]

@@ -83,3 +83,44 @@ function elementInViewport(el) {
 //   ];
 
 // ref={refs[0]}
+
+
+// function useViewPortObserver(titleAmount: number) {
+//   //   const refs = [];
+//   //   const isInViewport = [];
+
+//   //   for (let i = 0; i < titleAmount; i++) {
+//   //     refs.push(useRef(null));
+//   //     isInViewport.push(useIsInViewport(refs[i]));
+//   //   }
+
+//   //   return { refs, isInViewport };
+//   const observers = Array.from({ length: titleAmount }, () => {
+//     const refs = useRef(null);
+//     const isInViewport = useIsInViewport(refs);
+//     return { refs, isInViewport };
+//   });
+
+//   return observers;
+// }
+
+
+// function useIsInViewport(ref: any) {
+//   const [isIntersecting, setIsIntersecting] = useState(false);
+
+//   const observer = useMemo(
+//     () => typeof IntersectionObserver !== 'undefined'
+//       ? new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting))
+//       : { observe: () => { }, disconnect: () => { } },
+//     [],
+//   );
+//   useEffect(() => {
+//     observer.observe(ref.current);
+
+//     return () => {
+//       observer.disconnect();
+//     };
+//   }, [ref, observer]);
+
+//   return isIntersecting;
+// }

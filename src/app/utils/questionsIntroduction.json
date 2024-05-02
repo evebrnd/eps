@@ -1,0 +1,38 @@
+[
+    {
+      "question": "What are some benefits of using smart home devices?",
+      "answerOptions": [
+        { "answer": "Increased security and comfort", "isCorrect": true },
+        { "answer": "Reduced cost of utilities" },
+        { "answer": "Both increased security and comfort and reduced cost of utilities" },
+        { "answer": "None of the above" }
+      ] 
+    },
+    {
+      "question": "Which of the following is NOT a smart home assistant device?",
+      "answerOptions": [
+        { "answer": "Amazon Alexa" },
+        { "answer": "Samsung SmartThings Hub" },
+        { "answer": "Ring Doorbell", "isCorrect": true },
+        { "answer": "Google Assistant" }
+      ]
+    },
+    {
+      "question": "In the example given about Alice and Bob, what does Alice represent?",
+      "answerOptions": [
+        { "answer": "A smart doorbell" },
+        { "answer": "A virtual assistant", "isCorrect": true },
+        { "answer": "A security camera" },
+        { "answer": "A smart speaker" }
+      ]
+    },
+    {
+      "question": "What is one potential risk of using smart home devices?",
+      "answerOptions": [
+       { "answer": "They can be inconvenient to use" },
+       { "answer": "They can be expensive to install" },
+       { "answer": "They can be less reliable than traditional devices" },
+       { "answer": "They can raise privacy and security concerns", "isCorrect": true }
+      ]
+    }
+  ]
