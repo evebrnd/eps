@@ -288,6 +288,18 @@ export default function Page() {
           <h3 id="Chapter_2.2" className="mt-8 text-2xl font-semibold tracking-tight">
             2.2. Data Sharing with Third Parties
           </h3>
+          <p className="leading-7 mt-6">
+            It is important to know what data is being shared to third parties, especially with a device that captures motion, audio and video data. According to Ring:
+          </p>
+          <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-l">
+            “A small number of video recordings are viewed by our research and development team to improve Ring’s products, services and technology. These video recordings are either from customers who have made them publicly available (by posting them on the Neighbors App* or otherwise on the Internet), or from customers, team members and their friends and family who have given us explicit permission to use them for this purpose (which they may revoke at any time).”
+          </blockquote>
+          <p className="leading-7">
+            From this, we can conclude that they can access your videos only <strong>after</strong> obtaining explicit permission. Yet, this does suggest that they have the <strong>ability to view your recordings.</strong> But how can you be sure they aren't accessing footage without your consent?
+          </p>
+          <p className="leading-7 mt-6">
+            The reality is that you can not be certain. There have been numerous cases where data was provided to law enforcement without the user's consent, raising serious concerns about privacy and data security.
+          </p>
           <p className="leading-7 mt-3">
             Ring has been criticized for its data-sharing practices. User data is shared with third-party companies,
             including law enforcement agencies.
