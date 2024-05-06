@@ -74,13 +74,6 @@ export const components_chapters: { title: string; href: string; description: st
         icon: mdiRobotConfused,
     },
     {
-        title: "6. Usabilities and Dangers",
-        href: "/chapters/six",
-        description:
-            "The usabilities and dangers of smart home devices.",
-        icon: mdiCogOffOutline,
-    },
-    {
         title: "6. Benefits and Risks",
         href: "/chapters/six",
         description:

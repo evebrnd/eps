@@ -262,12 +262,12 @@ export default function Page() {
           <p className="leading-7 mt-6">
             As far as sensors go Ring doesn’t really tell what is in the device specifically like Google did.
             <br />
-            Ring tells us that it has video capabilities, motion detection and two-way audio. What does it really have inside? Exactly, that’s not clear from looking at the product page.
+            Ring tells us that it has video capabilities, motion detection and two-way audio. What does it really have inside? That’s not exactly clear from looking at the product page.
           </p>
           <p className="leading-7 mt-6">
             After some more digging we found that the Ring Doorbell has a HD camera, a button, a speaker, microphone, “motion detection sensors” and infrared LEDS for the night vision of the camera.
             <br />
-            Well, this is a lot more data that can be processed compared to the Google Nest Mini.
+            With all these sensors a lot more data can be processed compared to the Google Nest Mini.
           </p>
         </div>
 
@@ -317,7 +317,7 @@ export default function Page() {
             Depending on if you have a subscription or not these videos will be stored online.
           </p>
           <p className="leading-7 mt-6">
-            They say it’s safely stored against anyone else. But is it really? Is it just a security camera for you? You will get the information later in this course.
+            They say it’s safely stored against anyone else. But is it really? Is it just a security camera for you? You will get information about this later in this course.
           </p>
         </div>
 
@@ -342,7 +342,7 @@ export default function Page() {
             Having explored the sensors within two smart devices and the data they process, let's turn our attention to the processing itself and where it takes place.
           </p>
           <p className="leading-7 mt-6">
-            First, it's crucial for us to distinguish between on-device and cloud processing. This is a subtle difference that can often be overlooked, especially in our fast-paced, tech-savvy era.
+            First, it's crucial for us to distinguish between on-device and cloud processing. This is a subtle difference that can easily be overlooked, especially in our fast-paced, tech-savy era.
           </p>
 
           {/* 3.1 */}
@@ -350,7 +350,7 @@ export default function Page() {
             3.1. On-Device
           </h3>
           <p className="leading-7 mt-3">
-            With <strong>On-Device</strong> processing it means that the data <strong>DOES NOT</strong> leave the device. It is processed On-Device. Nowadays this is possible by things called ’Machine Learning Engines’. More on that later.
+            With <strong>On-Device</strong> processing it means that the data <strong>DOES NOT</strong> leave the device. It is processed On-Device. Nowadays this is possible by things called ’Machine Learning Engines’.
           </p>
           <p className="leading-7 mt-6">
             Machine Learning Engines can be thought of as processors or computers programmed with specific “tasks” to search for. Take the Google Nest Mini as an example. It's programmed to respond to the command "Hey Google". Google has trained a program to listen specifically for these two words. Just these two.
