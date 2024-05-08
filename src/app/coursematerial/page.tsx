@@ -1,5 +1,9 @@
 'use client'
 
+import { useState } from 'react';
+import PDFViewer from '@/components/pdfviewer';
+// import importedAnnotatedPDF from '../../../../public/courseMaterial/AnnotatedBibliography.pdf';
+
 import Icon from "@mdi/react";
 import Sidebar from "@/components/SideBar";
 import { mdiHumanMaleBoardPoll } from "@mdi/js";
@@ -8,6 +12,13 @@ import { components_chapters } from "@/utils/constants";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 
 export default function Page() {
+
+  const [numPages, setNumPages] = useState<number>();
+  const [pageNumber, setPageNumber] = useState<number>(1);
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }): void {
+    setNumPages(numPages);
+  }
 
   // This is for the internal navigation of the page.
   // const titleAmount = 7;
@@ -32,10 +43,11 @@ export default function Page() {
       ]
     },
     { title: 'Powerpoint', id: 'powerpoint' },
-    { title: 'Games', id: 'games', subChapters: [
-      { title: 'Game One', id: 'gameOne' },
-      { title: 'Game Two', id: 'gameTwo' }
-    ]
+    {
+      title: 'Games', id: 'games', subChapters: [
+        { title: 'Game One', id: 'gameOne' },
+        { title: 'Game Two', id: 'gameTwo' }
+      ]
     }
   ];
 
@@ -191,8 +203,17 @@ export default function Page() {
             <p className="leading-7 mt-2">
               Explain the first game here.
             </p>
+
+            {/* <PDFViewer file={PDFAnnotated} /> */}
+            {/* <PDFViewer
+              file="https://www.learningcontainer.com/wp-content/uploads/2019/09/sample-pdf-file.pdf"
+            /> */}
+
+
             <div className="flex justify-center mt-4">
-              <Link href="/pdf/game_one.pdf" target="_blank" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Link href="../../../../public/courseMaterial/Annotated_Bibliography.pdf"
+                target="_blank"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Download Game One
               </Link>
             </div>
@@ -204,7 +225,9 @@ export default function Page() {
               Explain the second game here.
             </p>
             <div className="flex justify-center mt-4">
-              <Link href="/pdf/game_two.pdf" target="_blank" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <Link href="../../../../public/courseMaterial/Annotated_Bibliography[V1.0].pdf"
+                target="_blank"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Download Game Two
               </Link>
             </div>
