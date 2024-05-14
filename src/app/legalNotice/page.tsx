@@ -13,9 +13,9 @@ export default function Page() {
                 </div>
             </div>
 
-            <div>
+            <div className="mx-auto md:w-3/6">
                 <h2 id="infos" className="text-center text-2xl font-bold mt-4 p-4">General information</h2>
-                <ul className="p-4 w-5/6 text-center mx-auto">
+                <ul className="p-4 text-center">
                     <li>
                         <Link
                             href="https://evebrnd.github.io/eps/"

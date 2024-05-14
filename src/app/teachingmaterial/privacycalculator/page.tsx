@@ -5,7 +5,7 @@ import Icon from '@mdi/react';
 import { mdiCalculatorVariantOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters, components_teaching } from "@/utils/constants";
 import QuestionsPrivacyRisk from "../../utils/privacyRiskCalculator.json";
 import PrivacyRiskCalculator from "@/components/PrivacyRiskCalculator";
 
@@ -38,8 +38,8 @@ export default function Page() {
         </div>
 
         <PreviousAndNextButton
-          previousUrl={components_chapters[0].href}
-          nextUrl={components_chapters[2].href}
+          previousUrl={components_chapters[7].href}
+          nextUrl={components_teaching[1].href}
         />
 
         </div>

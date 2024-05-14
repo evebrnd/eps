@@ -354,8 +354,8 @@ export default function Page() {
         <div className="flex flex-col">
           {/* The previous and next buttons */}
           <PreviousAndNextButton
-            previousUrl={components_chapters[1].href}
-            nextUrl={components_chapters[3].href}
+            previousUrl={components_chapters[5].href}
+            nextUrl={components_chapters[7].href}
           />
         </div>
       </div>

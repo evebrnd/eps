@@ -4,7 +4,7 @@ import Icon from "@mdi/react";
 import Sidebar from "@/components/SideBar";
 import { mdiHumanMaleBoardPoll } from "@mdi/js";
 import Link from "next/link"
-import { components_chapters } from "@/utils/constants";
+import { components_teaching, components_about } from "@/utils/constants";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 
 export default function Page() {
@@ -214,8 +214,8 @@ export default function Page() {
         <div className="flex flex-col">
           {/* The previous and next buttons */}
           <PreviousAndNextButton
-            previousUrl={components_chapters[1].href}
-            nextUrl={components_chapters[3].href}
+            previousUrl={components_teaching[0].href}
+            nextUrl={components_about[0].href}
           />
         </div>
       </div>

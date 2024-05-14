@@ -1,13 +1,13 @@
 "use client"
 
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import TeamMemberCard from "@/components/TeamMemberCard";
 import Icon from '@mdi/react';
-import TeamMemberIcon from "/public/teamMember.png"
 import { mdiAccountGroup } from '@mdi/js';
+import TeamMemberIcon from "/public/teamMember.png"
+import TeamMemberCard from "@/components/TeamMemberCard";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
+import { components_teaching, components_about } from "@/utils/constants";
+
 
 export default function Page() {
   return (
@@ -60,8 +60,8 @@ export default function Page() {
       </div>
 
       <PreviousAndNextButton
-        previousUrl="https://evebrnd.github.io/eps/coursematerial"
-        nextUrl="https://evebrnd.github.io/eps/about/relink"
+        previousUrl={components_teaching[1].href}
+        nextUrl={components_about[1].href}
       />
     </div>
   );

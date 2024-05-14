@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import ReactCountryFlag from "react-country-flag";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
+import { components_about } from "@/utils/constants";
 
 export default function Page() {
   return (
@@ -49,8 +50,8 @@ export default function Page() {
       </div>
 
       <PreviousAndNextButton
-        previousUrl="https://evebrnd.github.io/eps/chapters/us"
-        nextUrl="https://evebrnd.github.io/eps/about/relink"
+        previousUrl={components_about[1].href}
+        nextUrl="/"
       />
     </div>
   );

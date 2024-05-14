@@ -24,7 +24,7 @@ function Footer() {
                         </Link>
                     </div>
                     <div className="px-5 py-2">
-                        <Link href="/chapters/one" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
+                        <Link href="/chapters/kickoff" className="text-base leading-6 text-gray-500 hover:text-gray-900 hover:underline hover:underline-offset-4">
                             Course
                         </Link>
                     </div>
