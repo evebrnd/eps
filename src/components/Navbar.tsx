@@ -9,7 +9,7 @@ import {
 
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { components_about, components_chapters, components_teaching } from "@/utils/constants"
+import { components_about, components_chapters, components_teaching } from "@/app/utils/constants"
 
 import {
   NavigationMenu,

@@ -6,7 +6,7 @@ import { mdiInformationSlabBoxOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import BodAndAlice from "/public/bobAndAlice.jpg";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 
 export default function Page() {
     const chapters = [

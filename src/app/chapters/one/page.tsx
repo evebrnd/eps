@@ -7,7 +7,7 @@ import { mdiChatQuestionOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import Quiz from "@/components/Quiz";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 import SmartHomeIntroduction from "/public/smartHomeIntroduction.webp";
 import QuestionsIntroduction from "../../utils/questionsIntroduction.json";
 
@@ -105,8 +105,10 @@ export default function Page() {
           <Link href="https://www.researchgate.net/publication/346211896_A_RESEARCH_PAPER_ON_SMART_HOME" className="mt-4 italic text-gray-500" rel="noopener noreferrer" target="_blank">https://www.researchgate.net/publication/346211896_A_RESEARCH_PAPER_ON_SMART_HOME</Link>
 
 
-          <h3 id="quiz" className="mt-8 text-2xl font-semibold tracking-tight">Quiz</h3>
-          <Quiz questions={QuestionsIntroduction} />
+          <h3 className="text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+          <div className="flex text-center">
+            <Quiz questions={QuestionsIntroduction} />
+          </div>
         </div>
 
         <PreviousAndNextButton
