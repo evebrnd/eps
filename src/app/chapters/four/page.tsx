@@ -36,7 +36,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 
 import Quiz from "@/components/Quiz";
 import questionsChapterFour from "../../utils/questionsChapterFour.json";
@@ -669,14 +669,14 @@ export default function Page() {
         </div>
 
         {/* The quiz text */}
-        <h3 className="text-center text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+        <h3 className="text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
 
-        {/* The quiz */}
-        <div className="flex text-center">
+        <div className=" flex text-center">
           <Quiz
             questions={questionsChapterFour}
           />
         </div>
+
 
         {/* The previous and next buttons */}
         <div className="flex flex-col">

@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import { mdiChip } from "@mdi/js";
+import { mdiAbacus } from "@mdi/js";
 import Icon from "@mdi/react";
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ import SmartDoorbellPNG from "../../../../public/WorkingOfDevices/SmartDoorbell.
 import SmartEcoBeePNG from "../../../../public/RisksAndBenefits/SmartEcoBee.png"
 import SmartNestHubPNG from "../../../../public/RisksAndBenefits/NestHubSand.jpg"
 import SmartEnergyMonitorPNG from "../../../../public/RisksAndBenefits/SmappeeEnergyMonitor.jpeg"
+import QuestionsRisks from "../../utils/questionsRisks.json"
 
 import {
   Carousel,
@@ -20,7 +21,8 @@ import {
 } from "@/components/ui/carousel"
 
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
+import Quiz from "@/components/Quiz";
 
 const chap6_Examples = [
   {
@@ -86,12 +88,12 @@ export default function Page() {
 
       {/* The main content of the page */}
 
-      <div className="flex flex-col justify-center py-2 mx-auto w-5/6 md:w-3/6">
-        <Icon path={mdiChip} size="4em" className="mx-auto mt-7" />
-        <h1 id="Introduction" className="flex justify-center text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <div className="flex flex-col py-2 mx-auto w-5/6 md:w-3/6">
+        <Icon path={mdiAbacus} size="4em" className="mx-auto mt-7" />
+        <h1 id="Introduction" className="flex text-center mt-6 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Benefits and Risks of Smart Home Devices
         </h1>
-        <p className="leading-7 mt-6 text-justify">
+        <p className="leading-7 mt-6 text-pretty">
           In this chapter, the benefits and risks of Smart Home Devices will be elaborated.
           becoming aware of these topics will provide more clarity on what an SHD can assist with in improving daily quality of life,
           but also highlights the risks of having such a device in your home.
@@ -102,8 +104,8 @@ export default function Page() {
         </p>
 
         {/* 1.0 */}
-        <div className="flex flex-col text-justify py-3 border-y-2 border-primary/20 mt-10">
-          <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+        <div className="flex flex-col py-3 border-y-2 border-primary/20 mt-10">
+          <h2 id="Chapter_1.0" className="flex mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
             1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Benefits of an SHD
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
@@ -221,28 +223,28 @@ export default function Page() {
           <a href="https://www.aarp.org/pri/topics/livable-communities/housing/2021-home-community-preferences/" className="underline">Where We Live, Where We Age: Trends in Home and Community Preferences (AARP.org)</a>
         </div>
 
-        <div className="flex flex-col text-justify py-3 mt-4">
+        <div className="flex flex-col py-3 mt-4">
           {/* 2.0 */}
-          <h2 id="Chapter_2.0" className="flex justify-normal border-b pb-2 text-3xl font-semibold tracking-tight ">
+          <h2 id="Chapter_2.0" className="flex border-b pb-2 text-3xl font-semibold tracking-tight ">
             2.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Obstacles and Need for Better Understanding of Smart Home Devices
           </h2>
 
           <p className="leading-7 mt-6">
-            Smart home devices come with a few problems, often made worse by users not knowing enough about them. SHDs can be complicated.
-            They include many different devices like smart bulbs, thermostats, security cameras, and voice assistants.
+            Smart home devices come with a few problems, often made worse by users not knowing enough about them. SHDs can be complicated. <br />
+            They include many different devices like smart bulbs, thermostats, security cameras, and voice assistants. <br />
             Fitting all these together can be difficult for users.
             Without the right help, users might find it hard to set up, adjust, and fix these devices. </p>
           <br></br>
           <p>
-            There are worries about privacy and safety. Many SHDs collect personal information, from daily habits to health details.
-            Users often don't know how much data is collected and what it means.
+            There are worries about privacy and safety. Many SHDs collect personal information, from daily habits to health details. <br />
+            Users often don't know how much data is collected and what it means. <br />
             Not knowing enough about privacy settings and safe use can accidentally expose data.
           </p>
           <br></br>
           <p>
             Because users don't know much about the privacy and security issues in their devices,
-            manufacturers often don't share a lot of information about these topics. This situation can lead to a cycle.
-            If users aren't asking for better security or privacy, manufacturers might not spend time or money to make these improvements.
+            manufacturers often don't share a lot of information about these topics. This situation can lead to a cycle. <br />
+            If users aren't asking for better security or privacy, manufacturers might not spend time or money to make these improvements. <br />
             They might also not tell users about possible security issues. Instead, they focus on promoting the good parts of their devices.</p>
           <br></br>
           <p>
@@ -294,6 +296,7 @@ export default function Page() {
           <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-l">
             “A small number of video recordings are viewed by our research and development team to improve Ring’s products, services and technology. These video recordings are either from customers who have made them publicly available (by posting them on the Neighbors App* or otherwise on the Internet), or from customers, team members and their friends and family who have given us explicit permission to use them for this purpose (which they may revoke at any time).”
           </blockquote>
+          
           <p className="leading-7">
             From this, we can conclude that they can access your videos only <strong>after</strong> obtaining explicit permission. Yet, this does suggest that they have the <strong>ability to view your recordings.</strong> But how can you be sure they aren't accessing footage without your consent?
           </p>
@@ -349,6 +352,13 @@ export default function Page() {
             Because of the growth of smart surveillance cameras, questions arise on who owns the private home security footage, and who can access it.
             It is important to keep in mind this debate because it emphasizes how crucial it is to keep the conversation about privacy going.
           </p>
+        </div>
+
+        <h3 className="text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+        <div className="flex text-center">
+          <Quiz
+              questions={QuestionsRisks}
+          /> 
         </div>
 
         <div className="flex flex-col">

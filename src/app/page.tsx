@@ -1,6 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 import HomePage from "../../public/HomePage.png"
 import HomePage_Mobile from "../../public/HomePage_Mobile.png"
 import Image from "next/image"

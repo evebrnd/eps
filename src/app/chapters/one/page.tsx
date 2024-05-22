@@ -7,7 +7,7 @@ import { mdiChatQuestionOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import Quiz from "@/components/Quiz";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 import SmartHomeIntroduction from "/public/smartHomeIntroduction.webp";
 import QuestionsIntroduction from "../../utils/questionsIntroduction.json";
 
@@ -16,7 +16,7 @@ export default function Page() {
     { title: 'Introduction', id: 'Introduction' },
     { title: 'The definition of a smart home device', id: 'Chapter_1.0' },
     { title: 'An example of a smart home device', id: 'Chapter_2.0' },
-    { title: 'Quiz', id: 'quiz'}
+    { title: 'Quiz', id: 'quiz' }
   ];
 
   return (
@@ -32,16 +32,16 @@ export default function Page() {
           What is a smart home device?
         </h1>
 
-        <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
-          <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
-            1.0. The definition of smart home device
-          </h3>
+        <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-10">
+          <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+            1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>The definition of smart home device
+          </h2>
           <p className="leading-7 mt-3 md:mt-6">
             When people hear the word smart home, they usually first connect it to some device they already know or have at their home. <br />
           </p>
-            <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-xl">
-              “A smart home is a set up where applications or devices can be controlled from anywhere and are connected to the internet and other devices wirelessly.”
-            </blockquote>
+          <blockquote className="my-6 border-l-2 pl-2 italic font-semibold text-xl">
+            “A smart home is a set up where applications or devices can be controlled from anywhere and are connected to the internet and other devices wirelessly.”
+          </blockquote>
           <p className="leading-7">
             A device can perform functions independently as well as can be used even remotely when a person who owns it, is not home. Smart homes can provide homeowners security, comfort, convenience and energy efficiency by allowing them to control smart home devices by application on their smart phone or other device. These devices collect information constantly, so they have potential risks related to privacy and security. (Chawda et al. 2020.) <br />
             Smart home environments can have many benefits, for example:
@@ -61,11 +61,12 @@ export default function Page() {
           <p className="leading-7">
             All these devices are intended to be used for different cases. These different use cases also need less or more sensors to let the device function properly.
           </p>
+        </div>
 
-
-          <h3 id="Chapter_2.0" className="mt-8 text-3xl font-semibold tracking-tight">
-            2.0. An example of smart home device
-          </h3>
+        <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-6">
+          <h2 id="Chapter_2.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+            2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>An example of smart home device
+          </h2>
           <figure className="max-w-lg mx-auto my-6">
             <Image className="h-auto max-w-full rounded-lg" src={SmartHomeIntroduction} alt="A smart home" />
             <figcaption className="mt-2 text-sm text-center text-gray-500">https://medium.com/iotforall/who-is-buying-into-iot-8f65c701b1ef</figcaption>
@@ -105,8 +106,10 @@ export default function Page() {
           <Link href="https://www.researchgate.net/publication/346211896_A_RESEARCH_PAPER_ON_SMART_HOME" className="mt-4 italic text-gray-500" rel="noopener noreferrer" target="_blank">https://www.researchgate.net/publication/346211896_A_RESEARCH_PAPER_ON_SMART_HOME</Link>
 
 
-          <h3 id="quiz" className="mt-8 text-2xl font-semibold tracking-tight">Quiz</h3>
-          <Quiz questions={QuestionsIntroduction} />
+          <h3 className="text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+          <div className="flex text-center">
+            <Quiz questions={QuestionsIntroduction} />
+          </div>
         </div>
 
         <PreviousAndNextButton

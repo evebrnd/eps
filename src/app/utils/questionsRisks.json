@@ -1,0 +1,27 @@
+[
+    {
+      "question": "Smart home devices DON'T contribute the following type of benefits",
+      "answerOptions": [
+        { "answer": "Financial benefits" },
+        { "answer": "Health benefits" },
+        { "answer": "Social benefits", "isCorrect": true },
+        { "answer": "Environmental benefits" }
+      ] 
+    },
+    {
+      "question": "In 2023, the Ring company had how many police departments registered on their app?",
+      "answerOptions": [
+        { "answer": "2350", "isCorrect": true },
+        { "answer": "2530" },
+        { "answer": "3520" },
+        { "answer": "5320" }
+      ]
+    },
+    {
+      "question": "A hacker gained access to a Ring camera in a child’s room and interacted with an 8-year-old girl.",
+      "answerOptions": [
+        { "answer": "True", "isCorrect": true },
+        { "answer": "False" }
+      ]
+    }
+  ]

@@ -6,7 +6,7 @@ import { mdiAccountGroup } from '@mdi/js';
 import TeamMemberIcon from "/public/teamMember.png"
 import TeamMemberCard from "@/components/TeamMemberCard";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_teaching, components_about } from "@/utils/constants";
+import { components_teaching, components_about } from "@/app/utils/constants";
 
 
 export default function Page() {

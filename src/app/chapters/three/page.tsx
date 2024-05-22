@@ -7,7 +7,7 @@ import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import Sidebar from '@/components/SideBar';
 import Quiz from '@/components/Quiz';
 import TransparencyImage from "/public/transparency/connectedHome.png"
-import { components_chapters } from '@/utils/constants';
+import { components_chapters } from '@/app/utils/constants';
 import QuestionsTransparency from "../../utils/questionsTransparency.json";
 
 export default function Page() {
@@ -16,7 +16,7 @@ export default function Page() {
         { title: "The black box", id: "Chapter_1.0" },
         { title: "What data is being processed?", id: "Chapter_2.0" },
         { title: "Why this matters", id: "Chapter_3.0" },
-        { title: "Quiz", id: "quiz"}
+        { title: "Quiz", id: "quiz" }
     ];
 
     return (
@@ -32,10 +32,10 @@ export default function Page() {
                     Transparency of Smart Home Devices
                 </h1>
 
-                <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
-                    <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
-                        1.0. The black box
-                    </h3>
+                <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-10">
+                    <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+                        1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>The black box
+                    </h2>
                     <p className="leading-7 mt-3 md:mt-6">
                         In our interactions with smart home devices, the term <strong>'transparency'</strong>  often refers to the degree to which a company or device maker is open about their data collection practices. This includes the data they collect from us, why and how they collect it, and their intended use for this data. Unfortunately, these devices often act like 'black boxes', with their operations remaining a mystery and manufacturers providing little information.
                         <br /><br />
@@ -43,10 +43,12 @@ export default function Page() {
                         <br /><br />
                         Furthermore, if users are not aware of data collection, it opens up possibilities for misuse. The collected data could be sold, used for targeted advertising, or even for impersonation.
                     </p>
+                </div>
 
-                    <h3 id="Chapter_2.0" className="mt-8 text-3xl font-semibold tracking-tight">
-                        2.0. What data is being processed?
-                    </h3>
+                <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-6">
+                    <h2 id="Chapter_2.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+                        2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>What data is being processed?
+                    </h2>
                     <p className="leading-7 mt-3">
                         Picture this: your smart home devices are like little detectives, constantly collecting clues about your daily life. Whether it's your Amazon Echo eavesdropping on your music preferences, your Nest thermostat taking note of your cozy temperature sweet spot, or your smart TV keeping tabs on your binge-watching habits, these devices are always gathering information. Even your humble smart light bulb is in on the action, quietly observing when and how often you flick the switch. Put all these pieces together, and voila! You have a detailed portrait of your behaviors, preferences, and routines.
                     </p>
@@ -58,10 +60,12 @@ export default function Page() {
                         <br /><br />
                         But wait, there's more! GDPR also gives you the power to demand a copy of your own data dossier. Not only that, you also have the 'right to erasure'. That's right, you can ask the company to delete all the data they've gathered about you. The only exception is if they're legally bound to keep it for compliance purposes. So, in the world of data privacy, you're not just a spectator, but a player.
                     </p>
+                </div>
 
-                    <h3 id="Chapter_3.0" className="mt-8 text-3xl font-semibold tracking-tight">
-                        3.0. Why this matters.
-                    </h3>
+                <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-6">
+                    <h2 id="Chapter_3.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+                        3.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Why this matters.
+                    </h2>
                     <p className="leading-7 mt-3">
                         Here's why all of this is a big deal. With most of our smart gizmos, we're left in the dark about when they're recording our actions, and the whereabouts, methods, and duration of how our data is stored. The gravity of these unknowns is immense, given the personal and sensitive nature of the data harvested.
                         <br /><br />
@@ -71,9 +75,10 @@ export default function Page() {
                     </p>
                     <Image src={TransparencyImage} alt="Connected Home" className="mx-auto" width="500" />
 
-                    <h3 id="quiz" className="mt-8 text-3xl font-semibold tracking-tight">Quiz</h3>
-                    <Quiz questions={QuestionsTransparency} />
-
+                    <h3 className="text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+                    <div className="flex text-center">
+                        <Quiz questions={QuestionsTransparency} />
+                    </div>
                 </div>
 
                 <PreviousAndNextButton

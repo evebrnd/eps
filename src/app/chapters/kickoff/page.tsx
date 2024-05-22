@@ -6,7 +6,7 @@ import { mdiInformationSlabBoxOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import BodAndAlice from "/public/bobAndAlice.jpg";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 
 export default function Page() {
     const chapters = [
@@ -28,19 +28,21 @@ export default function Page() {
                     Make the most out of this course
                 </h1>
 
-                <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
-                    <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
-                        1.0. Bob & Alice
-                    </h3>
+                <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-10">
+                    <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+                        1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Bob & Alice
+                    </h2>
                     <p className="leading-7 mt-3 md:mt-6">
                         Bob and Alice are two fictional characters commonly used as placeholders in discussions regarding cybersecurity, cyptography and so on. They are used to illustrate different scenarios and to make the content more relatable <br />
                         That is why we have decided throughout this lesson to take the example of Bob and Alice, two partners that live together in a connected home and has many smart home devices. <br />
                     </p>
                     <Image src={BodAndAlice} alt="Bob and Alice" width={500} className="mx-auto mt-7" />
+                </div>
 
-                    <h3 id="Chapter_2.0" className="mt-8 text-3xl font-semibold tracking-tight">
-                        2.0. The 10 commandments of this site !
-                    </h3>
+                <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-6">
+                    <h2 id="Chapter_2.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+                        2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>The 10 commandments of this site !
+                    </h2>
                     <ul className="text-left my-4 ml-6 list-disc [&>li]:mt-2">
                         <li>Read the articles at your pace you should</li>
                         <li>Read without skipping (too much) you will</li>

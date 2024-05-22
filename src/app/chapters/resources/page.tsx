@@ -13,7 +13,7 @@ import ElectronicFrontierFoundation from "../../../../public/resources/electroni
 import GdprEnforcementTracker from "../../../../public/resources/gdprEnforcementTracker.jpg"
 import RelinkLogo from "../../../../public/relinkLogo.png"
 import InfographDeviceSettings from "../../../../public/resources/infographDeviceSettings.webp"
-import { components_chapters, components_teaching } from '@/utils/constants';
+import { components_chapters, components_teaching } from '@/app/utils/constants';
 
 export default function Page() {
     return (

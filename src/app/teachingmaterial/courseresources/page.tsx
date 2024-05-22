@@ -4,7 +4,7 @@ import Icon from "@mdi/react";
 import Sidebar from "@/components/SideBar";
 import { mdiHumanMaleBoardPoll } from "@mdi/js";
 import Link from "next/link"
-import { components_teaching, components_about } from "@/utils/constants";
+import { components_teaching, components_about } from "@/app/utils/constants";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 
 export default function Page() {

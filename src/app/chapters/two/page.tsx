@@ -6,7 +6,7 @@ import Card from "@/components/Card";
 import { mdiLightbulbOnOutline } from '@mdi/js';
 import Sidebar from "@/components/SideBar";
 import Quiz from "@/components/Quiz";
-import { components_chapters } from "@/utils/constants";
+import { components_chapters } from "@/app/utils/constants";
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
 import AiDrivenSHD from "/public/generalPublicOpinion/aiDrivenShdDiagram.svg"
 import ItKnowledge from "/public/generalPublicOpinion/itKnowledgeDiagram.svg"
@@ -28,7 +28,7 @@ export default function Page() {
       ]
     },
     { title: 'Summary', id: 'Chapter_3.0' },
-    { title: 'Quiz', id: 'quiz'}
+    { title: 'Quiz', id: 'quiz' }
 
   ];
 
@@ -38,7 +38,6 @@ export default function Page() {
       <Sidebar chapters={chapters} />
 
       {/* The main content of the page */}
-
       <div className="flex flex-col justify-center py-2 mx-auto w-5/6 md:w-3/6">
         <Icon path={mdiLightbulbOnOutline} size="4em" className="mx-auto mt-7" />
         <h1 id='Introduction' className="flex justify-center text-center mt-5 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -53,10 +52,10 @@ export default function Page() {
           Numerous studies, surveys, and articles have been conducted and written about data transparency, privacy, and the risks associated with smart home devices. Here are a few:
         </p>
 
-        <div className="flex flex-col text-pretty py-3 border-y-2 border-primary/20 mt-10">
-          <h3 id="Chapter_1.0" className="mt-8 text-3xl font-semibold tracking-tight">
-            1.0. Articles
-          </h3>
+        <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-10">
+          <h2 id="Chapter_1.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+            1.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Articles
+          </h2>
           <p className="leading-7 mt-3 md:mt-6">
             Diving into the realm of smart home devices, we encounter a fascinating blend of technology, privacy, and user behavior. Let's take a journey through some intriguing studies and articles that shed light on this.
             <br /><br />
@@ -109,10 +108,12 @@ export default function Page() {
               href="https://www.sciencedirect.com/science/article/pii/S0160791X22001671?via%3Dihub"
             />
           </div>
+        </div>
 
-          <h3 id="Chapter_2.0" className="mt-8 text-3xl font-semibold tracking-tight pt-10 border-t-2 border-primary/20">
-            2.0. The EPS project survey
-          </h3>
+        <div className="flex flex-col text-pretty py-3 border-t-2 border-primary/20 mt-6">
+          <h2 id="Chapter_2.0" className="flex justify-normal mt-2 border-b pb-2 text-3xl font-semibold tracking-tight">
+            2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>The EPS project survey
+          </h2>
           <p className="leading-7 mt-3">
             In our quest to understand people's knowledge of smart home devices, we, the EPS project group, conducted a survey with around 70 respondents, a mix of students and older individuals. The survey, consisting of 20 questions, offered some intriguing insights.
           </p>
@@ -154,8 +155,10 @@ export default function Page() {
             So, while some people are already navigating the world of smart home devices with ease, others are still exploring this territory. As we continue to delve into this field, our goal is to enhance awareness and understanding, ensuring that everyone can confidently and safely integrate these devices into their lives.
           </p>
 
-          <h3 id="quiz" className="mt-8 text-2xl font-bold tracking-tight">Quiz</h3>
-          <Quiz questions={QuestionsOpinion} />
+          <h3 className="text-pretty mt-3 mb-3 text-2xl font-semibold hover:underline hover:decoration-wavy hover:decoration-primary pt-10 border-t-2 border-primary/20"><span className="text-primary">Test your knowledge</span> on this chapter!</h3>
+          <div className="flex text-center">
+            <Quiz questions={QuestionsOpinion} />
+          </div>
         </div>
 
         <PreviousAndNextButton

@@ -7,7 +7,7 @@ import Icon from '@mdi/react';
 import RelinkLogo from "/public/relinkLogo.png"
 import { mdiShieldHomeOutline } from '@mdi/js';
 import PreviousAndNextButton from "@/components/PreviousAndNextButton";
-import { components_about } from "@/utils/constants";
+import { components_about } from "@/app/utils/constants";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export default function Page() {
