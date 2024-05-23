@@ -77,10 +77,10 @@ export default function Page() {
             2.0<a className="mx-2 border-x-2 border-primary text-3xl"></a>Is AI used in smart home devices?
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
-            Not all smart home devices use AI, but there are certainly smart home devices that do use it. When done right, it can significantly enhance the user experience, enabling people to automate or enhance various things in their homes. However, it's not all smooth sailing. AI brings along its own set of privacy concerns. For example, are companies using our data to train their AI models and if so, are they transparent about it, and can we opt out of it? An interesting question that would be great to have answered.
+            Not all smart home devices use AI, but there are certainly smart home devices that do use it. When done right, it can significantly enhance the user experience, enabling people to automate or enhance various things in their homes. However, it's not all smooth sailing. AI brings along its own set of privacy concerns. For example, are companies using our data to train their AI models and if so, are they transparent about it, and can we opt out of it? AI is the center of a lot of very active research and the origin & ethics of the training data cannot be underestimated.
           </p>
           <p className="leading-7 mt-6">
-            Furthermore, AI models are sometimes hosted in a datacenter, meaning the data collected by the smart home device must be transmitted to a datacenter first, potentially exposing it to greater risk.
+            Furthermore, AI models are sometimes hosted in a datacenter (a building with a lot of computers), meaning the data collected by the smart home device must be transmitted to a datacenter first, potentially exposing it to greater risk.
           </p>
           <p className="leading-7 mt-6">
             Several smart home devices use AI to provide unique functionalities and seamless user experience.

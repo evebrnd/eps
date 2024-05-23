@@ -54,7 +54,7 @@ export default function Page() {
                         “Even simple devices like smart light bulbs can collect data about when and how often certain lights are turned on and off”
                     </blockquote>
                     <p className="leading-7">
-                        Now, if you're living in the EU/EAA, here's the good news. The companies behind these devices can't just hoard your data like some digital dragon sitting on a mountain of gold. Thanks to the General Data Protection Regulation (GDPR), they have to tell you exactly what kind of data they're collecting, why they're doing it, how long they're keeping it, and who else gets a peek at it. Think of it as a digital Miranda rights of sorts.
+                        Now, if you're living in the EU/EAA, here's the good news. The companies behind these devices are not allowed to collect data without a valid reason. Thanks to the General Data Protection Regulation (GDPR), they have to tell you exactly what kind of data they're collecting, why they're doing it, how long they're keeping it, and who they share it with.
                         <br /><br />
                         But wait, there's more! GDPR also gives you the power to demand a copy of your own data dossier. Not only that, you also have the 'right to erasure'. That's right, you can ask the company to delete all the data they've gathered about you. The only exception is if they're legally bound to keep it for compliance purposes. So, in the world of data privacy, you're not just a spectator, but a player.
                     </p>
@@ -63,9 +63,9 @@ export default function Page() {
                         3.0. Why this matters.
                     </h3>
                     <p className="leading-7 mt-3">
-                        Here's why all of this is a big deal. With most of our smart gizmos, we're left in the dark about when they're recording our actions, and the whereabouts, methods, and duration of how our data is stored. The gravity of these unknowns is immense, given the personal and sensitive nature of the data harvested.
+                        Here's why all of this is a big deal. With most of our smart devices, we're left in the dark about when they're recording our actions, and the whereabouts, methods, and duration of how our data is stored. The gravity of these unknowns is immense, given the personal and sensitive nature of the data harvested.
                         <br /><br />
-                        Imagine this: companies like Amazon, Google, Apple, and all their buddies having access to your private information, and even potentially trading it. It's like giving them a VIP pass to your life's concert, with all the backstage access! In a nightmarish scenario, this data could slip into the wrong hands, paving the way for identity theft. Suddenly, there's a doppelgänger of you out there, knowing everything about you, from your bedtime routine to your favorite pizza topping.
+                        Imagine this: companies like Amazon, Google, Apple, etc. having access to your private information, and even potentially selling it to third parties. It's like giving them a VIP pass to your life's concert, with all the backstage access! In a nightmarish scenario, this data could slip into the wrong hands, paving the way for identity theft. Suddenly, there's a doppelgänger of you out there, knowing everything about you, from your bedtime routine to your favorite pizza topping.
                         <br /><br />
                         This is precisely why companies need to pull back the curtain and be upfront about the data they collect and the safety measures they adopt to guard this sensitive information. Transparency isn't just a nice-to-have, it's a must-have in the world of data privacy.
                     </p>

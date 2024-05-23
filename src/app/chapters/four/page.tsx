@@ -235,7 +235,7 @@ export default function Page() {
             “The little speaker that’s a huge help around the house.”
           </blockquote>
           <p className="leading-7">
-            A little speaker for sure, but what does it do on the inside to be the: <a className="font-semibold italic">"huge help"</a>?
+            A little speaker for sure, but what does it do on the inside to be the <a className="font-semibold italic">"huge help"</a>?
             <br />
             This speaker is equipped with capacitive touch sensors (as buttons) and three far-field microphones and of course a speaker.
           </p>
@@ -265,7 +265,7 @@ export default function Page() {
             Ring tells us that it has video capabilities, motion detection and two-way audio. What does it really have inside? That’s not exactly clear from looking at the product page.
           </p>
           <p className="leading-7 mt-6">
-            After some more digging we found that the Ring Doorbell has a HD camera, a button, a speaker, microphone, “motion detection sensors” and infrared LEDS for the night vision of the camera.
+            After some more digging we found that the Ring Doorbell has an HD camera, a button, a speaker, microphone, “motion detection sensors” and infrared LEDS for the night vision of the camera.
             <br />
             With all these sensors a lot more data can be processed compared to the Google Nest Mini.
           </p>
@@ -277,7 +277,7 @@ export default function Page() {
             2.0<a className="mx-2 border-x-2 border-primary text-2xl center-x"></a>Data Processing
           </h2>
           <p className="leading-7 mt-3 md:mt-6">
-            Alright now that we know the insides of a small smart speaker and a camera doorbell. The question comes up, what is controlling the sensors and what does the device do with it?
+            Alright, now that we know the insides of a small smart speaker and a camera doorbell. The following question comes to mind: "what is controlling the sensors and what does the device do with the collected data?"
           </p>
 
           {/* 2.1 */}
@@ -311,9 +311,9 @@ export default function Page() {
             But how does it do this?
           </p>
           <p className="leading-7 mt-6">
-            Let’s start with the main component, the camera. The camera according to Ring only starts recording when one of the motion sensors sees well, motion. The camera also starts recording when the doorbell is pressed physically.
+            Let’s start with the main component, the camera. The camera, according to Ring, only starts recording when one of the motion sensors sees, well, motion. The camera also starts recording when the doorbell is pressed physically.
             <br />
-            The Ring Doorbell also has a microphone so this will be recorded together with the camera footage.
+            The Ring Doorbell also has a microphone, so this will be recorded together with the camera footage.
             Depending on if you have a subscription or not these videos will be stored online.
           </p>
           <p className="leading-7 mt-6">
@@ -399,16 +399,16 @@ export default function Page() {
             With <strong>Cloud</strong> processing it means that the data <strong>DOES</strong> leave the device. It is processed in the cloud. This happens in massive data centers scattered across the globe.
           </p>
           <p className="leading-7 mt-6">
-            Like on-device processing, these data centers also utilize "Machine Learning Engines" to analyze data. However, it's essential to understand that these data-center computers are way <strong>WAY</strong> bigger and more powerful than the modest computer in a device like the Google Nest Mini.
+            Like on-device processing, these data centers also utilize "Machine Learning Engines" to analyze data. However, it's essential to understand that these data-center computers are way, <strong>WAY</strong> bigger and more powerful than the modest computer in a device like the Google Nest Mini.
           </p>
           <p className="leading-7 mt-6">
             Because of their superior processing power, these computers in the data centers can run much more advanced "Machine Learning" programs.
           </p>
           <p className="leading-7 mt-6">
-            Consider a voice-activated speaker like the Google Nest Mini. When you pose a question to the device, your voice is recorded and transmitted over the internet to Google's cloud servers. These servers deploy machine learning algorithms to interpret your speech, determine the best response, and then send that response back to your device.
+            Consider a voice-activated speaker like the Google Nest Mini: when you pose a question to the device, your voice is recorded and transmitted over the internet to Google's cloud servers. These servers employ machine learning algorithms to interpret your speech, determine the best response, and then send that response back to your device.
           </p>
           <p className="leading-7 mt-6">
-            This process demands the computational power and storage capacity of the cloud, as it involves complex tasks like natural language processing and accessing large databases of information. This is just not accessible or ideal for on-device processing.
+            This process demands the computational power and storage capacity of the cloud, as it involves complex tasks like natural language processing and accessing large databases of information. This is just not feasible with on-device processing.
           </p>
           <p className="leading-7 mt-6">
             Other examples of Cloud processing are:
@@ -495,13 +495,13 @@ export default function Page() {
             Now that we've established the difference between on-device and cloud processing, let's examine what happens with the data from our Google Nest Mini.
           </p>
           <p className="leading-7 mt-6">
-            First, the device will listen <strong className="text-xl">On-Device</strong> to a wake-word; “Hey Google”. It does this every few seconds. If it does detect the word it will record the sentences after “Hey Google” and send all of this to the <strong className="text-xl">Cloud</strong>. All of this information is then processed on one of the computers in a datacenter. Once it understands your question, it attempts to find the best response. When it does, it sends the answer back to your device. It's a repeating process.
+            First, the device will listen <strong className="text-xl">On-Device</strong> to a wake-word; “Hey Google”. It does this every few seconds. If it does detect the word, it will record the sentences after “Hey Google” and send all of this to the <strong className="text-xl">Cloud</strong>. All of this information is then processed on one of the computers in a datacenter. Once it understands your question, it attempts to find the best response. When it does, it sends the answer back to your device. It's a repeating process.
           </p>
           <p className="leading-7 mt-6">
-            But does this mean that Google Nest Mini doesn't listen to other words or things we say? We can't say for sure. This is where we have to place our trust in large companies like Google, Amazon, and Apple.
+            But does this mean that Google Nest Mini doesn't listen to other words or things we say? We can't say for sure. This is where we have to place our trust in large companies like Google, Amazon, Meta, Microsoft and Apple and hope that they don't misuse the data.
           </p>
           <p className="leading-7 mt-6">
-            The thing we do know is that your voice snippets will be send to one of the big companies to check if the wake word has been said. Human reviewers transcribe and annotate voice clips to enhance speech recognition systems.
+            The thing we do know, is that your voice snippets will be sent to one of the big companies to check if the wake word has been said. Human reviewers also transcribe and annotate voice clips to enhance speech recognition systems.
           </p>
           <p className="leading-7 mt-6">
             This means that your conversations could potentially be reviewed by employees.
@@ -518,7 +518,7 @@ export default function Page() {
                   The audio snippets under review aren't linked to user accounts and are anonymized to prevent associating them with specific individuals. Google also notes that the audio is distorted to protect the user's voice.
                 </p>
                 <p className="my-3">
-                  Google only uses your Assistant recordings if you opt into the program. Normally it’s opted out.
+                  Google only uses your Assistant recordings if you opt into the program, by default you are opted out.
                 </p>
                 <a href="https://www.theverge.com/2019/7/11/20690197/google-assistant-voice-recordings-human-review-listening-vrt-nws" className="underline">Google Assistant recordings being reviewed by humans (theverge.com)</a>
               </AccordionContent>
@@ -548,7 +548,7 @@ export default function Page() {
                   Amazon states that it places a high priority on security and privacy, and only annotates an "extremely small sample" of Alexa voice recordings. This is done to train their speech recognition and natural language understanding systems. The company maintains strict technical and operational safeguards and adheres to a zero-tolerance policy for system abuse.
                 </p>
                 <p className="my-3">
-                  Amazon only stops listening to your microphone if you opt-out. This is different than Google and Apple. They store more data together with your voice snippets and have an opt-out policy.
+                  Amazon only stops listening to your microphone if you opt-out. This is different than Google and Apple, they store more data together with your voice snippets and have an opt-in policy.
                 </p>
                 <a href="https://www.bbc.com/news/technology-47974579" className="underline">Smart speaker recordings reviewed by humans (bbc.com)</a>
               </AccordionContent>
@@ -569,7 +569,7 @@ export default function Page() {
             It's likely that the motion sensors process everything on-device. This is because motion detection isn't a complex task and needs to be done quickly, which is best achieved on-device.
           </p>
           <p className="leading-7 mt-6">
-            Once motion is detected, the camera and microphone kick into action, recording videos. Here's where things get murky. We're not certain if features like "package detection" or "person detection" are processed on-device.  This is <strong className="text-2xl">exactly</strong> why this needs to be more transparent.
+            Once motion is detected, the camera and microphone kick into action, recording videos. Here's where things get murky. We're not certain if features like "package detection" or "person detection" are processed on-device. This is <strong className="text-2xl">exactly</strong> why this needs to be more transparent.
           </p>
           <p className="leading-7 mt-6">
             When a subscription is bought from Ring every time motion is detected the video will be stored in your online cloud storage. However, if you don’t have this it’s possible to check the feed on your mobile device.
@@ -583,7 +583,7 @@ export default function Page() {
             "Ring does not have facial recognition technology in any of its devices or services."
           </blockquote>
           <p className="leading-7">
-            Yet, it's been reported that Amazon has used public videos to train a facial recognition system.
+            Yet, it's been reported that Amazon has used public videos to train a facial recognition system.<sup><a href="https://apnews.com/article/ring-doorbell-camera-settlement-ftc-payments-658a3bae14c4744cf449932099dc4404" target="_blank">[1]</a><a href="https://www.malwarebytes.com/blog/news/2023/06/amazons-ring-camera-used-to-spy-on-customers" target="_blank">[2]</a></sup>
           </p>
           <p className="leading-7 mt-6">
             As for the access of the footage by others, that's another question that needs answering. According to Ring:
@@ -595,7 +595,7 @@ export default function Page() {
             From this, we can conclude that they can access your videos only <strong>after</strong> obtaining explicit permission. Yet, this does suggest that they have the <strong>potential</strong> to view your recordings. But how can you be sure they aren't doing this without your consent?
           </p>
           <p className="leading-7 mt-6">
-            The reality is you can't be certain. There have been numerous cases where data was provided to law enforcement without the user's consent, raising serious concerns about privacy and data security.
+            The reality is you can't be certain. There have been numerous cases where data was provided to law enforcement without the user's consent<sup><a href="https://www.pbs.org/newshour/politics/ring-will-no-longer-allow-police-to-request-doorbell-camera-footage-from-users">[1]</a></sup>, raising serious concerns about privacy and data security.
           </p>
 
           <div className="flex flex-col text-pretty py-3 mt-4">
@@ -605,7 +605,7 @@ export default function Page() {
             </h2>
 
             <p className="leading-7 mt-3">
-              As these devices are used a lot, the security sector has looked at these devices extensively.
+              As these devices are used a lot, privacy & security experts have researched them extensively.
             </p>
             <p className="leading-7 mt-6">
               For the smart speakers discussed earlier, there's no concrete evidence to suggest that the devices are constantly recording audio. This implies that the On-Device wake word detection is likely in operation, and only after the wake word is detected is the data sent to the cloud.
@@ -620,12 +620,12 @@ export default function Page() {
                 <AccordionTrigger>Abusive clips (Google Nest)</AccordionTrigger>
                 <AccordionContent>
                   <p className="">
-                    In an article published reviewers from Amazon have said that the audio clips have been send internally as an amusing way. They also have described that there were clips with potential sexual assault or other extreme things. Amazon however has told them that it was not their job to intervene.
+                    In an article published by BBC, reviewers from Amazon revealed that some amusing audio clips from Amazon Echo smart speakers and the Alexa service have been shared internally. They also described how there were clips with potential sexual assault or other distressing events. However, they were told by colleagues that "it was not Amazon's job to intervene".
                   </p>
                   <p className="my-3">
                     We can only speculate if the reviewers could be able to help customers in these situations. The Alexa audio clips have their first name, account number and used device used attached to it, but Amazon quotes: “Employees do not have direct access to information that can identify the person or account as part of this workflow."
                   </p>
-                  <a href="https://www.bbc.com/news/technology-47974579" className="underline">Smart speaker recordings reviewed by humans (bbc.com)</a>
+                  <a href="https://www.bbc.com/news/technology-47893082" className="underline">Smart speaker recordings reviewed by humans (bbc.com)</a>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
