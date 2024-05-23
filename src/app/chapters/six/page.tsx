@@ -98,8 +98,7 @@ export default function Page() {
           becoming aware of these topics will provide more clarity on what an SHD can assist with in improving daily quality of life,
           but also highlights the risks of having such a device in your home.
           <br></br>
-          <br /> A smart home device can have many benefits to convenience and efficiency. below are a few categories in which an
-          SHD excels in.
+          <br /> A smart home device can have many benefits to convenience and efficiency. below are a few categories in which an SHD excels in.
           <br />
         </p>
 
@@ -210,14 +209,9 @@ export default function Page() {
             virtual assistants that can provide companionship and reminders for medication or self-care routines.
             <br />
             <br />
-            For older adults, smart homes can be especially useful. Nearly 75% of adults aged 50 and older express a desire to remain in their homes. Features like smart door locks, fall detection sensors, medication reminders, and voice-controlled devices assist with daily tasks and enhance safety.
+            For older adults, smart homes can be especially useful. Over 75% of adults aged 50 and older express a desire to remain in their homes<sup><a href="https://www.aarp.org/home-family/your-home/info-2021/home-and-community-preferences-survey.html">[1]</a></sup>. Features like smart door locks, fall detection sensors, medication reminders, and voice-controlled devices assist with daily tasks and enhance safety.
             <br />
             <br />
-          </p>
-          <p className="leading-7 mt-6">
-            After some more digging we found that the Ring Doorbell has a HD camera, a button, a speaker, microphone, infrared LEDS for the night vision of the camera and “motion detection sensors”.
-            <br />
-            Well this is way more data that can be processed compared to the Google Nest Mini.
           </p>
           <br></br>
           <a href="https://www.aarp.org/pri/topics/livable-communities/housing/2021-home-community-preferences/" className="underline">Where We Live, Where We Age: Trends in Home and Community Preferences (AARP.org)</a>
@@ -244,20 +238,20 @@ export default function Page() {
           <p>
             Because users don't know much about the privacy and security issues in their devices,
             manufacturers often don't share a lot of information about these topics. This situation can lead to a cycle. <br />
-            If users aren't asking for better security or privacy, manufacturers might not spend time or money to make these improvements. <br />
+            If users aren't asking for better security or privacy, manufacturers will not spend time or money to make these improvements. <br />
             They might also not tell users about possible security issues. Instead, they focus on promoting the good parts of their devices.</p>
           <br></br>
           <p>
             Manufacturers might only fix security or privacy issues after they become a problem,
             instead of working to prevent these problems in the first place. To stop this cycle,
             we need to help users understand more about the importance of security and privacy.
-            This way, they can ask manufacturers to be more open about these topics and to do a better job of protecting users.
+            This way, they can demand manufacturers to be more open about these topics and to do a better job of protecting users.
             This can be done through education, support from groups that care about these issues,
-            and rules that require manufacturers to protect users' security and privacy.
+            and laws that require manufacturers to protect users' security and privacy.
           </p>
           <br></br>
           <p>
-            In conclusion, teaching users is key to getting the most out of SHDs while reducing risks.
+            In conclusion, educating users is key to getting the most out of SHDs while reducing risks.
             By increasing awareness, we allow users to make smart decisions and handle the complexities of these smart home devices.
           </p>
 
@@ -275,15 +269,9 @@ export default function Page() {
           <p className="leading-7">
             Ring doorbells have been under investigation due to their susceptibility to hacking incidents.
             In a case reported by The Washington Post,
-            a hacker gained access to a Ring camera in a child’s room and interacted with an 8-year-old girl.
+            a hacker gained access to a Ring camera in a child’s room and interacted with an 8-year-old girl.<sup><a href="https://www.washingtonpost.com/technology/2020/02/18/ring-nest-surveillance-doorbell-camera/">[1]</a></sup>
             This incident highlights the privacy risks associated with these devices,
             as unauthorized access can lead to spying and harassment through home security cameras.
-          </p>
-          <blockquote className="mt-6 border-l-2 pl-6 italic">
-            “Google Assistant is designed to wait in standby mode until it detects an activation, like when it hears "Hey Google."”
-          </blockquote>
-          <p className="leading-7 mt-6">
-            They say in standby mode the device records small snippets of audio every few seconds to detect the magic word. After that the device is activated (showed by an indicator light) and will record the request from the user. This request will be send to the servers of Google, more about this later.
           </p>
 
           {/* 2.2 */}
@@ -301,7 +289,7 @@ export default function Page() {
             From this, we can conclude that they can access your videos only <strong>after</strong> obtaining explicit permission. Yet, this does suggest that they have the <strong>ability to view your recordings.</strong> But how can you be sure they aren't accessing footage without your consent?
           </p>
           <p className="leading-7 mt-6">
-            The reality is that you can not be certain. There have been numerous cases where data was provided to law enforcement without the user's consent, raising serious concerns about privacy and data security.
+            The reality is that you can not be certain. There have been numerous cases<sup><a href="https://www.politico.com/news/2022/07/13/amazon-gave-ring-videos-to-police-without-owners-permission-00045513">[1]</a><a href="https://www.npr.org/2022/07/23/1113166744/amazon-says-its-given-information-from-ring-cameras-to-police-without-owners-con">[2]</a><a href="https://www.wired.com/story/ring-police-rfa-tool-shut-down/">[3]</a></sup> where data was provided to law enforcement without the user's consent, raising serious concerns about privacy and data security.
           </p>
           <p className="leading-7 mt-3">
             Ring has been criticized for its data-sharing practices. User data is shared with third-party companies,
