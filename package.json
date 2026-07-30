@@ -28,7 +28,7 @@
     "react-country-flag": "3.1.0",
     "react-dom": "18.3.1",
     "react-typed": "2.0.12",
-    "sharp": "0.33.3",
+    "sharp": "0.35.0",
     "tailwind-merge": "2.3.0",
     "tailwindcss-animate": "1.0.7"
   },
